@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { UilBracketsCurly, UilAngleDown } from '@iconscout/react-unicons'
 
 const SkillCard = ({ infoCard }) => (
@@ -13,17 +13,17 @@ const SkillCard = ({ infoCard }) => (
   </div>
 );
 
-const SkillContent = ({ infoCard }) => {
+const SkillContent = ({ infoCard, clickerFn }) => {
   const sizeIcons = "32";
   return (
-    <div className="skills__content skills__open">
+    <div className={`skills__content ${infoCard.isOpen ? 'skills__open' : 'skills__close'}`}>
       <div className="skills__header">
         <UilBracketsCurly size={sizeIcons} className="skills__icon" />
         <div>
           <h1 className="skills__title">{infoCard.title}</h1>
           <span className="section__subtitle">{infoCard.subtitle}</span>
         </div>
-        <UilAngleDown size={sizeIcons} className="skills__arrow" />
+        <UilAngleDown onClick={ () => clickerFn(infoCard.code)} size={sizeIcons} className="skills__arrow" />
       </div>
 
       <div className="skills__list grid">
@@ -36,6 +36,7 @@ const SkillContent = ({ infoCard }) => {
 };
 
 const Skills = () => {
+  const [skillsContents, setSkillsContents] = useState([])
   const infoFECards = [
     { name: 'HTML', percent: '90%' },
     { name: 'CSS', percent: '85%' },
@@ -54,23 +55,44 @@ const Skills = () => {
     { name: 'Python', percent: '75%' },
   ];
 
-  const skillsContentsInfo = [
+  const skills = [
     {
       title: 'Frontend developer',
+      code: 'FE',
+      isOpen: false,
       subtitle: 'More than 4 years',
       cardsSkills: infoFECards,
     },
     {
       title: 'Backend developer',
+      code: 'BE',
+      isOpen: false,
       subtitle: 'More than 2 years',
       cardsSkills: infoBECards,
     },
     {
       title: 'Designer developer',
+      code: 'DD',
+      isOpen: false,
       subtitle: 'More than 1 years',
       cardsSkills: infoUXCards,
     },
   ];
+
+  if (!skillsContents.length) {
+    setSkillsContents(skills);
+  }
+
+  const handlerOpenClose = (skillCode) => {
+    const index = skillsContents.findIndex(skill => skill.code === skillCode);
+    const changeState = !skillsContents.find(skill => skill.code === skillCode).isOpen;
+    setSkillsContents([
+         ...skills.slice(0, index),
+        { ...skills[index], isOpen: changeState },  
+         ...skills.slice(index + 1)
+      ]
+    );
+  }
 
   return (
     <section className="skills section" id="skills">
@@ -79,8 +101,8 @@ const Skills = () => {
 
       <div className="skills__container container grid">
         <div>
-          {skillsContentsInfo.map((skillContent, index) => (
-            <SkillContent key={index} infoCard={skillContent} />
+          {skillsContents.map((skillContent, index) => (
+            <SkillContent key={index} infoCard={skillContent} clickerFn={handlerOpenClose} />
           ))}
         </div>
       </div>
