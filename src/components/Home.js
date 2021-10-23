@@ -1,6 +1,7 @@
 import React from 'react';
 import HomeImg from './HomeImg';
-import { UilDribbble, UilLinkedinAlt, UilGithubAlt, UilMouseAlt, UilArrowDown/*, UilMessage*/ } from '@iconscout/react-unicons'
+import { UilDribbble, UilLinkedinAlt, UilGithubAlt, UilMouseAlt, UilArrowDown/*, UilMessage*/ } from '@iconscout/react-unicons';
+import '../assets/css/home.css';
 
 const HomeSocialLink = ({ infoCard }) => (
   <a
