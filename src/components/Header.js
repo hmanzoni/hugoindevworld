@@ -11,6 +11,7 @@ import {
   // UilMessage,
   UilSun 
 } from '@iconscout/react-unicons';
+import '../assets/css/header.css';
 
 const NavItems = ({ infoCard, hideMenu }) => (
   <li className="nav__item">
