@@ -1,5 +1,6 @@
 import React from 'react';
-import { UilPhone, UilEnvelope, UilMapMarker, UilMessage } from '@iconscout/react-unicons'
+import { UilPhone, UilEnvelope, UilMapMarker, UilMessage } from '@iconscout/react-unicons';
+import '../assets/css/contact.css';
 
 const ContactInfo = ({ cardInfo }) => {
   const { title, subtitle, icon } = cardInfo;

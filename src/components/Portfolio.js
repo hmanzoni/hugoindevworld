@@ -2,7 +2,8 @@ import React from 'react';
 import portfolio1 from '../assets/img/portfolio1.jpg';
 import portfolio2 from '../assets/img/portfolio2.jpg';
 import portfolio3 from '../assets/img/portfolio3.jpg';
-import { UilArrowRight, UilAngleRightB, UilAngleLeftB } from '@iconscout/react-unicons'
+import { UilArrowRight, UilAngleRightB, UilAngleLeftB } from '@iconscout/react-unicons';
+import '../assets/css/portfolio.css';
 
 const PorfolioCards = ({ infoCard }) => {
   return (

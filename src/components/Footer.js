@@ -1,5 +1,6 @@
 import React from 'react';
-import { UilFacebookF, UilInstagram, UilTwitterAlt } from '@iconscout/react-unicons'
+import { UilFacebookF, UilInstagram, UilTwitterAlt } from '@iconscout/react-unicons';
+import '../assets/css/footer.css';
 
 const FooterLink = ({ infoCard }) => {
   return (

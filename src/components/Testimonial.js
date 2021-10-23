@@ -2,7 +2,8 @@ import React from 'react';
 import testimonial1 from '../assets/img/testimonial1.jpg';
 import testimonial2 from '../assets/img/testimonial2.jpg';
 import testimonial3 from '../assets/img/testimonial3.jpg';
-import { UilStar } from '@iconscout/react-unicons'
+import { UilStar } from '@iconscout/react-unicons';
+import '../assets/css/testimonial.css';
 
 const TestimonialCard = ({ infoCard }) => {
   const qtyStarsIcons = () => {

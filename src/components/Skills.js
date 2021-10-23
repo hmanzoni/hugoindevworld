@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import { UilBracketsCurly, UilAngleDown } from '@iconscout/react-unicons'
+import { UilBracketsCurly, UilAngleDown } from '@iconscout/react-unicons';
+import '../assets/css/skills.css';
 
 const SkillCard = ({ infoCard }) => (
   <div className="skills__data">

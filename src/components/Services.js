@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import { UilCheckCircle, UilBrushAlt, UilWebGrid, UilServer, UilArrowRight, UilTimes } from '@iconscout/react-unicons'
+import { UilCheckCircle, UilBrushAlt, UilWebGrid, UilServer, UilArrowRight, UilTimes } from '@iconscout/react-unicons';
+import '../assets/css/services.css';
 
 const ServicesList = ({ text }) => (
   <li className="services__modal-service">

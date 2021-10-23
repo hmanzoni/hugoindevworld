@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import { UilCalendarAlt, UilGraduationCap, UilBriefcaseAlt } from '@iconscout/react-unicons'
+import { UilCalendarAlt, UilGraduationCap, UilBriefcaseAlt } from '@iconscout/react-unicons';
+import '../assets/css/qualification.css';
 
 const SingleQualification = ({ infoCard }) => (
   <div className="qualification__data">

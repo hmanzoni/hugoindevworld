@@ -1,6 +1,7 @@
 import React from 'react';
 import project from '../assets/img/project.png';
-import { UilMessage } from '@iconscout/react-unicons'
+import { UilMessage } from '@iconscout/react-unicons';
+import '../assets/css/project.css';
 
 const Banner = () => {
   return (
