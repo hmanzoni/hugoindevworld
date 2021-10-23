@@ -85,11 +85,11 @@ const Skills = () => {
 
   const handlerOpenClose = (skillCode) => {
     const index = skillsContents.findIndex(skill => skill.code === skillCode);
-    const changeState = !skillsContents.find(skill => skill.code === skillCode).isOpen;
+    const changeState = !skillsContents[index].isOpen;
     setSkillsContents([
-         ...skills.slice(0, index),
-        { ...skills[index], isOpen: changeState },  
-         ...skills.slice(index + 1)
+         ...skillsContents.slice(0, index),
+        { ...skillsContents[index], isOpen: changeState },  
+         ...skillsContents.slice(index + 1)
       ]
     );
   }
