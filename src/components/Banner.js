@@ -1,5 +1,5 @@
 import React from 'react';
-import project from './assets/img/project.png';
+import project from '../assets/img/project.png';
 import { UilMessage } from '@iconscout/react-unicons'
 
 const Banner = () => {
