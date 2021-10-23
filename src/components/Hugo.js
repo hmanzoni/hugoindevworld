@@ -1,4 +1,5 @@
 import React from 'react';
+import { UilArrowUp } from '@iconscout/react-unicons'
 import Header from './Header';
 import Home from './Home';
 import About from './About';
@@ -31,7 +32,8 @@ const Hugo = () => {
           <Skills />
           <Qualification />
           <Services />
-          <Footer /> 
+          <Footer />
+          <a href="!#" className="show-scroll scrollup" id="scroll-up"><UilArrowUp size="32" className="scrollup__icon" /></a>
         </>
       )}
     </>
