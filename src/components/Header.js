@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import { UilTimes, UilMoon, UilApps, UilEstate, UilUser, UilFileAlt, UilBriefcaseAlt, UilScenery, UilMessage } from '@iconscout/react-unicons'
 
-const NavItems = ({ infoCard }) => (
+const NavItems = ({ infoCard, hideMenu }) => (
   <li className="nav__item">
-    <a href={infoCard.link} className="nav__link active-link">
+    <a href={infoCard.link} onClick={hideMenu} className="nav__link active-link">
       {infoCard.icon}
       {infoCard.title}
     </a>
@@ -31,16 +31,16 @@ const Header = () => {
         <div className={`nav__menu ${isActive ? "show-menu" : ""}`} id="nav-menu">
           <ul className="nav__list grid">
             {linksNavitems.map((linkNavitem, index) => (
-              <NavItems key={index} infoCard={linkNavitem} />
+              <NavItems key={index} infoCard={linkNavitem} hideMenu={() => setActive(false)} />
             ))}
           </ul>
-          <UilTimes onClick={() => setActive(false)} className="nav__close" id="nav-close" />
+          <UilTimes onClick={ () => setActive(false)} className="nav__close" id="nav-close" />
         </div>
 
         <div className="nav__btns">
           <UilMoon className="change-theme" id="theme-button" />
           <div className="nav__toggle" id="nav-toggle">
-            <UilApps onClick={() => setActive(true)} />
+            <UilApps onClick={ () => setActive(true)} />
           </div>
         </div>
       </nav>
