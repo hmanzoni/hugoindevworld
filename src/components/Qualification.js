@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { UilCalendarAlt, UilGraduationCap, UilBriefcaseAlt } from '@iconscout/react-unicons'
 
 const SingleQualification = ({ infoCard }) => (
@@ -30,6 +30,7 @@ const SingleQualification = ({ infoCard }) => (
 );
 
 const Qualification = () => {
+  const [tabActive, setTabActive] = useState('work')
   const educations = [
     {
       id: 1,
@@ -99,15 +100,17 @@ const Qualification = () => {
       <div className="qualification__container container">
         <div className="qualification__tabs">
           <div
-            className="qualification__button button--flex qualification__active"
+            className={`qualification__button button--flex ${tabActive === 'education' && "qualification__active"}`}
             data-target="#education"
+            onClick={() => setTabActive('education')}
           >
             <UilGraduationCap className="qualification__icon" />
             Education
           </div>
           <div
-            className="qualification__button button--flex"
+            className={`qualification__button button--flex ${tabActive === 'work' && "qualification__active"}`}
             data-target="#work"
+            onClick={() => setTabActive('work')}
           >
             <UilBriefcaseAlt className="qualification__icon" />
             Work
@@ -116,7 +119,7 @@ const Qualification = () => {
 
         <div className="qualification__sections">
           <div
-            className="qualification__content qualification__active"
+            className={`qualification__content ${tabActive === 'education' && "qualification__active"}`}
             data-content
             id="education"
           >
@@ -124,7 +127,7 @@ const Qualification = () => {
               <SingleQualification key={education.id} infoCard={education} />
             ))}
           </div>
-          <div className="qualification__content" data-content id="work">
+          <div className={`qualification__content ${tabActive === 'work' && "qualification__active"}`} data-content id="work">
             {works.map((work) => (
               <SingleQualification key={work.id} infoCard={work} />
             ))}
