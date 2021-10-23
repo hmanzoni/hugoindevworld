@@ -1,7 +1,8 @@
 import React from 'react';
 import about from '../assets/img/about.jpg';
 import cv from '../assets/pdf/Alexa-Cv.pdf';
-import { UilDownloadAlt } from '@iconscout/react-unicons'
+import { UilDownloadAlt } from '@iconscout/react-unicons';
+import '../assets/css/about.css';
 
 const SingleAboutCard = ({ infoCard }) => {
   return (
