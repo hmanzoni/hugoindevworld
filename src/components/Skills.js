@@ -24,7 +24,7 @@ const SkillContent = ({ infoCard, clickerFn }) => {
           <h1 className="skills__title">{infoCard.title}</h1>
           <span className="section__subtitle">{infoCard.subtitle}</span>
         </div>
-        <UilAngleDown onClick={ () => clickerFn(infoCard.code)} size={sizeIcons} className="skills__arrow" />
+        <UilAngleDown onClick={() => clickerFn(infoCard.code)} size={sizeIcons} className="skills__arrow" />
       </div>
 
       <div className="skills__list grid">

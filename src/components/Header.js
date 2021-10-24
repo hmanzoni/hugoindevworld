@@ -71,7 +71,7 @@ const Header = () => {
               <UilMoon className="change-theme" id="theme-button" onClick={() => setDarkThemeActive(true)} />
             }
           <div className="nav__toggle" id="nav-toggle">
-            <UilApps onClick={ () => setActive(true)} />
+            <UilApps onClick={() => setActive(true)} />
           </div>
         </div>
       </nav>
