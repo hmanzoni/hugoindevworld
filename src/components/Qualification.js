@@ -49,9 +49,16 @@ const Qualification = () => {
     },
     {
       id: 3,
-      title: 'Advance Web, Sofware and DevOps Develop',
+      title: 'Advance Web, Sofware Develop',
       subtitle: 'Udemy',
       rangeYears: '2019 - Actual',
+      isRight: true,
+    },
+    {
+      id: 4,
+      title: 'DevOps Skills',
+      subtitle: 'Udemy',
+      rangeYears: '2021 - Actual',
       isRight: true,
     }
   ];
