@@ -2,15 +2,19 @@ import React, {useState} from 'react';
 import { UilCalendarAlt, UilGraduationCap, UilBriefcaseAlt } from '@iconscout/react-unicons';
 import '../assets/css/qualification.css';
 
+const QualificationRounderLine = () => (
+  <div>
+    <span className="qualification__rounder"></span>
+    <span className="qualification__line"></span>
+  </div>
+);
+
 const SingleQualification = ({ infoCard }) => (
   <div className="qualification__data">
-    {!infoCard.isRight && (
+    {(infoCard.order % 2) === 0 && (
       <>
         <div></div>
-        <div>
-          <span className="qualification__rounder"></span>
-          <span className="qualification__line"></span>
-        </div>
+        <QualificationRounderLine />
       </>
     )}
     <div>
@@ -21,11 +25,8 @@ const SingleQualification = ({ infoCard }) => (
         {infoCard.rangeYears}
       </div>
     </div>
-    {infoCard.isRight && (
-      <div>
-        <span className="qualification__rounder"></span>
-        <span className="qualification__line"></span>
-      </div>
+    {(infoCard.order % 2) === 1 && (
+        <QualificationRounderLine />
     )}
   </div>
 );
@@ -38,28 +39,28 @@ const Qualification = () => {
       title: 'Biochemistry',
       subtitle: 'Universidad Nacional de Córdoba',
       rangeYears: '2008 - 2012',
-      isRight: true,
+      order: 1,
     },
     {
       id: 2,
       title: 'Basic Web Develop',
       subtitle: 'Udemy',
       rangeYears: '2017 - 2019',
-      isRight: false,
+      order: 2,
     },
     {
       id: 3,
       title: 'Advance Web, Sofware Develop',
       subtitle: 'Udemy',
       rangeYears: '2019 - Actual',
-      isRight: true,
+      order: 3,
     },
     {
       id: 4,
       title: 'DevOps Skills',
       subtitle: 'Udemy',
       rangeYears: '2021 - Actual',
-      isRight: true,
+      order: 4,
     }
   ];
   const works = [
@@ -68,21 +69,21 @@ const Qualification = () => {
       title: 'Web Developer',
       subtitle: 'Dana Giraldo',
       rangeYears: '07/2018 - 10/2018',
-      isRight: true,
+      order: 1,
     },
     {
       id: 2,
       title: 'Web Developer',
       subtitle: 'Gustos Alto Adige',
       rangeYears: '12/2018 - 07/2020',
-      isRight: false,
+      order: 2,
     },
     {
       id: 3,
       title: 'Sofware Developer',
       subtitle: 'Trueblue',
       rangeYears: '09/2020 - 03/2021',
-      isRight: true,
+      order: 3,
     }
   ];
 
