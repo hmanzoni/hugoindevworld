@@ -35,62 +35,48 @@ const Qualification = () => {
   const educations = [
     {
       id: 1,
-      title: 'Computer Enginenr',
-      subtitle: 'Arg - University',
-      rangeYears: '2009 - 2012',
+      title: 'Biochemistry',
+      subtitle: 'Universidad Nacional de Córdoba',
+      rangeYears: '2008 - 2012',
       isRight: true,
     },
     {
       id: 2,
-      title: 'Web Design',
-      subtitle: 'Arg - University',
-      rangeYears: '2011 - 2014',
+      title: 'Basic Web Develop',
+      subtitle: 'Udemy',
+      rangeYears: '2017 - 2019',
       isRight: false,
     },
     {
       id: 3,
-      title: 'Web Develop',
-      subtitle: 'Arg - University',
-      rangeYears: '2016 - 2017',
-      isRight: true,
-    },
-    {
-      id: 4,
-      title: 'Master in UI/UX',
+      title: 'Advance Web, Sofware and DevOps Develop',
       subtitle: 'Udemy',
-      rangeYears: '2018 - 2020',
-      isRight: false,
-    },
+      rangeYears: '2019 - Actual',
+      isRight: true,
+    }
   ];
   const works = [
     {
       id: 1,
-      title: 'Software Enginenr',
-      subtitle: 'Microsoft',
-      rangeYears: '2009 - 2012',
+      title: 'Web Developer',
+      subtitle: 'Dana Giraldo',
+      rangeYears: '07/2018 - 10/2018',
       isRight: true,
     },
     {
       id: 2,
-      title: 'Frontend Developer',
-      subtitle: 'Apple',
-      rangeYears: '2012 - 2014',
+      title: 'Web Developer',
+      subtitle: 'Gustos Alto Adige',
+      rangeYears: '12/2018 - 07/2020',
       isRight: false,
     },
     {
       id: 3,
-      title: 'Ui Designer',
-      subtitle: 'Figma - Spain',
-      rangeYears: '2014 - 2016',
+      title: 'Sofware Developer',
+      subtitle: 'Trueblue',
+      rangeYears: '09/2020 - 03/2021',
       isRight: true,
-    },
-    {
-      id: 4,
-      title: 'Freelancer',
-      subtitle: 'Italy',
-      rangeYears: '2016 - ',
-      isRight: false,
-    },
+    }
   ];
 
   return (

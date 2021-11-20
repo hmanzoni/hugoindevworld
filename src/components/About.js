@@ -26,15 +26,25 @@ const About = () => {
   return (
     <section className="about section" id="about">
       <h2 className="section__title">About me</h2>
-      <span className="section__subtitle">My introduction</span>
+      <span className="section__subtitle">How I start in IT world</span>
 
       <div className="about__container container grid">
         <img src={about} alt="about" className="about__img" />
         <div className="about__data">
           <p className="about__description">
-            Web developer, with extensive knowledge and years of experience,
-            working in web technologies and Ui / Ux design, delivering quality
-            work.
+            I have been a software enthusiast IT since 2015.
+            <br />
+            As a professional, my main goal is to increase my knowledge in this field, things like new
+            technologies and programming languages. In particular, I look enjoy discovering their
+            weaknesses and strengths.
+            <br />
+            In addition, I consider myself a self-motivated, enthusiastic and resilient person and I
+            have the ability to learn fast and adapt to any changes quickly. Moreover, I am
+            very sociable, I love to learn from other cultures.
+            <br />
+            I have a degree on biochemistry and worked in this field for some years. Nevertheless, in
+            2015 I started learning about IT, and finally I pursued my dream of starting with an
+            independent team for websites for clients for a living.
           </p>
 
           <div className="about__info">

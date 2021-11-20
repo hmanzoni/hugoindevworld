@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { UilBracketsCurly, UilAngleDown } from '@iconscout/react-unicons';
+import { UilBracketsCurly, UilAngleDown, UilWebGrid, UilServer, UilCloudDatabaseTree } from '@iconscout/react-unicons';
 import '../assets/css/skills.css';
 
 const SkillCard = ({ infoCard }) => (
@@ -39,44 +39,63 @@ const SkillContent = ({ infoCard, clickerFn }) => {
 const Skills = () => {
   const [skillsContents, setSkillsContents] = useState([])
   const infoFECards = [
-    { name: 'HTML', percent: '90%' },
+    { name: 'HTML', percent: '85%' },
     { name: 'CSS', percent: '85%' },
-    { name: 'JavaScript', percent: '80%' },
-    { name: 'React', percent: '75%' },
+    { name: 'Sass', percent: '80%' },
+    { name: 'JavaScript', percent: '95%' },
+    { name: 'TypeScript', percent: '95%' },
+    { name: 'React', percent: '85%' },
+    { name: 'Redux', percent: '70%' },
+    { name: 'Gulp', percent: '70%' },
+    { name: 'Webpack', percent: '70%' },
   ];
-  const infoUXCards = [
-    { name: 'Figma', percent: '90%' },
-    { name: 'Sketch', percent: '85%' },
-    { name: 'Photoshop', percent: '80%' },
+  const infoDevOpsCards = [
+    { name: 'Azure', percent: '70%' },
+    { name: 'Firebase', percent: '70%' },
+    { name: 'Docker', percent: '85%' },
+    { name: 'Kubernetes', percent: '80%' },
+    { name: 'Bash', percent: '60%' },
+    { name: 'Heroku', percent: '70%' },
+    { name: 'GIT', percent: '95%' },
   ];
   const infoBECards = [
-    { name: 'PHP', percent: '90%' },
+    { name: 'PHP', percent: '75%' },
     { name: 'Node JS', percent: '85%' },
-    { name: 'Firebase', percent: '80%' },
-    { name: 'Python', percent: '75%' },
+    { name: 'Express JS', percent: '85%' },
+    { name: 'Python', percent: '70%' },
+    { name: 'Laravel', percent: '75%' },
+    { name: 'MongoDB', percent: '65%' },
+    { name: 'My SQL', percent: '65%' },
+    { name: 'SQL Server', percent: '65%' },
+    { name: 'PostgreSQL', percent: '50%' },
+    { name: 'MariaSQL', percent: '50%' },
   ];
 
+  const sizeIcons = "32";
   const skills = [
     {
-      title: 'Frontend developer',
+      title: 'Frontend',
       code: 'FE',
+      icon: <UilWebGrid size={sizeIcons} className="skills__icon" />,
       isOpen: false,
       subtitle: 'More than 4 years',
       cardsSkills: infoFECards,
     },
     {
-      title: 'Backend developer',
+      title: 'Backend and DB',
       code: 'BE',
+      icon: <UilServer size={sizeIcons} className="skills__icon" />,
       isOpen: false,
       subtitle: 'More than 2 years',
       cardsSkills: infoBECards,
     },
     {
-      title: 'Designer developer',
-      code: 'DD',
+      title: 'DevOps',
+      code: 'DO',
+      icon: <UilCloudDatabaseTree size={sizeIcons} className="skills__icon" />,
       isOpen: false,
       subtitle: 'More than 1 years',
-      cardsSkills: infoUXCards,
+      cardsSkills: infoDevOpsCards,
     },
   ];
 

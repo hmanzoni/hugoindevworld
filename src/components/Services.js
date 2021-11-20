@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { UilCheckCircle, UilBrushAlt, UilWebGrid, UilServer, UilArrowRight, UilTimes } from '@iconscout/react-unicons';
+import { UilCheckCircle, UilCloudDatabaseTree, UilWebGrid, UilServer, UilArrowRight, UilTimes } from '@iconscout/react-unicons';
 import '../assets/css/services.css';
 
 const ServicesList = ({ text }) => (
@@ -47,16 +47,18 @@ const Services = () => {
   const [servicesContent, setServicesContent] = useState([])
   const services = [
     {
-      title: 'Ui/Ux',
-      icon: <UilBrushAlt className="services__icon" />,
-      subtitle: 'Ui/Ux',
-      code: 'UX',
+      title: 'DevOps',
+      icon: <UilCloudDatabaseTree className="services__icon" />,
+      subtitle: 'DevOps',
+      code: 'DO',
       isOpen: false,
       textsList: [
-        'I develop the user interface.',
-        'Web page development.',
-        'I create ux element interaction.',
-        'I position your company brand.',
+        'Integrate server in Azure or Firebase.',
+        'Integrate Docker and Kubernetes.',
+        'Improve deployment process.',
+        'Integrate GIT (version controller) in your code.',
+        'Create custom process with Bash.',
+        'Setup Services SMTP.',
       ],
     },
     {
@@ -66,10 +68,10 @@ const Services = () => {
       code: 'FE',
       isOpen: false,
       textsList: [
-        'I develop the user interface.',
-        'Web page development.',
-        'I create ux element interaction.',
-        'I position your company brand.',
+        'Integrate functions for new business requirements.',
+        'Make visual changes for renew a software/site.',
+        'Improve and optimize the existing code.',
+        'Debug and resolve bugs.',
       ],
     },
     {
@@ -79,10 +81,10 @@ const Services = () => {
       code: 'BE',
       isOpen: false,
       textsList: [
-        'I develop the user interface.',
-        'Web page development.',
-        'I create ux element interaction.',
-        'I position your company brand.',
+        'Integrate a API services for consulting data in DB.',
+        'Integrate new data structure.',
+        'Integrate a services for send emails.',
+        'Control and update the package versions.',
       ],
     },
   ];
@@ -105,7 +107,7 @@ const Services = () => {
   return (
     <section className="services section">
       <h2 className="section__title">Services</h2>
-      <span className="section__subtitle">What i offer</span>
+      <span className="section__subtitle">What i can offer</span>
       <div className="services__container container grid">
         {servicesContent.map((serviceContent, index) => (
           <ServicesContent key={index} cardInfo={serviceContent} clickerFn={handlerOpenClose} />
