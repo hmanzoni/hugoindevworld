@@ -1,15 +1,16 @@
-import React, {useState} from 'react';
-import { UilCheckCircle, UilCloudDatabaseTree, UilWebGrid, UilServer, UilArrowRight, UilTimes } from '@iconscout/react-unicons';
+import React, {useState, useContext} from 'react';
+import { UilArrowRight, UilTimes } from '@iconscout/react-unicons';
 import '../assets/css/services.css';
+import iconContext from '../context/icons/iconsContext';
 
-const ServicesList = ({ text }) => (
+const ServicesList = ({ text, checkCircle }) => (
   <li className="services__modal-service">
-    <UilCheckCircle className="services__modal-icon" />
+    {checkCircle}
     <p>{text}</p>
   </li>
 );
 
-const ServicesContent = ({ cardInfo, clickerFn }) => {
+const ServicesContent = ({ cardInfo, clickerFn, checkCircle }) => {
   return (
     <div className="services__content">
       <div>
@@ -34,7 +35,7 @@ const ServicesContent = ({ cardInfo, clickerFn }) => {
           <UilTimes className="services__modal-close" onClick={() => clickerFn(cardInfo.code)} />
           <ul className="services__modal-services grid">
             {cardInfo.textsList.map((text, index) => (
-              <ServicesList key={index} text={text} />
+              <ServicesList key={index} text={text} checkCircle={checkCircle} />
             ))}
           </ul>
         </div>
@@ -44,11 +45,16 @@ const ServicesContent = ({ cardInfo, clickerFn }) => {
 };
 
 const Services = () => {
-  const [servicesContent, setServicesContent] = useState([])
+  const [servicesContent, setServicesContent] = useState([]);
+  
+  const iconsContext = useContext(iconContext);
+  const { icons } = iconsContext;
+
+  const checkCircle = icons.find(i => i?.type?.name === 'UilCheckCircle' && i.props.className === 'services__modal-icon');
   const services = [
     {
       title: 'DevOps',
-      icon: <UilCloudDatabaseTree className="services__icon" />,
+      icon: icons.find(i => i?.type?.name === 'UilCloudDatabaseTree' && i.props.className === 'services__icon'),
       subtitle: 'DevOps',
       code: 'DO',
       isOpen: false,
@@ -63,7 +69,7 @@ const Services = () => {
     },
     {
       title: 'Frontend',
-      icon: <UilWebGrid className="services__icon" />,
+      icon: icons.find(i => i?.type?.name === 'UilWebGrid' && i.props.className === 'services__icon'),
       subtitle: 'Frontend',
       code: 'FE',
       isOpen: false,
@@ -76,7 +82,7 @@ const Services = () => {
     },
     {
       title: 'Backend',
-      icon: <UilServer className="services__icon" />,
+      icon: icons.find(i => i?.type?.name === 'UilServer' && i.props.className === 'services__icon'),
       subtitle: 'Backend',
       code: 'BE',
       isOpen: false,
@@ -110,7 +116,7 @@ const Services = () => {
       <span className="section__subtitle">What i can offer</span>
       <div className="services__container container grid">
         {servicesContent.map((serviceContent, index) => (
-          <ServicesContent key={index} cardInfo={serviceContent} clickerFn={handlerOpenClose} />
+          <ServicesContent key={index} cardInfo={serviceContent} clickerFn={handlerOpenClose} checkCircle={checkCircle} />
         ))}
       </div>
     </section>

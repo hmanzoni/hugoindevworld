@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import HomeImg from './HomeImg';
-import { UilDribbble, UilLinkedinAlt, UilGithubAlt, UilMouseAlt, UilArrowDown/*, UilMessage*/ } from '@iconscout/react-unicons';
+import iconContext from '../context/icons/iconsContext';
 import '../assets/css/home.css';
 
 const HomeSocialLink = ({ infoCard }) => (
@@ -13,32 +13,41 @@ const HomeSocialLink = ({ infoCard }) => (
     {infoCard.icon}
   </a>
 );
-const HomeScroll = () => (
+const HomeScroll = ({iconHomeScroll}) => (
   <div className="home__scroll">
     <a href="#about" className="home__scroll-button button--flex">
-      <UilMouseAlt size="32" className="home__scroll-mouse" />
+      {iconHomeScroll.mouseAlt}
       <span className="home__scroll-name">Scroll down</span>
-      <UilArrowDown className="home__scroll-arrow" />
+      {iconHomeScroll.arrowDown}
     </a>
   </div>
 );
 
 const Home = () => {
-  const sizeIcons = "32";
+
+  const iconsContext = useContext(iconContext);
+  const { icons } = iconsContext;
+
   const socialLinks = [
     {
       link: '!#',
-      icon: <UilLinkedinAlt size={sizeIcons} />,
+      icon: icons.find(i => i?.type?.name === 'UilLinkedinAlt'),
     },
     {
       link: '!#',
-      icon: <UilDribbble size={sizeIcons} />,
+      icon: icons.find(i => i?.type?.name === 'UilDribbble'),
     },
     {
       link: '!#',
-      icon: <UilGithubAlt size={sizeIcons} />,
+      icon: icons.find(i => i?.type?.name === 'UilGithubAlt'),
     },
   ];
+
+  const iconHomeScroll = {
+    mouseAlt: icons.find(i => i?.type?.name === 'UilMouseAlt' && i.props.className === 'home__scroll-mouse'), 
+    arrowDown: icons.find(i => i?.type?.name === 'UilArrowDown' && i.props.className === 'home__scroll-arrow')
+}
+
   return (
     <section className="home section" id="home">
       <div className="home__container container grid">
@@ -65,7 +74,7 @@ const Home = () => {
             </a> */}
           </div>
         </div>
-        <HomeScroll />
+        <HomeScroll iconHomeScroll={iconHomeScroll} />
       </div>
     </section>
   );

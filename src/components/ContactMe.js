@@ -1,6 +1,6 @@
-import React from 'react';
-import { UilPhone, UilEnvelope, UilMapMarker, UilMessage } from '@iconscout/react-unicons';
+import React, { useContext } from 'react';
 import '../assets/css/contact.css';
+import iconContext from '../context/icons/iconsContext';
 
 const ContactInfo = ({ cardInfo }) => {
   const { title, subtitle, icon } = cardInfo;
@@ -15,7 +15,7 @@ const ContactInfo = ({ cardInfo }) => {
   );
 };
 
-const ContactForm = () => {
+const ContactForm = ({messageBtnIcon}) => {
   return (
     <form action="" className="contact__form grid">
       <div className="contact__inputs grid">
@@ -53,7 +53,7 @@ const ContactForm = () => {
       <div>
         <a href="!#" className="button button--flex">
           Send Message
-          <UilMessage className="button__icon" />
+          {messageBtnIcon}
         </a>
       </div>
     </form>
@@ -61,21 +61,26 @@ const ContactForm = () => {
 };
 
 const ContactMe = () => {
+
+  const iconsContext = useContext(iconContext);
+  const { icons } = iconsContext;
+
+  const messageBtnIcon = icons.find(i => i?.type?.name === 'UilMessage' && i.props.className === 'button__icon');
   const contactsInfo = [
     {
       title: 'Call Me',
       subtitle: '333-4444-555',
-      icon: <UilPhone className="contact__icon" />,
+      icon: icons.find(i => i?.type?.name === 'UilPhone' && i.props.className === 'contact__icon'),
     },
     {
       title: 'Email',
       subtitle: 'hugo@manzoni.com',
-      icon: <UilEnvelope className="contact__icon" />, // 'uil uil-envelope',
+      icon: icons.find(i => i?.type?.name === 'UilEnvelope' && i.props.className === 'contact__icon'),
     },
     {
       title: 'Location',
       subtitle: 'Italy',
-      icon: <UilMapMarker className="contact__icon" />, // 'uil uil-map-marker',
+      icon: icons.find(i => i?.type?.name === 'UilMapMarker' && i.props.className === 'contact__icon'),
     },
   ];
   return (
@@ -88,7 +93,7 @@ const ContactMe = () => {
             <ContactInfo key={index} cardInfo={contactSingleInfo} />
           ))}
         </div>
-        <ContactForm />
+        <ContactForm messageBtnIcon={messageBtnIcon}/>
       </div>
     </section>
   );

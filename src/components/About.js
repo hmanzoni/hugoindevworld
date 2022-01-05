@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import '../assets/css/about.css';
 import about from '../assets/img/about.jpg';
 import cv from '../assets/pdf/Alexa-Cv.pdf';
-import { UilDownloadAlt } from '@iconscout/react-unicons';
-import '../assets/css/about.css';
+import iconContext from '../context/icons/iconsContext';
 
 const SingleAboutCard = ({ infoCard }) => {
   return (
@@ -18,6 +18,11 @@ const SingleAboutCard = ({ infoCard }) => {
 };
 
 const About = () => {
+  const iconsContext = useContext(iconContext);
+  const { icons } = iconsContext;
+  
+  const downloadAlt = icons.find(i => i?.type?.name === 'UilDownloadAlt');
+
   const aboutCardsInfo = [
     { title: '08+', name: 'Years', desc: 'experience' },
     { title: '20+', name: 'Completed', desc: 'project' },
@@ -56,7 +61,7 @@ const About = () => {
           <div className="about__buttons">
             <a download="" href={cv} className="button button--flex">
               Download CV
-              <UilDownloadAlt className="button__icon" />
+              {downloadAlt}
             </a>
           </div>
         </div>

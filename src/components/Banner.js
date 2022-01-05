@@ -1,9 +1,14 @@
-import React from 'react';
-import project from '../assets/img/project.png';
-import { UilMessage } from '@iconscout/react-unicons';
+import React, {useContext} from 'react';
 import '../assets/css/project.css';
+import project from '../assets/img/project.png';
+import iconContext from '../context/icons/iconsContext';
 
 const Banner = () => {
+  const iconsContext = useContext(iconContext);
+  const { icons } = iconsContext;
+  
+  const messageProject = icons.find(i => i?.type?.name === 'UilMessage' && i.props.className === 'project__icon');
+  
   return (
     <section className="project section">
       <div className="project__bg">
@@ -15,7 +20,7 @@ const Banner = () => {
             </p>
             <a href="!#" className="button button--flex button--white">
               Contact Me
-              <UilMessage className="project__icon button__icon" />
+              {messageProject}
             </a>
           </div>
           <img src={project} alt="project" className="project__img" />

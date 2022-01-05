@@ -1,16 +1,21 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import testimonial1 from '../assets/img/testimonial1.jpg';
 import testimonial2 from '../assets/img/testimonial2.jpg';
 import testimonial3 from '../assets/img/testimonial3.jpg';
-import { UilStar } from '@iconscout/react-unicons';
 import '../assets/css/testimonial.css';
+import iconContext from '../context/icons/iconsContext';
 
 const TestimonialCard = ({ infoCard }) => {
+  const iconsContext = useContext(iconContext);
+  const { icons } = iconsContext;
+
+  const star = icons.find(i => i?.type?.name === 'UilStar' && i.props.className === 'testimonial__icon-star');
+
   const qtyStarsIcons = () => {
     let icons = [];
     for (let i = 0; i < infoCard.stars; i++) {
       icons.push(
-        <UilStar key={i} className="testimonial__icon-star" />
+        {star}
       );
     }
     return icons;

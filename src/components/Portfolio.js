@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import portfolio1 from '../assets/img/portfolio1.jpg';
 import portfolio2 from '../assets/img/portfolio2.jpg';
 import portfolio3 from '../assets/img/portfolio3.jpg';
-import { UilArrowRight, UilAngleRightB, UilAngleLeftB } from '@iconscout/react-unicons';
+import iconContext from '../context/icons/iconsContext';
 import '../assets/css/portfolio.css';
 
 const PorfolioCards = ({ infoCard }) => {
@@ -26,6 +26,11 @@ const PorfolioCards = ({ infoCard }) => {
 };
 
 const Portfolio = () => {
+  const iconsContext = useContext(iconContext);
+  const { icons } = iconsContext;
+  const arrowRight = icons.find(i => i?.type?.name === 'UilArrowRight' && i.props.className === 'button__icon');
+  const angleLeftB = icons.find(i => i?.type?.name === 'UilAngleLeftB' && i.props.className === 'swiper-portfolio-icon');
+  const angleRightB = icons.find(i => i?.type?.name === 'UilAngleRightB' && i.props.className === 'swiper-portfolio-icon');
   const portfolios = [
     {
       img: portfolio1,
@@ -35,7 +40,7 @@ const Portfolio = () => {
         'Website adaptable to all devices, with ui components and animated interactions.',
       link: '!#',
       textButton: 'Demo',
-      icon: <UilArrowRight className="button__icon" />,
+      icon: arrowRight,
     },
     {
       img: portfolio2,
@@ -45,7 +50,7 @@ const Portfolio = () => {
         'Website adaptable to all devices, with ui components and animated interactions.',
       link: '!#',
       textButton: 'Demo',
-      icon: <UilArrowRight className="button__icon" />,
+      icon: arrowRight,
     },
     {
       img: portfolio3,
@@ -55,7 +60,7 @@ const Portfolio = () => {
         'Website adaptable to all devices, with ui components and animated interactions.',
       link: '!#',
       textButton: 'Demo',
-      icon: <UilArrowRight className="button__icon" />,
+      icon: arrowRight,
     },
   ];
 
@@ -70,10 +75,10 @@ const Portfolio = () => {
           ))}
         </div>
         <div className="swiper-button-next">
-          <UilAngleRightB className="swiper-portfolio-icon" />
+          {angleLeftB}
         </div>
         <div className="swiper-button-prev">
-          <UilAngleLeftB className="swiper-portfolio-icon" />
+          {angleRightB}
         </div>
         <div className="swiper-pagination"></div>
       </div>

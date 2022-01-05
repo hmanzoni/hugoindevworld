@@ -1,12 +1,12 @@
-import React from 'react';
-import { UilFacebookF, UilInstagram, UilTwitterAlt } from '@iconscout/react-unicons';
+import React, { useContext } from 'react';
 import '../assets/css/footer.css';
+import iconContext from '../context/icons/iconsContext';
 
 const FooterLink = ({ infoCard }) => {
   return (
     <li>
       <a href={infoCard.link} className="footer__link">
-        {infoCard.nombre}
+        {infoCard.title}
       </a>
     </li>
   );
@@ -26,15 +26,20 @@ const FooterSocialLink = ({ infoCard }) => {
 };
 
 const Footer = () => {
-  const socialLinks = [
-    { icon: <UilFacebookF />, link: '!#' },
-    { icon: <UilInstagram />, link: '!#' },
-    { icon: <UilTwitterAlt />, link: '!#' },
+
+  const iconsContext = useContext(iconContext);
+  const { icons } = iconsContext;
+
+  const arrIconsSocial = [
+    {icon: icons.find(i => i?.type?.name === 'UilTwitterAlt'), link: '!#'}, 
+    {icon: icons.find(i => i?.type?.name === 'UilFacebookF'), link: '!#'}, 
+    {icon: icons.find(i => i?.type?.name === 'UilInstagram'), link: '!#'},
   ];
+
   const linksInt = [
-    { nombre: 'Services', link: '!#' },
-    { nombre: 'Portfolio', link: '!#' },
-    { nombre: 'Contactme', link: '!#' },
+    { title: 'Services', link: '!#' },
+    { title: 'Portfolio', link: '!#' },
+    { title: 'Contactme', link: '!#' },
   ];
   return (
     <footer className="footer">
@@ -48,7 +53,7 @@ const Footer = () => {
             ))}
           </ul>
           <div className="footer__socials">
-            {socialLinks.map((socialLink, index) => (
+            {arrIconsSocial.map((socialLink, index) => (
               <FooterSocialLink key={index} infoCard={socialLink} />
             ))}
           </div>

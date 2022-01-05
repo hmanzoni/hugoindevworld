@@ -1,14 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
+import iconContext from '../context/icons/iconsContext';
 import {
   UilTimes,
   UilMoon,
   UilApps,
-  UilEstate,
-  UilUser,
-  UilFileAlt,
-  UilBriefcaseAlt,
-  // UilScenery,
-  // UilMessage,
   UilSun 
 } from '@iconscout/react-unicons';
 import '../assets/css/header.css';
@@ -27,6 +22,9 @@ const Header = () => {
   const [isActive, setActive] = useState(false);
   const [darkThemeActive, setDarkThemeActive] = useState(false);
 
+  const iconsContext = useContext(iconContext);
+  const { icons } = iconsContext;
+
   const getCurrentTheme = (selectTheme) => selectTheme !== 'dark' ? 'dark' : 'light';
 
   useEffect(() => {
@@ -40,12 +38,12 @@ const Header = () => {
   }, [darkThemeActive]);
 
   const linksNavitems = [
-    { link: '#home', title: 'Home', icon: <UilEstate className="nav__icon"/> },
-    { link: '#about', title: 'About', icon: <UilUser className="nav__icon"/> },
-    { link: '#skills', title: 'Skills', icon: <UilFileAlt className="nav__icon"/> },
-    { link: '#services', title: 'Services', icon: <UilBriefcaseAlt className="nav__icon"/> },
-    // { link: '#portfolio', title: 'Portfolio', icon: <UilScenery className="nav__icon"/> },
-    // { link: '#contactme', title: 'Contactme', icon: <UilMessage className="nav__icon"/> },
+    { link: '#home', title: 'Home', icon: icons.find(i => i?.type?.name === 'UilEstate' && i.props.className === 'nav__icon') },
+    { link: '#about', title: 'About', icon: icons.find(i => i?.type?.name === 'UilUser' && i.props.className === 'nav__icon') },
+    { link: '#skills', title: 'Skills', icon: icons.find(i => i?.type?.name === 'UilFileAlt' && i.props.className === 'nav__icon') },
+    { link: '#services', title: 'Services', icon: icons.find(i => i?.type?.name === 'UilBriefcaseAlt' && i.props.className === 'nav__icon') },
+    // { link: '#portfolio', title: 'Portfolio', icon: icons.find(i => i?.type?.name === 'UilScenery' && i.props.className === 'nav__icon') },
+    // { link: '#contactme', title: 'Contactme', icon: icons.find(i => i?.type?.name === 'UilMessage' && i.props.className === 'nav__icon') },
   ];
 
   return (

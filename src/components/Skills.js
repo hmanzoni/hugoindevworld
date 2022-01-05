@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
-import { UilBracketsCurly, UilAngleDown, UilWebGrid, UilServer, UilCloudDatabaseTree } from '@iconscout/react-unicons';
+import React, {useState, useContext} from 'react';
+import { UilAngleDown } from '@iconscout/react-unicons';
 import '../assets/css/skills.css';
+import iconContext from '../context/icons/iconsContext';
 
 const SkillCard = ({ infoCard }) => (
   <div className="skills__data">
@@ -14,17 +15,15 @@ const SkillCard = ({ infoCard }) => (
   </div>
 );
 
-const SkillContent = ({ infoCard, clickerFn }) => {
-  const sizeIcons = "32";
-  return (
+const SkillContent = ({ infoCard, clickerFn, bracketsCurly }) => (
     <div className={`skills__content ${infoCard.isOpen ? 'skills__open' : 'skills__close'}`}>
       <div className="skills__header">
-        <UilBracketsCurly size={sizeIcons} className="skills__icon" />
+        {bracketsCurly}
         <div>
           <h1 className="skills__title">{infoCard.title}</h1>
           <span className="section__subtitle">{infoCard.subtitle}</span>
         </div>
-        <UilAngleDown onClick={() => clickerFn(infoCard.code)} size={sizeIcons} className="skills__arrow" />
+        <UilAngleDown onClick={() => clickerFn(infoCard.code)} size={'32'} className="skills__arrow" />
       </div>
 
       <div className="skills__list grid">
@@ -34,10 +33,13 @@ const SkillContent = ({ infoCard, clickerFn }) => {
       </div>
     </div>
   );
-};
 
 const Skills = () => {
-  const [skillsContents, setSkillsContents] = useState([])
+  const [skillsContents, setSkillsContents] = useState([]);
+  
+  const iconsContext = useContext(iconContext);
+  const { icons } = iconsContext;
+
   const infoFECards = [
     { name: 'HTML', percent: '85%' },
     { name: 'CSS', percent: '85%' },
@@ -70,13 +72,11 @@ const Skills = () => {
     { name: 'PostgreSQL', percent: '50%' },
     { name: 'MariaSQL', percent: '50%' },
   ];
-
-  const sizeIcons = "32";
   const skills = [
     {
       title: 'Frontend',
       code: 'FE',
-      icon: <UilWebGrid size={sizeIcons} className="skills__icon" />,
+      icon: icons.find(i => i?.type?.name === 'UilWebGrid' && i.props.className === 'skills__icon'),
       isOpen: false,
       subtitle: 'More than 4 years',
       cardsSkills: infoFECards,
@@ -84,7 +84,7 @@ const Skills = () => {
     {
       title: 'Backend and DB',
       code: 'BE',
-      icon: <UilServer size={sizeIcons} className="skills__icon" />,
+      icon: icons.find(i => i?.type?.name === 'UilServer' && i.props.className === 'skills__icon'),
       isOpen: false,
       subtitle: 'More than 2 years',
       cardsSkills: infoBECards,
@@ -92,12 +92,14 @@ const Skills = () => {
     {
       title: 'DevOps',
       code: 'DO',
-      icon: <UilCloudDatabaseTree size={sizeIcons} className="skills__icon" />,
+      icon: icons.find(i => i?.type?.name === 'UilCloudDatabaseTree' && i.props.className === 'skills__icon'),
       isOpen: false,
       subtitle: 'More than 1 years',
       cardsSkills: infoDevOpsCards,
     },
   ];
+
+  const bracketsCurly = icons.find(i => i?.type?.name === 'UilBracketsCurly' && i.props.className === 'skills__icon');
 
   if (!skillsContents.length) {
     setSkillsContents(skills);
@@ -122,7 +124,7 @@ const Skills = () => {
       <div className="skills__container container grid">
         <div>
           {skillsContents.map((skillContent, index) => (
-            <SkillContent key={index} infoCard={skillContent} clickerFn={handlerOpenClose} />
+            <SkillContent key={index} infoCard={skillContent} clickerFn={handlerOpenClose} bracketsCurly={bracketsCurly} />
           ))}
         </div>
       </div>

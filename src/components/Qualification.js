@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
-import { UilCalendarAlt, UilGraduationCap, UilBriefcaseAlt } from '@iconscout/react-unicons';
+import React, {useState, useContext} from 'react';
 import '../assets/css/qualification.css';
+import iconContext from '../context/icons/iconsContext';
 
 const QualificationRounderLine = () => (
   <div>
@@ -9,7 +9,7 @@ const QualificationRounderLine = () => (
   </div>
 );
 
-const SingleQualification = ({ infoCard }) => (
+const SingleQualification = ({ infoCard, calendarAlt }) => (
   <div className="qualification__data">
     {(infoCard.order % 2) === 0 && (
       <>
@@ -21,7 +21,7 @@ const SingleQualification = ({ infoCard }) => (
       <h3 className="qualification__title">{infoCard.title}</h3>
       <span className="qualification__subtitle">{infoCard.subtitle}</span>
       <div className="qualification__calendar">
-        <UilCalendarAlt />
+        {calendarAlt}
         {infoCard.rangeYears}
       </div>
     </div>
@@ -32,7 +32,15 @@ const SingleQualification = ({ infoCard }) => (
 );
 
 const Qualification = () => {
-  const [tabActive, setTabActive] = useState('work')
+  const [tabActive, setTabActive] = useState('work');
+  
+  const iconsContext = useContext(iconContext);
+  const { icons } = iconsContext;
+
+  const graduationCap = icons.find(i => i?.type?.name === 'UilGraduationCap' && i.props.className === 'qualification__icon');
+  const briefcaseAlt = icons.find(i => i?.type?.name === 'UilBriefcaseAlt' && i.props.className === 'qualification__icon');
+  const calendarAlt = icons.find(i => i?.type?.name === 'UilCalendarAlt');
+
   const educations = [
     {
       id: 1,
@@ -99,7 +107,7 @@ const Qualification = () => {
             data-target="#education"
             onClick={() => setTabActive('education')}
           >
-            <UilGraduationCap className="qualification__icon" />
+            {graduationCap}
             Education
           </div>
           <div
@@ -107,7 +115,7 @@ const Qualification = () => {
             data-target="#work"
             onClick={() => setTabActive('work')}
           >
-            <UilBriefcaseAlt className="qualification__icon" />
+            {briefcaseAlt}
             Work
           </div>
         </div>
@@ -119,12 +127,12 @@ const Qualification = () => {
             id="education"
           >
             {educations.map((education) => (
-              <SingleQualification key={education.id} infoCard={education} />
+              <SingleQualification key={education.id} infoCard={education} calendarAlt={calendarAlt}/>
             ))}
           </div>
           <div className={`qualification__content ${tabActive === 'work' && "qualification__active"}`} data-content id="work">
             {works.map((work) => (
-              <SingleQualification key={work.id} infoCard={work} />
+              <SingleQualification key={work.id} infoCard={work} calendarAlt={calendarAlt}/>
             ))}
           </div>
         </div>
