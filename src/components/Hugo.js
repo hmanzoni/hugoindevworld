@@ -1,6 +1,6 @@
-import React from 'react';
-import { UilArrowUp } from '@iconscout/react-unicons'
+import React, {useContext, useEffect} from 'react';
 import Header from './Header';
+import {arrIcons} from './ui/icons';
 import Home from './Home';
 import About from './About';
 import Skills from './Skills';
@@ -12,14 +12,21 @@ import Services from './Services';
 // import ContactMe from './ContactMe';
 import Footer from './Footer';
 import Loader from './Loader';
+import iconContext from '../context/icons/iconsContext';
 
 const Hugo = () => {
-  const [loading, setLoading] = React.useState(true);
-  if (loading) {
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  }
+  const iconsContext = useContext(iconContext);
+  const { loadingFinish, loading, getIcons, icons } = iconsContext;
+
+  useEffect(() => {
+    if (!icons?.length) {
+      getIcons(arrIcons);
+    }
+    if (loading) {
+      loadingFinish();
+    }
+  }, [loading, icons]);
+  const arrowUp = icons.find(i => i?.type?.name === 'UilArrowUp' && i.props.className === 'scrollup__icon');
   return (
     <>
       {loading ? (
@@ -33,7 +40,7 @@ const Hugo = () => {
           <Qualification />
           <Services />
           <Footer />
-          <a href="!#" className="show-scroll scrollup" id="scroll-up"><UilArrowUp size="32" className="scrollup__icon" /></a>
+          <a href="!#" className="show-scroll scrollup" id="scroll-up">{arrowUp}</a>
         </>
       )}
     </>
