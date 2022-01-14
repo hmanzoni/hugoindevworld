@@ -1,8 +1,9 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import '../assets/css/about.css';
 import about from '../assets/img/about.jpg';
 import cv from '../assets/pdf/Alexa-Cv.pdf';
 import iconContext from '../context/icons/iconsContext';
+import { foundIcon } from './ui/icons';
 
 const SingleAboutCard = ({ infoCard }) => {
   return (
@@ -21,7 +22,7 @@ const About = () => {
   const iconsContext = useContext(iconContext);
   const { icons } = iconsContext;
   
-  const downloadAlt = icons.find(i => i?.type?.name === 'UilDownloadAlt');
+  const downloadAlt = foundIcon(icons, 'UilDownloadAlt');
 
   const aboutCardsInfo = [
     { title: '08+', name: 'Years', desc: 'experience' },

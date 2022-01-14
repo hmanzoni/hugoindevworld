@@ -1,6 +1,7 @@
-import React, {useState, useContext} from 'react';
+import React, { useContext, useState } from 'react';
 import '../assets/css/qualification.css';
 import iconContext from '../context/icons/iconsContext';
+import { foundIcon } from './ui/icons';
 
 const QualificationRounderLine = () => (
   <div>
@@ -37,9 +38,9 @@ const Qualification = () => {
   const iconsContext = useContext(iconContext);
   const { icons } = iconsContext;
 
-  const graduationCap = icons.find(i => i?.type?.name === 'UilGraduationCap' && i.props.className === 'qualification__icon');
-  const briefcaseAlt = icons.find(i => i?.type?.name === 'UilBriefcaseAlt' && i.props.className === 'qualification__icon');
-  const calendarAlt = icons.find(i => i?.type?.name === 'UilCalendarAlt');
+  const graduationCap = foundIcon(icons, 'UilGraduationCap', 'qualification__icon');
+  const briefcaseAlt = foundIcon(icons, 'UilBriefcaseAlt', 'qualification__icon');
+  const calendarAlt = foundIcon(icons, 'UilCalendarAlt');
 
   const educations = [
     {

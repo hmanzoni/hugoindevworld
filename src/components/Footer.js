@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import '../assets/css/footer.css';
 import iconContext from '../context/icons/iconsContext';
+import { foundIcon } from './ui/icons';
 
 const FooterLink = ({ infoCard }) => {
   return (
@@ -31,9 +32,9 @@ const Footer = () => {
   const { icons } = iconsContext;
 
   const arrIconsSocial = [
-    {icon: icons.find(i => i?.type?.name === 'UilTwitterAlt'), link: '!#'}, 
-    {icon: icons.find(i => i?.type?.name === 'UilFacebookF'), link: '!#'}, 
-    {icon: icons.find(i => i?.type?.name === 'UilInstagram'), link: '!#'},
+    {icon: foundIcon(icons, 'UilTwitterAlt'), link: '!#'}, 
+    {icon: foundIcon(icons, 'UilFacebookF'), link: '!#'}, 
+    {icon: foundIcon(icons, 'UilInstagram'), link: '!#'},
   ];
 
   const linksInt = [

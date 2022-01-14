@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
-import HomeImg from './HomeImg';
-import iconContext from '../context/icons/iconsContext';
 import '../assets/css/home.css';
+import iconContext from '../context/icons/iconsContext';
+import HomeImg from './HomeImg';
+import { foundIcon } from './ui/icons';
 
 const HomeSocialLink = ({ infoCard }) => (
   <a
@@ -27,26 +28,25 @@ const Home = () => {
 
   const iconsContext = useContext(iconContext);
   const { icons } = iconsContext;
-
   const socialLinks = [
     {
       link: '!#',
-      icon: icons.find(i => i?.type?.name === 'UilLinkedinAlt'),
+      icon: foundIcon(icons, 'UilLinkedinAlt'),
     },
     {
       link: '!#',
-      icon: icons.find(i => i?.type?.name === 'UilDribbble'),
+      icon: foundIcon(icons, 'UilDribbble'),
     },
     {
       link: '!#',
-      icon: icons.find(i => i?.type?.name === 'UilGithubAlt'),
+      icon: foundIcon(icons, 'UilGithubAlt'),
     },
   ];
 
   const iconHomeScroll = {
-    mouseAlt: icons.find(i => i?.type?.name === 'UilMouseAlt' && i.props.className === 'home__scroll-mouse'), 
-    arrowDown: icons.find(i => i?.type?.name === 'UilArrowDown' && i.props.className === 'home__scroll-arrow')
-}
+    mouseAlt: foundIcon(icons, 'UilMouseAlt', 'home__scroll-mouse'), 
+    arrowDown: foundIcon(icons, 'UilArrowDown', 'home__scroll-arrow')
+  }
 
   return (
     <section className="home section" id="home">

@@ -1,12 +1,10 @@
-import React, {useState, useEffect, useContext} from 'react';
-import iconContext from '../context/icons/iconsContext';
+import React, { useContext, useEffect, useState } from 'react';
 import {
-  UilTimes,
-  UilMoon,
-  UilApps,
-  UilSun 
+  UilApps, UilMoon, UilSun, UilTimes
 } from '@iconscout/react-unicons';
 import '../assets/css/header.css';
+import iconContext from '../context/icons/iconsContext';
+import { foundIcon } from './ui/icons';
 
 const NavItems = ({ infoCard, hideMenu }) => (
   <li className="nav__item">
@@ -38,12 +36,12 @@ const Header = () => {
   }, [darkThemeActive]);
 
   const linksNavitems = [
-    { link: '#home', title: 'Home', icon: icons.find(i => i?.type?.name === 'UilEstate' && i.props.className === 'nav__icon') },
-    { link: '#about', title: 'About', icon: icons.find(i => i?.type?.name === 'UilUser' && i.props.className === 'nav__icon') },
-    { link: '#skills', title: 'Skills', icon: icons.find(i => i?.type?.name === 'UilFileAlt' && i.props.className === 'nav__icon') },
-    { link: '#services', title: 'Services', icon: icons.find(i => i?.type?.name === 'UilBriefcaseAlt' && i.props.className === 'nav__icon') },
-    // { link: '#portfolio', title: 'Portfolio', icon: icons.find(i => i?.type?.name === 'UilScenery' && i.props.className === 'nav__icon') },
-    // { link: '#contactme', title: 'Contactme', icon: icons.find(i => i?.type?.name === 'UilMessage' && i.props.className === 'nav__icon') },
+    { link: '#home', title: 'Home', icon: foundIcon(icons, 'UilEstate', 'nav__icon') },
+    { link: '#about', title: 'About', icon: foundIcon(icons, 'UilUser', 'nav__icon') },
+    { link: '#skills', title: 'Skills', icon: foundIcon(icons, 'UilFileAlt', 'nav__icon') },
+    { link: '#services', title: 'Services', icon: foundIcon(icons, 'UilBriefcaseAlt', 'nav__icon') },
+    // { link: '#portfolio', title: 'Portfolio', icon: foundIcon(icons, 'UilScenery', 'nav__icon') },
+    // { link: '#contactme', title: 'Contactme', icon: foundIcon(icons, 'UilMessage', 'nav__icon') },
   ];
 
   return (

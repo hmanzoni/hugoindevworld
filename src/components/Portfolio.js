@@ -1,9 +1,10 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
+import '../assets/css/portfolio.css';
 import portfolio1 from '../assets/img/portfolio1.jpg';
 import portfolio2 from '../assets/img/portfolio2.jpg';
 import portfolio3 from '../assets/img/portfolio3.jpg';
 import iconContext from '../context/icons/iconsContext';
-import '../assets/css/portfolio.css';
+import { foundIcon } from './ui/icons';
 
 const PorfolioCards = ({ infoCard }) => {
   return (
@@ -28,9 +29,10 @@ const PorfolioCards = ({ infoCard }) => {
 const Portfolio = () => {
   const iconsContext = useContext(iconContext);
   const { icons } = iconsContext;
-  const arrowRight = icons.find(i => i?.type?.name === 'UilArrowRight' && i.props.className === 'button__icon');
-  const angleLeftB = icons.find(i => i?.type?.name === 'UilAngleLeftB' && i.props.className === 'swiper-portfolio-icon');
-  const angleRightB = icons.find(i => i?.type?.name === 'UilAngleRightB' && i.props.className === 'swiper-portfolio-icon');
+
+  const arrowRight = foundIcon(icons, 'UilArrowRight', 'button__icon');
+  const angleLeftB = foundIcon(icons, 'UilAngleLeftB', 'swiper-portfolio-icon');
+  const angleRightB = foundIcon(icons, 'UilAngleRightB', 'swiper-portfolio-icon');
   const portfolios = [
     {
       img: portfolio1,

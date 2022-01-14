@@ -1,7 +1,8 @@
-import React, {useState, useContext} from 'react';
+import React, { useContext, useState } from 'react';
 import { UilAngleDown } from '@iconscout/react-unicons';
 import '../assets/css/skills.css';
 import iconContext from '../context/icons/iconsContext';
+import { foundIcon } from './ui/icons';
 
 const SkillCard = ({ infoCard }) => (
   <div className="skills__data">
@@ -76,7 +77,7 @@ const Skills = () => {
     {
       title: 'Frontend',
       code: 'FE',
-      icon: icons.find(i => i?.type?.name === 'UilWebGrid' && i.props.className === 'skills__icon'),
+      icon: foundIcon(icons, 'UilWebGrid', 'skills__icon'),
       isOpen: false,
       subtitle: 'More than 4 years',
       cardsSkills: infoFECards,
@@ -84,7 +85,7 @@ const Skills = () => {
     {
       title: 'Backend and DB',
       code: 'BE',
-      icon: icons.find(i => i?.type?.name === 'UilServer' && i.props.className === 'skills__icon'),
+      icon: foundIcon(icons, 'UilServer', 'skills__icon'),
       isOpen: false,
       subtitle: 'More than 2 years',
       cardsSkills: infoBECards,
@@ -92,14 +93,14 @@ const Skills = () => {
     {
       title: 'DevOps',
       code: 'DO',
-      icon: icons.find(i => i?.type?.name === 'UilCloudDatabaseTree' && i.props.className === 'skills__icon'),
+      icon: foundIcon(icons, 'UilCloudDatabaseTree', 'skills__icon'),
       isOpen: false,
       subtitle: 'More than 1 years',
       cardsSkills: infoDevOpsCards,
     },
   ];
 
-  const bracketsCurly = icons.find(i => i?.type?.name === 'UilBracketsCurly' && i.props.className === 'skills__icon');
+  const bracketsCurly = foundIcon(icons, 'UilBracketsCurly', 'skills__icon');
 
   if (!skillsContents.length) {
     setSkillsContents(skills);

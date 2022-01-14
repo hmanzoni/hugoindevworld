@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import '../assets/css/contact.css';
 import iconContext from '../context/icons/iconsContext';
+import { foundIcon } from './ui/icons';
 
 const ContactInfo = ({ cardInfo }) => {
   const { title, subtitle, icon } = cardInfo;
@@ -64,23 +65,24 @@ const ContactMe = () => {
 
   const iconsContext = useContext(iconContext);
   const { icons } = iconsContext;
+  
+  const messageBtnIcon = foundIcon(icons, 'UilMessage', 'button__icon');
 
-  const messageBtnIcon = icons.find(i => i?.type?.name === 'UilMessage' && i.props.className === 'button__icon');
   const contactsInfo = [
     {
       title: 'Call Me',
       subtitle: '333-4444-555',
-      icon: icons.find(i => i?.type?.name === 'UilPhone' && i.props.className === 'contact__icon'),
+      icon: foundIcon(icons, 'UilPhone', 'contact__icon'),
     },
     {
       title: 'Email',
       subtitle: 'hugo@manzoni.com',
-      icon: icons.find(i => i?.type?.name === 'UilEnvelope' && i.props.className === 'contact__icon'),
+      icon: foundIcon(icons, 'UilEnvelope', 'contact__icon'),
     },
     {
       title: 'Location',
       subtitle: 'Italy',
-      icon: icons.find(i => i?.type?.name === 'UilMapMarker' && i.props.className === 'contact__icon'),
+      icon: foundIcon(icons, 'UilMapMarker', 'contact__icon'),
     },
   ];
   return (

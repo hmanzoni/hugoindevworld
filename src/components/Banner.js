@@ -1,13 +1,14 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import '../assets/css/project.css';
 import project from '../assets/img/project.png';
 import iconContext from '../context/icons/iconsContext';
+import { foundIcon } from './ui/icons';
 
 const Banner = () => {
   const iconsContext = useContext(iconContext);
   const { icons } = iconsContext;
   
-  const messageProject = icons.find(i => i?.type?.name === 'UilMessage' && i.props.className === 'project__icon');
+  const messageProject = foundIcon(icons, 'UilMessage', 'project__icon');
   
   return (
     <section className="project section">

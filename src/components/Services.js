@@ -1,7 +1,8 @@
-import React, {useState, useContext} from 'react';
+import React, { useContext, useState } from 'react';
 import { UilArrowRight, UilTimes } from '@iconscout/react-unicons';
 import '../assets/css/services.css';
 import iconContext from '../context/icons/iconsContext';
+import { foundIcon } from './ui/icons';
 
 const ServicesList = ({ text, checkCircle }) => (
   <li className="services__modal-service">
@@ -50,11 +51,11 @@ const Services = () => {
   const iconsContext = useContext(iconContext);
   const { icons } = iconsContext;
 
-  const checkCircle = icons.find(i => i?.type?.name === 'UilCheckCircle' && i.props.className === 'services__modal-icon');
+  const checkCircle = foundIcon(icons, 'UilCheckCircle', 'services__modal-icon');
   const services = [
     {
       title: 'DevOps',
-      icon: icons.find(i => i?.type?.name === 'UilCloudDatabaseTree' && i.props.className === 'services__icon'),
+      icon: foundIcon(icons, 'UilCloudDatabaseTree', 'services__icon'),
       subtitle: 'DevOps',
       code: 'DO',
       isOpen: false,
@@ -69,7 +70,7 @@ const Services = () => {
     },
     {
       title: 'Frontend',
-      icon: icons.find(i => i?.type?.name === 'UilWebGrid' && i.props.className === 'services__icon'),
+      icon: foundIcon(icons, 'UilWebGrid', 'services__icon'),
       subtitle: 'Frontend',
       code: 'FE',
       isOpen: false,
@@ -82,7 +83,7 @@ const Services = () => {
     },
     {
       title: 'Backend',
-      icon: icons.find(i => i?.type?.name === 'UilServer' && i.props.className === 'services__icon'),
+      icon: foundIcon(icons, 'UilServer', 'services__icon'),
       subtitle: 'Backend',
       code: 'BE',
       isOpen: false,

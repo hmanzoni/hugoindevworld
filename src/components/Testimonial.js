@@ -1,15 +1,16 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
+import '../assets/css/testimonial.css';
 import testimonial1 from '../assets/img/testimonial1.jpg';
 import testimonial2 from '../assets/img/testimonial2.jpg';
 import testimonial3 from '../assets/img/testimonial3.jpg';
-import '../assets/css/testimonial.css';
 import iconContext from '../context/icons/iconsContext';
+import { foundIcon } from './ui/icons';
 
 const TestimonialCard = ({ infoCard }) => {
   const iconsContext = useContext(iconContext);
   const { icons } = iconsContext;
 
-  const star = icons.find(i => i?.type?.name === 'UilStar' && i.props.className === 'testimonial__icon-star');
+  const star = foundIcon(icons, 'UilStar', 'testimonial__icon-star');
 
   const qtyStarsIcons = () => {
     let icons = [];

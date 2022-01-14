@@ -1,18 +1,18 @@
-import React, {useContext, useEffect} from 'react';
-import Header from './Header';
-import {arrIcons} from './ui/icons';
-import Home from './Home';
+import React, { useContext, useEffect } from 'react';
+import iconContext from '../context/icons/iconsContext';
 import About from './About';
-import Skills from './Skills';
-import Qualification from './Qualification';
-import Services from './Services';
 // import Portfolio from './Portfolio';
 // import Banner from './Banner';
 // import Testimonial from './Testimonial';
 // import ContactMe from './ContactMe';
 import Footer from './Footer';
+import Header from './Header';
+import Home from './Home';
 import Loader from './Loader';
-import iconContext from '../context/icons/iconsContext';
+import Qualification from './Qualification';
+import Services from './Services';
+import Skills from './Skills';
+import { arrIcons, foundIcon } from './ui/icons';
 
 const Hugo = () => {
   const iconsContext = useContext(iconContext);
@@ -26,7 +26,9 @@ const Hugo = () => {
       loadingFinish();
     }
   }, [loading, icons]);
-  const arrowUp = icons.find(i => i?.type?.name === 'UilArrowUp' && i.props.className === 'scrollup__icon');
+
+  const arrowUp = foundIcon(icons, 'UilArrowUp', 'scrollup__icon');
+
   return (
     <>
       {loading ? (
