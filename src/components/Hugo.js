@@ -25,7 +25,7 @@ const Hugo = () => {
     if (loading) {
       loadingFinish();
     }
-  }, [loading, icons]);
+  }, [loading, icons, getIcons, loadingFinish]);
 
   const arrowUp = foundIcon(icons, 'UilArrowUp', 'scrollup__icon');
 
