@@ -6,6 +6,7 @@
 .pnp.js
 /src/assets/img/*
 /src/assets/pdf/*
+globals.d.ts
 
 # testing
 /coverage
