@@ -8,7 +8,7 @@ import { foundIcon } from './ui/icons';
 const SingleAboutCard = ({ infoCard }) => {
   return (
     <div>
-      <span className="about__info-title">{infoCard.title}</span>
+      <span className="about__info-title">{infoCard.title}+</span>
       <span className="about__info-name">
         {infoCard.name}
         <br />
@@ -23,11 +23,12 @@ const About = () => {
   const { icons } = iconsContext;
   
   const downloadAlt = foundIcon(icons, 'UilDownloadAlt');
+  const yearsWorked = (new Date().getUTCFullYear() - '2018').toString();
 
   const aboutCardsInfo = [
-    { title: '08+', name: 'Years', desc: 'experience' },
-    { title: '20+', name: 'Completed', desc: 'project' },
-    { title: '05+', name: 'Companies', desc: 'worked' },
+    { title: yearsWorked, name: 'Years', desc: 'experience' },
+    { title: '20', name: 'Completed', desc: 'project' },
+    { title: '05', name: 'Companies', desc: 'worked' },
   ];
   return (
     <section className="about section" id="about">
@@ -40,17 +41,11 @@ const About = () => {
           <p className="about__description">
             I have been a software enthusiast IT since 2015.
             <br />
-            As a professional, my main goal is to increase my knowledge in this field, things like new
-            technologies and programming languages. In particular, I look enjoy discovering their
-            weaknesses and strengths.
+            As a professional, my main goal is to increase my knowledge in this field, things like new technologies and programming languages. In particular, I look enjoy discovering their weaknesses and strengths.
             <br />
-            In addition, I consider myself a self-motivated, enthusiastic and resilient person and I
-            have the ability to learn fast and adapt to any changes quickly. Moreover, I am
-            very sociable, I love to learn from other cultures.
+            In addition, I consider myself a self-motivated, enthusiastic and resilient person and I have the ability to learn fast and adapt to any changes quickly. Moreover, I am very sociable, I love to learn from other cultures.
             <br />
-            I have a degree on biochemistry and worked in this field for some years. Nevertheless, in
-            2015 I started learning about IT, and finally I pursued my dream of starting with an
-            independent team for websites for clients for a living.
+            I have a degree on biochemistry and worked in this field for some years. Nevertheless, in 2015 I started learning about IT, and finally I pursued my dream of starting with an independent team for websites for clients for a living.
           </p>
 
           <div className="about__info">

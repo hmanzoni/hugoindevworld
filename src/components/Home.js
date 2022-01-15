@@ -66,8 +66,7 @@ const Home = () => {
             <h1 className="home__title">Hi, I'm Hugo!</h1>
             <h3 className="home__subtitle">Frontend Developer</h3>
             <p className="home__description">
-              High level experience in web and software development knowledge,
-              and continuously learning new stacks.
+              High level experience in web and software development knowledge, and continuously learning new stacks.
             </p>
             {/* <a href="!#" className="button button--flex">
               Contact Me <UilMessage className="button__icon" />

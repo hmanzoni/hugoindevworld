@@ -46,7 +46,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__bg">
         <div className="footer__container container grid">
-          <div className="h1 footer__title">Alexa</div>
+          <div className="h1 footer__title">Hugo</div>
           <span className="footer__subtitle">Software development</span>
           <ul className="footer__links">
             {linksInt.map((linkInt, index) => (
