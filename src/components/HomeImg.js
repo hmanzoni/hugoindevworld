@@ -30,7 +30,7 @@ const HomeImg = () => {
           x="12"
           y="18"
           // xlink:href="assets/img/perfil.png"
-          xmlnsXlink={perfil}
+          xlinkHref={perfil}
         />
       </g>
     </svg>
