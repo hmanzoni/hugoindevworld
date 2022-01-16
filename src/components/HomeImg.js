@@ -28,7 +28,7 @@ const HomeImg = () => {
         <image
           className="home__blob-img"
           x="12"
-          y="18"
+          y="32"
           // xlink:href="assets/img/perfil.png"
           xlinkHref={perfil}
         />
