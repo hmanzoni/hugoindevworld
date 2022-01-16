@@ -31,6 +31,8 @@ const Footer = () => {
   const iconsContext = useContext(iconContext);
   const { icons } = iconsContext;
 
+  const actualYear = new Date().getUTCFullYear();
+
   const arrIconsSocial = [
     {icon: foundIcon(icons, 'UilTwitterAlt'), link: '!#'}, 
     {icon: foundIcon(icons, 'UilFacebookF'), link: '!#'}, 
@@ -59,7 +61,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <p className="footer__copy">&#169; Hugo all rights reserved</p>
+        <p className="footer__copy">&#169; {actualYear} Hugo. All rights reserved</p>
       </div>
     </footer>
   );
