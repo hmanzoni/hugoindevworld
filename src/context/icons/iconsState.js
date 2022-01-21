@@ -19,18 +19,16 @@ const IconsState = (props) => {
       iconsArr.forEach(iconInfo => {
         if (iconInfo.iconName) {
           const i = ico[iconInfo.iconName];
-          const iProps = iconInfo?.propsIcon || {};
+          const iProps = iconInfo.propsIcon || {};
           if (iconInfo.iconSize) i.defaultProps.size = iconInfo.iconSize;
           if (iconInfo.iconColor) i.defaultProps.color = iconInfo.iconColor;
           elementArray.push(React.createElement(i, iProps));
         }
       });
-      // console.log(elementArray);
       dispatch({
         type: GET_ICON,
         payload: elementArray,
       });
-      // console.log(state.icons);
     } catch (error) {
       console.log(error);
     }
@@ -42,7 +40,6 @@ const IconsState = (props) => {
         type: LOADING_FINISH,
         payload: false,
       });
-      // console.log(state.loading);
     } catch (error) {
       console.log(error);
     }
