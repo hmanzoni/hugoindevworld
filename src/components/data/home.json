@@ -1,0 +1,17 @@
+{
+  "en": {
+    "title": "Hi, I'm Hugo!",
+    "subtitle": "Frontend Developer",
+    "description": "High level experience in web and software development knowledge, and continuously learning new stacks.",
+    "socialLinksInfo": [
+      { "id": "1", "link": "#!", "icon": "UilLinkedinAlt" },
+      { "id": "2", "link": "#!", "icon": "UilDribbble" },
+      { "id": "3", "link": "#!", "icon": "UilGithubAlt" }
+    ],
+    "iconHomeScrollInfo": [
+      { "name": "mouseAlt", "icon": "UilMouseAlt", "classIcon": "home__scroll-mouse" },
+      { "name": "arrowDown", "icon": "UilArrowDown", "classIcon": "home__scroll-arrow"}
+    ],
+    "scollText": "Scroll down"
+  }
+}

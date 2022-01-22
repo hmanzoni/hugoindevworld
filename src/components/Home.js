@@ -3,6 +3,7 @@ import '../assets/css/home.css';
 import iconContext from '../context/icons/iconsContext';
 import HomeImg from './HomeImg';
 import { foundIcon } from './ui/icons';
+import homeInfo from './data/home';
 
 const HomeSocialLink = ({ infoCard }) => (
   <a
@@ -14,11 +15,11 @@ const HomeSocialLink = ({ infoCard }) => (
     {infoCard.icon}
   </a>
 );
-const HomeScroll = ({iconHomeScroll}) => (
+const HomeScroll = ({iconHomeScroll, scollText}) => (
   <div className="home__scroll">
     <a href="#about" className="home__scroll-button button--flex">
       {iconHomeScroll.mouseAlt}
-      <span className="home__scroll-name">Scroll down</span>
+      <span className="home__scroll-name">{scollText}</span>
       {iconHomeScroll.arrowDown}
     </a>
   </div>
@@ -28,26 +29,17 @@ const Home = () => {
 
   const iconsContext = useContext(iconContext);
   const { icons } = iconsContext;
-  const socialLinks = [
-    {
-      link: '!#',
-      icon: foundIcon(icons, 'UilLinkedinAlt'),
-    },
-    {
-      link: '!#',
-      icon: foundIcon(icons, 'UilDribbble'),
-    },
-    {
-      link: '!#',
-      icon: foundIcon(icons, 'UilGithubAlt'),
-    },
-  ];
+  const {title, subtitle, description, socialLinksInfo, iconHomeScrollInfo, scollText} = homeInfo['en'];
+  const socialLinks = [];
+  const iconHomeScroll = {};
 
-  const iconHomeScroll = {
-    mouseAlt: foundIcon(icons, 'UilMouseAlt', 'home__scroll-mouse'), 
-    arrowDown: foundIcon(icons, 'UilArrowDown', 'home__scroll-arrow')
-  }
+  socialLinksInfo.forEach(iconInfo => {
+    const params = {link: iconInfo.link, icon: foundIcon(icons, iconInfo.icon)}
+    socialLinks.push(params);
+  });
 
+  iconHomeScrollInfo.forEach(iconInfo => iconHomeScroll[iconInfo.name] = foundIcon(icons, iconInfo.icon, iconInfo.classIcon));
+  
   return (
     <section className="home section" id="home">
       <div className="home__container container grid">
@@ -63,17 +55,15 @@ const Home = () => {
           </div>
 
           <div className="home__data">
-            <h1 className="home__title">Hi, I'm Hugo!</h1>
-            <h3 className="home__subtitle">Frontend Developer</h3>
-            <p className="home__description">
-              High level experience in web and software development knowledge, and continuously learning new stacks.
-            </p>
+            <h1 className="home__title">{title}</h1>
+            <h3 className="home__subtitle">{subtitle}</h3>
+            <p className="home__description">{description}</p>
             {/* <a href="!#" className="button button--flex">
               Contact Me <UilMessage className="button__icon" />
             </a> */}
           </div>
         </div>
-        <HomeScroll iconHomeScroll={iconHomeScroll} />
+        <HomeScroll iconHomeScroll={iconHomeScroll} scollText={scollText} />
       </div>
     </section>
   );
