@@ -19,7 +19,7 @@ const Hugo = () => {
   const { loadingFinish, loading, getIcons, icons } = iconsContext;
 
   useEffect(() => {
-    if (!icons?.length) {
+    if (!icons.length) {
       getIcons(arrIcons);
     }
     if (loading) {
