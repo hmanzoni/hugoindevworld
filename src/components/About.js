@@ -31,7 +31,7 @@ const About = () => {
   const iconsContext = useContext(iconContext);
   const { icons } = iconsContext;
   
-  const {title, subtitle, downloadAltIcon, description, aboutCardsInfo, downloadText} = aboutInfo;
+  const {title, subtitle, downloadAltIcon, description, aboutCardsInfo, downloadText} = aboutInfo['en'];
   const downloadAlt = foundIcon(icons, downloadAltIcon);
 
   return (

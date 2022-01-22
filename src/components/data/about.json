@@ -1,18 +1,19 @@
 {
-  "lang": "en",
-  "title": "About me",
-  "subtitle": "How I start in IT world",
-  "downloadAltIcon": "UilDownloadAlt",
-  "downloadText": "Download CV",
-  "description": [
-    "I have been a software enthusiast IT since 2015.", 
-    "As a professional, my main goal is to increase my knowledge in this field, things like new technologies and programming languages. In particular, I look enjoy discovering their weaknesses and strengths.", 
-    "In addition, I consider myself a self-motivated, enthusiastic and resilient person and I have the ability to learn fast and adapt to any changes quickly. Moreover, I am very sociable, I love to learn from other cultures.", 
-    "I have a degree on biochemistry and worked in this field for some years. Nevertheless, in 2015 I started learning about IT, and finally I pursued my dream of starting with an independent team for websites for clients for a living."
-  ],
-  "aboutCardsInfo": [
-    { "id": "1", "title": "2018", "name": "Years", "desc": "experience" },
-    { "id": "2", "title": "20", "name": "Completed", "desc": "project" },
-    { "id": "3", "title": "05", "name": "Companies", "desc": "worked" }
-  ]
+  "en": {
+    "title": "About me",
+    "subtitle": "How I start in IT world",
+    "downloadAltIcon": "UilDownloadAlt",
+    "downloadText": "Download CV",
+    "description": [
+      "I have been a software enthusiast IT since 2015.", 
+      "As a professional, my main goal is to increase my knowledge in this field, things like new technologies and programming languages. In particular, I look enjoy discovering their weaknesses and strengths.", 
+      "In addition, I consider myself a self-motivated, enthusiastic and resilient person and I have the ability to learn fast and adapt to any changes quickly. Moreover, I am very sociable, I love to learn from other cultures.", 
+      "I have a degree on biochemistry and worked in this field for some years. Nevertheless, in 2015 I started learning about IT, and finally I pursued my dream of starting with an independent team for websites for clients for a living."
+    ],
+    "aboutCardsInfo": [
+      { "id": "1", "title": "2018", "name": "Years", "desc": "experience" },
+      { "id": "2", "title": "20", "name": "Completed", "desc": "project" },
+      { "id": "3", "title": "05", "name": "Companies", "desc": "worked" }
+    ]
+  }
 }
