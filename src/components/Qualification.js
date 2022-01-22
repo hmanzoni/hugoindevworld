@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import '../assets/css/qualification.css';
 import iconContext from '../context/icons/iconsContext';
 import { foundIcon } from './ui/icons';
+import qualificationInfo from './data/qualification';
 
 const QualificationRounderLine = () => (
   <div>
@@ -37,88 +38,31 @@ const Qualification = () => {
   
   const iconsContext = useContext(iconContext);
   const { icons } = iconsContext;
+  
+  const {title, subtitle, tabs, educations, works, mainIcon1, mainIcon2, mainIcon3} = qualificationInfo['en'];
 
-  const graduationCap = foundIcon(icons, 'UilGraduationCap', 'qualification__icon');
-  const briefcaseAlt = foundIcon(icons, 'UilBriefcaseAlt', 'qualification__icon');
-  const calendarAlt = foundIcon(icons, 'UilCalendarAlt');
-
-  const educations = [
-    {
-      id: 1,
-      title: 'Biochemistry',
-      subtitle: 'Universidad Nacional de Córdoba',
-      rangeYears: '2008 - 2012',
-      order: 1,
-    },
-    {
-      id: 2,
-      title: 'Basic Web Develop',
-      subtitle: 'Udemy',
-      rangeYears: '2017 - 2019',
-      order: 2,
-    },
-    {
-      id: 3,
-      title: 'Advance Web, Sofware Develop',
-      subtitle: 'Udemy',
-      rangeYears: '2019 - Actual',
-      order: 3,
-    },
-    {
-      id: 4,
-      title: 'DevOps Skills',
-      subtitle: 'Udemy',
-      rangeYears: '2021 - Actual',
-      order: 4,
-    }
-  ];
-  const works = [
-    {
-      id: 1,
-      title: 'Web Developer',
-      subtitle: 'Dana Giraldo',
-      rangeYears: '07/2018 - 10/2018',
-      order: 1,
-    },
-    {
-      id: 2,
-      title: 'Web Developer',
-      subtitle: 'Gustos Alto Adige',
-      rangeYears: '12/2018 - 07/2020',
-      order: 2,
-    },
-    {
-      id: 3,
-      title: 'Sofware Developer',
-      subtitle: 'Trueblue',
-      rangeYears: '09/2020 - 03/2021',
-      order: 3,
-    }
-  ];
+  const graduationCap = foundIcon(icons, mainIcon1.name, mainIcon1.class);
+  const briefcaseAlt = foundIcon(icons, mainIcon2.name, mainIcon2.class);
+  const calendarAlt = foundIcon(icons, mainIcon3.name);
 
   return (
     <section className="qualification section">
-      <h2 className="section__title">Qualification</h2>
-      <span className="section__subtitle">My personal journey</span>
+      <h2 className="section__title">{title}</h2>
+      <span className="section__subtitle">{subtitle}</span>
 
       <div className="qualification__container container">
         <div className="qualification__tabs">
-          <div
-            className={`qualification__button button--flex ${tabActive === 'education' && "qualification__active"}`}
-            data-target="#education"
-            onClick={() => setTabActive('education')}
-          >
-            {graduationCap}
-            Education
-          </div>
-          <div
-            className={`qualification__button button--flex ${tabActive === 'work' && "qualification__active"}`}
-            data-target="#work"
-            onClick={() => setTabActive('work')}
-          >
-            {briefcaseAlt}
-            Work
-          </div>
+          {tabs.map((tab, i) => (
+            <div
+              key={i}
+              className={`qualification__button button--flex ${tabActive === tab.targetData && "qualification__active"}`}
+              data-target={`#${tab.targetData}`}
+              onClick={() => setTabActive(tab.targetData)}
+            >
+              {tab.icon === 'mainIcon1' ? graduationCap : briefcaseAlt}
+              {tab.title}
+            </div>
+          ))}
         </div>
 
         <div className="qualification__sections">

@@ -1,0 +1,83 @@
+{
+  "en": {
+    "title": "Qualification",
+    "subtitle": "My personal journey",
+    "tabs": [
+      {
+        "icon": "mainIcon1",
+        "title": "Education",
+        "targetData": "education"
+      },
+      {
+        "icon": "mainIcon2",
+        "title":"Work",
+        "targetData": "work"
+      }
+    ],
+    "mainIcon1": {
+      "name": "UilGraduationCap",
+      "class":"qualification__icon"
+    },
+    "mainIcon2": {
+      "name": "UilBriefcaseAlt",
+      "class": "qualification__icon"
+    },
+    "mainIcon3": {
+      "name": "UilCalendarAlt",
+      "class": ""
+    },
+    "educations": [
+      {
+        "id": 1,
+        "title": "Biochemistry",
+        "subtitle": "Universidad Nacional de Córdoba",
+        "rangeYears": "2008 - 2012",
+        "order": 1
+      },
+      {
+        "id": 2,
+        "title": "Basic Web Develop",
+        "subtitle": "Udemy",
+        "rangeYears": "2017 - 2019",
+        "order": 2
+      },
+      {
+        "id": 3,
+        "title": "Advance Web, Sofware Develop",
+        "subtitle": "Udemy",
+        "rangeYears": "2019 - Actual",
+        "order": 3
+      },
+      {
+        "id": 4,
+        "title": "DevOps Skills",
+        "subtitle": "Udemy",
+        "rangeYears": "2021 - Actual",
+        "order": 4
+      }
+    ],
+    "works": [
+      {
+        "id": 1,
+        "title": "Web Developer",
+        "subtitle": "Dana Giraldo",
+        "rangeYears": "07/2018 - 10/2018",
+        "order": 1
+      },
+      {
+        "id": 2,
+        "title": "Web Developer",
+        "subtitle": "Gustos Alto Adige",
+        "rangeYears": "12/2018 - 07/2020",
+        "order": 2
+      },
+      {
+        "id": 3,
+        "title": "Sofware Developer",
+        "subtitle": "Trueblue",
+        "rangeYears": "09/2020 - 03/2021",
+        "order": 3
+      }
+    ]
+  }
+}
