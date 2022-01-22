@@ -13,5 +13,7 @@
       { "name": "arrowDown", "icon": "UilArrowDown", "classIcon": "home__scroll-arrow"}
     ],
     "scollText": "Scroll down"
-  }
+  },
+  "es": {},
+  "it": {}
 }

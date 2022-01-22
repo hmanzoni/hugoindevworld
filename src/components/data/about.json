@@ -15,5 +15,7 @@
       { "id": "2", "title": "20", "name": "Completed", "desc": "project" },
       { "id": "3", "title": "05", "name": "Companies", "desc": "worked" }
     ]
-  }
+  },
+  "es": {},
+  "it": {}
 }

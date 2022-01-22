@@ -67,5 +67,7 @@
       { "name": "PostgreSQL", "percent": "50%" },
       { "name": "MariaSQL", "percent": "50%" }
     ]
-  }
+  },
+  "es": {},
+  "it": {}
 }
