@@ -1,0 +1,59 @@
+{
+  "en": {
+    "title": "Services",
+    "subtitle": "What i can offer",
+    "textServicesContent": "View More",
+    "mainIcon1": {
+      "name": "UilCheckCircle",
+      "class":"services__modal-icon"
+    },
+    "servicesCardsInfo": [
+      {
+        "title": "DevOps",
+        "icon": "UilCloudDatabaseTree",
+        "iconClass":"services__icon",
+        "subtitle": "DevOps",
+        "code": "DO",
+        "isOpen": false,
+        "textsList": [
+          "Integrate server in Azure or Firebase.",
+          "Integrate Docker and Kubernetes.",
+          "Improve deployment process.",
+          "Integrate GIT (version controller) in your code.",
+          "Create custom process with Bash.",
+          "Setup Services SMTP."
+        ]
+      },
+      {
+        "title": "Frontend",
+        "icon": "UilWebGrid",
+        "iconClass":"services__icon",
+        "subtitle": "Frontend",
+        "code": "FE",
+        "isOpen": false,
+        "textsList": [
+          "Integrate functions for new business requirements.",
+          "Make visual changes for renew a software/site.",
+          "Improve and optimize the existing code.",
+          "Debug and resolve bugs."
+        ]
+      },
+      {
+        "title": "Backend",
+        "icon": "UilServer",
+        "iconClass":"services__icon",
+        "subtitle": "Backend",
+        "code": "BE",
+        "isOpen": false,
+        "textsList": [
+          "Integrate a API services for consulting data in DB.",
+          "Integrate new data structure.",
+          "Integrate a services for send emails.",
+          "Control and update the package versions."
+        ]
+      }
+    ]
+  },
+  "es": {},
+  "it": {}
+}

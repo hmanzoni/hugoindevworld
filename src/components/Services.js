@@ -3,6 +3,7 @@ import { UilArrowRight, UilTimes } from '@iconscout/react-unicons';
 import '../assets/css/services.css';
 import iconContext from '../context/icons/iconsContext';
 import { foundIcon } from './ui/icons';
+import servicesInfo from './data/services';
 
 const ServicesList = ({ text, checkCircle }) => (
   <li className="services__modal-service">
@@ -11,7 +12,7 @@ const ServicesList = ({ text, checkCircle }) => (
   </li>
 );
 
-const ServicesContent = ({ cardInfo, clickerFn, checkCircle }) => {
+const ServicesContent = ({ cardInfo, clickerFn, checkCircle, textServicesContent }) => {
   return (
     <div className="services__content">
       <div>
@@ -23,7 +24,7 @@ const ServicesContent = ({ cardInfo, clickerFn, checkCircle }) => {
         </h3>
       </div>
       <span className="button button--flex button--small button--link services__button" onClick={() => clickerFn(cardInfo.code)}>
-        View More
+        {textServicesContent}
         <UilArrowRight className="button__icon" />
       </span>
       <div className={`services__modal ${cardInfo.isOpen && 'active-modal'}`} onClick={(e) => e.target.className === 'services__modal active-modal' && clickerFn(cardInfo.code)}>
@@ -51,50 +52,16 @@ const Services = () => {
   const iconsContext = useContext(iconContext);
   const { icons } = iconsContext;
 
-  const checkCircle = foundIcon(icons, 'UilCheckCircle', 'services__modal-icon');
-  const services = [
-    {
-      title: 'DevOps',
-      icon: foundIcon(icons, 'UilCloudDatabaseTree', 'services__icon'),
-      subtitle: 'DevOps',
-      code: 'DO',
-      isOpen: false,
-      textsList: [
-        'Integrate server in Azure or Firebase.',
-        'Integrate Docker and Kubernetes.',
-        'Improve deployment process.',
-        'Integrate GIT (version controller) in your code.',
-        'Create custom process with Bash.',
-        'Setup Services SMTP.',
-      ],
-    },
-    {
-      title: 'Frontend',
-      icon: foundIcon(icons, 'UilWebGrid', 'services__icon'),
-      subtitle: 'Frontend',
-      code: 'FE',
-      isOpen: false,
-      textsList: [
-        'Integrate functions for new business requirements.',
-        'Make visual changes for renew a software/site.',
-        'Improve and optimize the existing code.',
-        'Debug and resolve bugs.',
-      ],
-    },
-    {
-      title: 'Backend',
-      icon: foundIcon(icons, 'UilServer', 'services__icon'),
-      subtitle: 'Backend',
-      code: 'BE',
-      isOpen: false,
-      textsList: [
-        'Integrate a API services for consulting data in DB.',
-        'Integrate new data structure.',
-        'Integrate a services for send emails.',
-        'Control and update the package versions.',
-      ],
-    },
-  ];
+  const {title, subtitle, textServicesContent, mainIcon1, servicesCardsInfo} = servicesInfo['en'];
+
+  const checkCircle = foundIcon(icons, mainIcon1.name, mainIcon1.class);
+  const services = [];
+
+  servicesCardsInfo.forEach(service => {
+    const iconElement = foundIcon(icons, service.icon, service.iconClass);
+    service.icon = iconElement
+    services.push(service);
+  });
 
   if (!servicesContent.length) {
     setServicesContent(services);
@@ -113,11 +80,11 @@ const Services = () => {
 
   return (
     <section className="services section">
-      <h2 className="section__title">Services</h2>
-      <span className="section__subtitle">What i can offer</span>
+      <h2 className="section__title">{title}</h2>
+      <span className="section__subtitle">{subtitle}</span>
       <div className="services__container container grid">
         {servicesContent.map((serviceContent, index) => (
-          <ServicesContent key={index} cardInfo={serviceContent} clickerFn={handlerOpenClose} checkCircle={checkCircle} />
+          <ServicesContent key={index} cardInfo={serviceContent} clickerFn={handlerOpenClose} checkCircle={checkCircle} textServicesContent={textServicesContent} />
         ))}
       </div>
     </section>
