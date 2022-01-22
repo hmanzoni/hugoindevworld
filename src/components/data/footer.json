@@ -1,0 +1,17 @@
+{
+  "en": {
+    "title": "Hugo",
+    "subtitle": "Software development",
+    "rightsText": "Hugo. All rights reserved",
+    "linksInt": [
+      { "title": "Services", "link": "!#" },
+      { "title": "Portfolio", "link": "!#" },
+      { "title": "Contactme", "link": "!#" }
+    ],
+    "iconSocial": [
+      { "id": "1", "link": "#!", "icon": "UilTwitterAlt" },
+      { "id": "2", "link": "#!", "icon": "UilFacebookF" },
+      { "id": "3", "link": "#!", "icon": "UilInstagram" }
+    ]
+  }
+}
