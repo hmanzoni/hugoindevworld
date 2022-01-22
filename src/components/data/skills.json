@@ -1,0 +1,71 @@
+{
+  "en": {
+    "title": "Skills",
+    "subtitle": "My technical level",
+    "mainIconSkills": {
+      "name": "UilBracketsCurly",
+      "class":"skills__icon"
+    },
+    "skillsInfo": [
+      {
+        "title": "Frontend",
+        "code": "FE",
+        "icon": "UilWebGrid", 
+        "iconClass": "skills__icon",
+        "isOpen": false,
+        "subtitle": "More than 4 years",
+        "cardsSkills": []
+      },
+      {
+        "title": "Backend and DB",
+        "code": "BE",
+        "icon": "UilServer", 
+        "iconClass": "skills__icon",
+        "isOpen": false,
+        "subtitle": "More than 2 years",
+        "cardsSkills": []
+      },
+      {
+        "title": "DevOps",
+        "code": "DO",
+        "icon": "UilCloudDatabaseTree", 
+        "iconClass": "skills__icon",
+        "isOpen": false,
+        "subtitle": "More than 1 years",
+        "cardsSkills": []
+      }
+    ],
+    "FE": [
+      { "name": "HTML", "percent": "85%" },
+      { "name": "CSS", "percent": "85%" },
+      { "name": "Sass", "percent": "80%" },
+      { "name": "JavaScript", "percent": "95%" },
+      { "name": "TypeScript", "percent": "95%" },
+      { "name": "React", "percent": "85%" },
+      { "name": "Redux", "percent": "70%" },
+      { "name": "Gulp", "percent": "70%" },
+      { "name": "Webpack", "percent": "70%" }
+    ],
+    "DO": [
+      { "name": "Azure", "percent": "70%" },
+      { "name": "Firebase", "percent": "70%" },
+      { "name": "Docker", "percent": "85%" },
+      { "name": "Kubernetes", "percent": "80%" },
+      { "name": "Bash", "percent": "60%" },
+      { "name": "Heroku", "percent": "70%" },
+      { "name": "GIT", "percent": "95%" }
+    ],
+    "BE": [
+      { "name": "PHP", "percent": "75%" },
+      { "name": "Node JS", "percent": "85%" },
+      { "name": "Express JS", "percent": "85%" },
+      { "name": "Python", "percent": "70%" },
+      { "name": "Laravel", "percent": "75%" },
+      { "name": "MongoDB", "percent": "65%" },
+      { "name": "My SQL", "percent": "65%" },
+      { "name": "SQL Server", "percent": "65%" },
+      { "name": "PostgreSQL", "percent": "50%" },
+      { "name": "MariaSQL", "percent": "50%" }
+    ]
+  }
+}

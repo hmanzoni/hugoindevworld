@@ -3,6 +3,7 @@ import { UilAngleDown } from '@iconscout/react-unicons';
 import '../assets/css/skills.css';
 import iconContext from '../context/icons/iconsContext';
 import { foundIcon } from './ui/icons';
+import skillInfo from './data/skills';
 
 const SkillCard = ({ infoCard }) => (
   <div className="skills__data">
@@ -41,66 +42,19 @@ const Skills = () => {
   const iconsContext = useContext(iconContext);
   const { icons } = iconsContext;
 
-  const infoFECards = [
-    { name: 'HTML', percent: '85%' },
-    { name: 'CSS', percent: '85%' },
-    { name: 'Sass', percent: '80%' },
-    { name: 'JavaScript', percent: '95%' },
-    { name: 'TypeScript', percent: '95%' },
-    { name: 'React', percent: '85%' },
-    { name: 'Redux', percent: '70%' },
-    { name: 'Gulp', percent: '70%' },
-    { name: 'Webpack', percent: '70%' },
-  ];
-  const infoDevOpsCards = [
-    { name: 'Azure', percent: '70%' },
-    { name: 'Firebase', percent: '70%' },
-    { name: 'Docker', percent: '85%' },
-    { name: 'Kubernetes', percent: '80%' },
-    { name: 'Bash', percent: '60%' },
-    { name: 'Heroku', percent: '70%' },
-    { name: 'GIT', percent: '95%' },
-  ];
-  const infoBECards = [
-    { name: 'PHP', percent: '75%' },
-    { name: 'Node JS', percent: '85%' },
-    { name: 'Express JS', percent: '85%' },
-    { name: 'Python', percent: '70%' },
-    { name: 'Laravel', percent: '75%' },
-    { name: 'MongoDB', percent: '65%' },
-    { name: 'My SQL', percent: '65%' },
-    { name: 'SQL Server', percent: '65%' },
-    { name: 'PostgreSQL', percent: '50%' },
-    { name: 'MariaSQL', percent: '50%' },
-  ];
-  const skills = [
-    {
-      title: 'Frontend',
-      code: 'FE',
-      icon: foundIcon(icons, 'UilWebGrid', 'skills__icon'),
-      isOpen: false,
-      subtitle: 'More than 4 years',
-      cardsSkills: infoFECards,
-    },
-    {
-      title: 'Backend and DB',
-      code: 'BE',
-      icon: foundIcon(icons, 'UilServer', 'skills__icon'),
-      isOpen: false,
-      subtitle: 'More than 2 years',
-      cardsSkills: infoBECards,
-    },
-    {
-      title: 'DevOps',
-      code: 'DO',
-      icon: foundIcon(icons, 'UilCloudDatabaseTree', 'skills__icon'),
-      isOpen: false,
-      subtitle: 'More than 1 years',
-      cardsSkills: infoDevOpsCards,
-    },
-  ];
+  const {title, subtitle, mainIconSkills, skillsInfo} = skillInfo['en'];
+  const skills = [];
 
-  const bracketsCurly = foundIcon(icons, 'UilBracketsCurly', 'skills__icon');
+  skillsInfo.forEach(skill => {
+    const iconElement = foundIcon(icons, skill.icon, skill.iconClass)
+    skill.icon = iconElement;
+    const skillCardsInformation = skillInfo['en'][skill.code];
+    skill.cardsSkills = skillCardsInformation;
+    
+    skills.push(skill);
+  });
+
+  const bracketsCurly = foundIcon(icons, mainIconSkills.name, mainIconSkills.class);
 
   if (!skillsContents.length) {
     setSkillsContents(skills);
@@ -119,8 +73,8 @@ const Skills = () => {
 
   return (
     <section className="skills section" id="skills">
-      <h2 className="section__title">Skills</h2>
-      <span className="section__subtitle">My technical level</span>
+      <h2 className="section__title">{title}</h2>
+      <span className="section__subtitle">{subtitle}</span>
 
       <div className="skills__container container grid">
         <div>
