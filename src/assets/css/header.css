@@ -43,6 +43,16 @@
   cursor: pointer;
 }
 
+.nav__lang {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 5px;
+}
+
+.nav__lang > div {
+  cursor: pointer;
+}
+
 .nav__logo:hover,
 .nav__toggle:hover {
   color: var(--first-color);

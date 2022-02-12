@@ -17,11 +17,12 @@ const NavItems = ({ infoCard, hideMenu }) => (
 
 const Header = () => {
   const darkTheme = 'dark-theme';
+  const langAvailables = ['EN', 'ES', 'IT'];
   const [isActive, setActive] = useState(false);
   const [darkThemeActive, setDarkThemeActive] = useState(false);
 
   const iconsContext = useContext(iconContext);
-  const { icons } = iconsContext;
+  const { icons, changeLanguage } = iconsContext;
 
   const getCurrentTheme = (selectTheme) => selectTheme !== 'dark' ? 'dark' : 'light';
 
@@ -50,6 +51,9 @@ const Header = () => {
         <a href="!#" className="nav__logo">
           Hugo
         </a>
+        <div className="nav__lang">
+          {langAvailables.map( (lang, index) => <div key={index} onClick={()=>changeLanguage(lang)}>{lang}</div>)}
+        </div>
         <div className={`nav__menu ${isActive ? "show-menu" : ""}`} id="nav-menu">
           <ul className="nav__list grid">
             {linksNavitems.map((linkNavitem, index) => (
