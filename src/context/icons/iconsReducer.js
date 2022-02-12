@@ -1,4 +1,4 @@
-import { GET_ICON, LOADING_FINISH } from '../types';
+import { GET_ICON, LOADING_FINISH, CHANGE_LANG } from '../types';
 
 const reducerFn = (state, action) => {
   switch (action.type) {
@@ -11,6 +11,11 @@ const reducerFn = (state, action) => {
       return {
         ...state,
         loading: action.payload
+      };
+    case CHANGE_LANG:
+      return {
+        ...state,
+        language: action.payload
       };
     default:
       return state;

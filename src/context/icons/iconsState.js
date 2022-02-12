@@ -2,13 +2,14 @@ import React, { useReducer } from 'react';
 import * as ico from '@iconscout/react-unicons';
 import iconsContext from './iconsContext';
 import iconsReducer from './iconsReducer';
-import { GET_ICON, LOADING_FINISH } from '../types';
+import { GET_ICON, LOADING_FINISH, CHANGE_LANG } from '../types';
 
 const IconsState = (props) => {
 
   const initialState = {
     icons: [],
-    loading: true
+    loading: true,
+    language: 'en'
   };
 
   const [state, dispatch] = useReducer(iconsReducer, initialState);
@@ -45,13 +46,26 @@ const IconsState = (props) => {
     }
   }
 
+  const changeLanguage = (lang) => {
+    try {
+      dispatch({
+        type: CHANGE_LANG,
+        payload: lang.toLocaleLowerCase(),
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <iconsContext.Provider
       value={{
         icons: state.icons,
         loading: state.loading,
+        language: state.language,
         getIcons,
-        loadingFinish
+        loadingFinish,
+        changeLanguage
       }}
     >
       {props.children}
