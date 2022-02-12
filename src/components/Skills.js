@@ -1,9 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { UilAngleDown } from '@iconscout/react-unicons';
 import '../assets/css/skills.css';
 import iconContext from '../context/icons/iconsContext';
 import { foundIcon } from './ui/icons';
 import skillInfo from './data/skills';
+import skillsCards from './data/skillsCards';
 
 const SkillCard = ({ infoCard }) => (
   <div className="skills__data">
@@ -40,25 +41,24 @@ const Skills = () => {
   const [skillsContents, setSkillsContents] = useState([]);
   
   const iconsContext = useContext(iconContext);
-  const { icons } = iconsContext;
+  const { icons, language } = iconsContext;
 
-  const {title, subtitle, mainIconSkills, skillsInfo} = skillInfo['en'];
-  const skills = [];
-
-  skillsInfo.forEach(skill => {
-    const iconElement = foundIcon(icons, skill.icon, skill.iconClass)
-    skill.icon = iconElement;
-    const skillCardsInformation = skillInfo['en'][skill.code];
-    skill.cardsSkills = skillCardsInformation;
-    
-    skills.push(skill);
-  });
+  const {title, subtitle, mainIconSkills, skillsInfo} = skillInfo[language || 'en'];
 
   const bracketsCurly = foundIcon(icons, mainIconSkills.name, mainIconSkills.class);
 
-  if (!skillsContents.length) {
+  useEffect(() => {
+    const skills = [];
+    skillsInfo.forEach(skill => {
+      const iconElement = foundIcon(icons, skill.icon, skill.iconClass)
+      skill.icon = iconElement;
+      const skillCardsInformation = skillsCards[skill.code];
+      skill.cardsSkills = skillCardsInformation;
+      
+      skills.push(skill);
+    });
     setSkillsContents(skills);
-  }
+  }, [language, skillsInfo, icons]);
 
   const handlerOpenClose = (skillCode) => {
     const index = skillsContents.findIndex(skill => skill.code === skillCode);
