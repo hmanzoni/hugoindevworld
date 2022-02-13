@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import '../assets/css/contact.css';
 import iconContext from '../context/icons/customsContext';
-import { foundIcon } from './ui/icons';
+import foundIcon from './functions/foundIcon';
 
 const ContactInfo = ({ cardInfo }) => {
   const { title, subtitle, icon } = cardInfo;

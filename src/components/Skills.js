@@ -2,7 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { UilAngleDown } from '@iconscout/react-unicons';
 import '../assets/css/skills.css';
 import customContext from '../context/customs/customsContext';
-import { foundIcon } from './ui/icons';
+import foundIcon from './functions/foundIcon';
+import calcYears from './functions/calcYears';
 import skillInfo from './data/skills';
 import skillsCards from './data/skillsCards';
 
@@ -52,8 +53,7 @@ const Skills = () => {
     skillsInfo.forEach(skill => {
       const iconElement = foundIcon(icons, skill.icon, skill.iconClass)
       skill.icon = iconElement;
-      const yearsCalc = (new Date().getUTCFullYear() - skill.year).toString();
-      skill.subtitle = skill.subtitle.replace('$year', yearsCalc);
+      skill.subtitle = calcYears(skill.subtitle, skill.year);
       const skillCardsInformation = skillsCards[skill.code];
       skill.cardsSkills = skillCardsInformation;
       

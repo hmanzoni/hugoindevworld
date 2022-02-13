@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import '../assets/css/home.css';
 import customContext from '../context/customs/customsContext';
 import HomeImg from './HomeImg';
-import { foundIcon } from './ui/icons';
+import foundIcon from './functions/foundIcon';
 import homeInfo from './data/home';
 
 const HomeSocialLink = ({ infoCard }) => (

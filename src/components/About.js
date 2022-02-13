@@ -3,15 +3,15 @@ import '../assets/css/about.css';
 import about from '../assets/img/about.jpg';
 import hugoCV from '../assets/pdf/HugoManzoni.CV.pdf';
 import customContext from '../context/customs/customsContext';
-import { foundIcon } from './ui/icons';
+import calcYears from './functions/calcYears';
+import foundIcon from './functions/foundIcon';
 import aboutInfo from './data/about';
 
 const SingleAboutCard = ({ infoCard }) => {
   let title = infoCard.title;
   const {name, desc} = infoCard;
-  if (name === 'Years') {
-    const yearsWorked = (new Date().getUTCFullYear() - title).toString();
-    title = yearsWorked.length === 1 ? `0${yearsWorked}` : yearsWorked;
+  if (title === '$year' && infoCard.year) {
+    title = calcYears(title, infoCard.year, true);
   }
   return (
     <div>

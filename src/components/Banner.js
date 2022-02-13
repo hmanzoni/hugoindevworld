@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import '../assets/css/project.css';
 import project from '../assets/img/project.png';
 import iconContext from '../context/icons/customsContext';
-import { foundIcon } from './ui/icons';
+import foundIcon from './functions/foundIcon';
 
 const Banner = () => {
   const customsContext = useContext(iconContext);

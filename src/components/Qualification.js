@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import '../assets/css/qualification.css';
 import customContext from '../context/customs/customsContext';
-import { foundIcon } from './ui/icons';
+import foundIcon from './functions/foundIcon';
 import qualificationInfo from './data/qualification';
 
 const QualificationRounderLine = () => (

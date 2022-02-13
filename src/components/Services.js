@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { UilArrowRight, UilTimes } from '@iconscout/react-unicons';
 import '../assets/css/services.css';
 import customContext from '../context/customs/customsContext';
-import { foundIcon } from './ui/icons';
+import foundIcon from './functions/foundIcon';
 import servicesInfo from './data/services';
 
 const ServicesList = ({ text, checkCircle }) => (

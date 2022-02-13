@@ -4,7 +4,7 @@ import {
 } from '@iconscout/react-unicons';
 import '../assets/css/header.css';
 import customContext from '../context/customs/customsContext';
-import { foundIcon } from './ui/icons';
+import foundIcon from './functions/foundIcon';
 
 const NavItems = ({ infoCard, hideMenu }) => (
   <li className="nav__item">
