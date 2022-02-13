@@ -24,7 +24,7 @@ const SingleQualification = ({ infoCard, calendarAlt }) => (
       <span className="qualification__subtitle">{infoCard.subtitle}</span>
       <div className="qualification__calendar">
         {calendarAlt}
-        {infoCard.rangeYears}
+        <p>{infoCard.rangeYears}</p>
       </div>
     </div>
     {(infoCard.order % 2) === 1 && (

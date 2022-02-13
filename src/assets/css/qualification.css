@@ -40,6 +40,9 @@
 }
 
 .qualification__calendar {
+  display: flex;
+  place-items: center;
+  justify-content: space-evenly;
   font-size: var(--smaller-font-size);
   color: var(--text-color-light);
 }
