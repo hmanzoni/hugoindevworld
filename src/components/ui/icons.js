@@ -1,8 +1,5 @@
 const sizeIcons = "32";
 export const arrIcons = [
-  {iconName: 'UilTwitterAlt'},
-  {iconName: 'UilFacebookF'},
-  {iconName: 'UilInstagram'},
   {iconName: 'UilMessage'},
   {iconName: 'UilCalendarAlt'},
   {iconName: 'UilDownloadAlt', propsIcon: {className: "button__icon"}},
@@ -32,7 +29,9 @@ export const arrIcons = [
   {iconName: 'UilServer', propsIcon: {className: "skills__icon"}, iconSize: sizeIcons},
   {iconName: 'UilCloudDatabaseTree', propsIcon: {className: "skills__icon"}, iconSize: sizeIcons},
   {iconName: 'UilArrowUp', propsIcon: {className: "scrollup__icon"}, iconSize: sizeIcons},
+  {iconName: 'UilFacebookF', iconSize: sizeIcons},
+  {iconName: 'UilInstagram', iconSize: sizeIcons},
   {iconName: 'UilLinkedinAlt', iconSize: sizeIcons},
-  {iconName: 'UilDribbble', iconSize: sizeIcons},
+  {iconName: 'UilAward', iconSize: sizeIcons},
   {iconName: 'UilGithubAlt', iconSize: sizeIcons},
 ];
