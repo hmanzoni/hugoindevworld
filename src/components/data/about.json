@@ -29,8 +29,8 @@
     ],
     "aboutCardsInfo": [
       { "id": "1", "title": "2018", "name": "Años", "desc": "experiencia" },
-      { "id": "2", "title": "20", "name": "Completo", "desc": "proyectos" },
-      { "id": "3", "title": "05", "name": "Compañías", "desc": "trabajados" }
+      { "id": "2", "title": "20", "name": "Proyectos", "desc": "completos" },
+      { "id": "3", "title": "05", "name": "Compañías", "desc": "" }
     ]
   },
   "it": {
@@ -46,8 +46,8 @@
     ],
     "aboutCardsInfo": [
       { "id": "1", "title": "2018", "name": "Anni", "desc": "esperienza" },
-      { "id": "2", "title": "20", "name": "Completo", "desc": "progetto" },
-      { "id": "3", "title": "05", "name": "Aziende", "desc": "lavorate" }
+      { "id": "2", "title": "20", "name": "Progetti", "desc": "completatti" },
+      { "id": "3", "title": "05", "name": "Aziende", "desc": "" }
     ]
   }
 }
