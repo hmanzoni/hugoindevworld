@@ -17,7 +17,7 @@ const Hugo = () => {
     if (!icons.length) {
       getIcons(arrIcons);
     }
-  }, [, icons, getIcons ]);
+  }, [icons, getIcons]);
 
   const arrowUp = foundIcon(icons, 'UilArrowUp', 'scrollup__icon');
 
