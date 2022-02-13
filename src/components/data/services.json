@@ -54,6 +54,114 @@
       }
     ]
   },
-  "es": {},
-  "it": {}
+  "es": {
+    "title": "Servicios",
+    "subtitle": "Que puedo ofrecer",
+    "textServicesContent": "Vea más",
+    "mainIcon1": {
+      "name": "UilCheckCircle",
+      "class":"services__modal-icon"
+    },
+    "servicesCardsInfo": [
+      {
+        "title": "DevOps",
+        "icon": "UilCloudDatabaseTree",
+        "iconClass":"services__icon",
+        "subtitle": "DevOps",
+        "code": "DO",
+        "isOpen": false,
+        "textsList": [
+          "Integraciones en Azure or Firebase servers.",
+          "Integraciones con Docker y Kubernetes.",
+          "Optimizaciones en el proceso de deployment.",
+          "Integraciones GIT (version controller) en tu codigo.",
+          "Creación procesos customs con Bash.",
+          "Configuración cuentas SMTP."
+        ]
+      },
+      {
+        "title": "Frontend",
+        "icon": "UilWebGrid",
+        "iconClass":"services__icon",
+        "subtitle": "Frontend",
+        "code": "FE",
+        "isOpen": false,
+        "textsList": [
+          "Integración de funciones para satisfacer nuevos requirimientos.",
+          "Hacer cambios visuales para renovar un software o web.",
+          "Mejorar y optimizar codigo existente.",
+          "Debug y resolución de errores."
+        ]
+      },
+      {
+        "title": "Backend",
+        "icon": "UilServer",
+        "iconClass":"services__icon",
+        "subtitle": "Backend",
+        "code": "BE",
+        "isOpen": false,
+        "textsList": [
+          "Integración servicios API para consultas a DB.",
+          "Integración nuevas estructuras de datos.",
+          "Integración de servicios para envio de emails.",
+          "Controlalr y actualizar paquete de versiones."
+        ]
+      }
+    ]
+  },
+  "it": {
+    "title": "Services",
+    "subtitle": "Cosa posso offrire",
+    "textServicesContent": "Guarda di più",
+    "mainIcon1": {
+      "name": "UilCheckCircle",
+      "class":"services__modal-icon"
+    },
+    "servicesCardsInfo": [
+      {
+        "title": "DevOps",
+        "icon": "UilCloudDatabaseTree",
+        "iconClass":"services__icon",
+        "subtitle": "DevOps",
+        "code": "DO",
+        "isOpen": false,
+        "textsList": [
+          "Integrare in Azure o Firebase servers.",
+          "Integrare Docker e Kubernetes.",
+          "Ottimizzare il processo di rilascio.",
+          "Integrare GIT (version controller) nel tuo codice.",
+          "Creare processi custom con Bash.",
+          "Configurare servizi SMTP."
+        ]
+      },
+      {
+        "title": "Frontend",
+        "icon": "UilWebGrid",
+        "iconClass":"services__icon",
+        "subtitle": "Frontend",
+        "code": "FE",
+        "isOpen": false,
+        "textsList": [
+          "Integrare nuove funzioni per soddisfare i requisiti business.",
+          "Fare cambi visivi per per rinnovare un software/sito.",
+          "Migliorare e ottimizzare il codice.",
+          "Debug e risolvere gli errori."
+        ]
+      },
+      {
+        "title": "Backend",
+        "icon": "UilServer",
+        "iconClass":"services__icon",
+        "subtitle": "Backend",
+        "code": "BE",
+        "isOpen": false,
+        "textsList": [
+          "Integrare un servizio API per consulenza di dati in DB.",
+          "Integrare nuove strutture di dati.",
+          "Integrare un servizio per inviare emails.",
+          "Controllo e aggiornamento di pacchetto di versioni."
+        ]
+      }
+    ]
+  }
 }
