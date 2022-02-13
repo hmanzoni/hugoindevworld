@@ -15,6 +15,7 @@ const reducerFn = (state, action) => {
     case CHANGE_LANG:
       return {
         ...state,
+        isSetupLang: true,
         language: action.payload
       };
     default:

@@ -9,8 +9,10 @@ const CustomsState = (props) => {
   const initialState = {
     icons: [],
     loading: true,
+    isSetupLang: false,
     language: 'en'
   };
+  const localStorageLangWord = 'selected-lang';
 
   const [state, dispatch] = useReducer(customsReducer, initialState);
 
@@ -46,7 +48,27 @@ const CustomsState = (props) => {
     }
   }
 
+  const setDefaultLang = () => {
+    let defaultLang = localStorage.getItem(localStorageLangWord);
+    if (!defaultLang) {
+      switch (navigator?.language?.split('-')[0]) {
+        case 'it':
+          defaultLang = 'it';
+          break;
+        case 'es':
+          defaultLang = 'es';
+          break;
+        default:
+          defaultLang = 'en';
+          break;
+      }
+      localStorage.setItem(localStorageLangWord, defaultLang);
+    }
+    changeLanguage(defaultLang);
+  }
+
   const changeLanguage = (lang) => {
+    localStorage.setItem(localStorageLangWord, lang);
     try {
       dispatch({
         type: CHANGE_LANG,
@@ -63,8 +85,10 @@ const CustomsState = (props) => {
         icons: state.icons,
         loading: state.loading,
         language: state.language,
+        isSetupLang: state.isSetupLang,
         getIcons,
         loadingFinish,
+        setDefaultLang,
         changeLanguage
       }}
     >
