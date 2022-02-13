@@ -4,6 +4,7 @@ import customContext from '../context/customs/customsContext';
 import HomeImg from './HomeImg';
 import foundIcon from './functions/foundIcon';
 import homeInfo from './data/home';
+import { home as socialLinksInfo } from './data/socialLinks';
 
 const HomeSocialLink = ({ infoCard }) => (
   <a
@@ -29,7 +30,8 @@ const Home = () => {
 
   const customsContext = useContext(customContext);
   const { icons, language } = customsContext;
-  const {title, subtitle, description, socialLinksInfo, iconHomeScrollInfo, scollText} = homeInfo[language || 'en'];
+  const {title, subtitle, description, scollText} = homeInfo[language || 'en'];
+  const { iconHomeScrollInfo } = homeInfo['unique'];
   const socialLinks = [];
   const iconHomeScroll = {};
 

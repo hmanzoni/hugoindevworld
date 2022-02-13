@@ -3,6 +3,7 @@ import '../assets/css/footer.css';
 import customContext from '../context/customs/customsContext';
 import foundIcon from './functions/foundIcon';
 import footerInfo from './data/footer';
+import { footer as socialLinksInfo } from './data/socialLinks';
 
 const FooterLink = ({ infoCard }) => {
   return (
@@ -32,11 +33,11 @@ const Footer = () => {
   const customsContext = useContext(customContext);
   const { icons, language } = customsContext;
 
-  const {title, subtitle, rightsText, linksInt, iconSocial} = footerInfo[language || 'en'];
+  const {title, subtitle, rightsText, linksInt} = footerInfo[language || 'en'];
   const actualYear = new Date().getUTCFullYear();
 
   const arrIconsSocial = [];
-  iconSocial.forEach(socialInfo => arrIconsSocial.push({icon: foundIcon(icons, socialInfo.icon), link: socialInfo.link}));
+  socialLinksInfo.forEach(socialInfo => arrIconsSocial.push({icon: foundIcon(icons, socialInfo.icon), link: socialInfo.link}));
 
   return (
     <footer className="footer">

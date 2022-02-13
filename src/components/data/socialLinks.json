@@ -1,0 +1,12 @@
+{
+  "home": [
+    { "id": "1", "link": "https://www.linkedin.com/in/hugo-manzoni/", "icon": "UilLinkedinAlt" },
+    { "id": "2", "link": "https://github.com/hcaman/", "icon": "UilGithubAlt" },
+    { "id": "3", "link": "https://www.udemy.com/user/hugo-carrizo-manzoni/", "icon": "UilAward" }
+  ],
+  "footer": [
+    { "id": "1", "link": "https://github.com/hcaman/", "icon": "UilGithubAlt" },
+    { "id": "2", "link": "https://www.facebook.com/HugoCMan/", "icon": "UilFacebookF" },
+    { "id": "3", "link": "https://www.instagram.com/hugoinwonderland/", "icon": "UilInstagram" }
+  ]
+}

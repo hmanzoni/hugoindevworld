@@ -7,11 +7,6 @@
       { "title": "Services", "link": "!#" },
       { "title": "Portfolio", "link": "!#" },
       { "title": "Contact", "link": "!#" }
-    ],
-    "iconSocial": [
-      { "id": "1", "link": "#!", "icon": "UilTwitterAlt" },
-      { "id": "2", "link": "#!", "icon": "UilFacebookF" },
-      { "id": "3", "link": "#!", "icon": "UilInstagram" }
     ]
   },
   "es": {
@@ -22,11 +17,6 @@
       { "title": "Servicios", "link": "!#" },
       { "title": "Portafolio", "link": "!#" },
       { "title": "Contacto", "link": "!#" }
-    ],
-    "iconSocial": [
-      { "id": "1", "link": "#!", "icon": "UilTwitterAlt" },
-      { "id": "2", "link": "#!", "icon": "UilFacebookF" },
-      { "id": "3", "link": "#!", "icon": "UilInstagram" }
     ]
   },
   "it": {
@@ -37,11 +27,6 @@
       { "title": "Services", "link": "!#" },
       { "title": "Portfolio", "link": "!#" },
       { "title": "Contatto", "link": "!#" }
-    ],
-    "iconSocial": [
-      { "id": "1", "link": "#!", "icon": "UilTwitterAlt" },
-      { "id": "2", "link": "#!", "icon": "UilFacebookF" },
-      { "id": "3", "link": "#!", "icon": "UilInstagram" }
     ]
   }
 }
