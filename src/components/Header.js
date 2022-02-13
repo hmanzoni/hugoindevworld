@@ -22,7 +22,7 @@ const Header = () => {
   const [darkThemeActive, setDarkThemeActive] = useState(false);
 
   const iconsContext = useContext(iconContext);
-  const { icons, changeLanguage } = iconsContext;
+  const { icons, changeLanguage, language } = iconsContext;
 
   const getCurrentTheme = (selectTheme) => selectTheme !== 'dark' ? 'dark' : 'light';
 
@@ -52,7 +52,7 @@ const Header = () => {
           Hugo
         </a>
         <div className="nav__lang">
-          {langAvailables.map( (lang, index) => <div key={index} onClick={()=>changeLanguage(lang)}>{lang}</div>)}
+          {langAvailables.map( (lang, index) => <div key={index} className={language === lang.toLocaleLowerCase() ? 'active-link' : ''} onClick={()=>changeLanguage(lang)}>{lang}</div>)}
         </div>
         <div className={`nav__menu ${isActive ? "show-menu" : ""}`} id="nav-menu">
           <ul className="nav__list grid">
