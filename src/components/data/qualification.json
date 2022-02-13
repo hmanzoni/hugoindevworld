@@ -14,18 +14,6 @@
         "targetData": "work"
       }
     ],
-    "mainIcon1": {
-      "name": "UilGraduationCap",
-      "class":"qualification__icon"
-    },
-    "mainIcon2": {
-      "name": "UilBriefcaseAlt",
-      "class": "qualification__icon"
-    },
-    "mainIcon3": {
-      "name": "UilCalendarAlt",
-      "class": ""
-    },
     "educations": [
       {
         "id": 1,
@@ -95,18 +83,6 @@
         "targetData": "work"
       }
     ],
-    "mainIcon1": {
-      "name": "UilGraduationCap",
-      "class":"qualification__icon"
-    },
-    "mainIcon2": {
-      "name": "UilBriefcaseAlt",
-      "class": "qualification__icon"
-    },
-    "mainIcon3": {
-      "name": "UilCalendarAlt",
-      "class": ""
-    },
     "educations": [
       {
         "id": 1,
@@ -176,18 +152,6 @@
         "targetData": "work"
       }
     ],
-    "mainIcon1": {
-      "name": "UilGraduationCap",
-      "class":"qualification__icon"
-    },
-    "mainIcon2": {
-      "name": "UilBriefcaseAlt",
-      "class": "qualification__icon"
-    },
-    "mainIcon3": {
-      "name": "UilCalendarAlt",
-      "class": ""
-    },
     "educations": [
       {
         "id": 1,
@@ -241,5 +205,19 @@
         "order": 3
       }
     ]
+  },
+  "unique": {
+    "mainIcon1": {
+      "name": "UilGraduationCap",
+      "class":"qualification__icon"
+    },
+    "mainIcon2": {
+      "name": "UilBriefcaseAlt",
+      "class": "qualification__icon"
+    },
+    "mainIcon3": {
+      "name": "UilCalendarAlt",
+      "class": ""
+    }
   }
 }

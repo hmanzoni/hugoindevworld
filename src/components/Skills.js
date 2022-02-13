@@ -44,7 +44,8 @@ const Skills = () => {
   const customsContext = useContext(customContext);
   const { icons, language } = customsContext;
 
-  const {title, subtitle, mainIconSkills, skillsInfo} = skillInfo[language || 'en'];
+  const {title, subtitle, skillsInfo} = skillInfo[language || 'en'];
+  const {mainIconSkills} = skillInfo['unique'];
 
   const bracketsCurly = foundIcon(icons, mainIconSkills.name, mainIconSkills.class);
 

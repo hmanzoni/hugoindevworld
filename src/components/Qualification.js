@@ -39,7 +39,8 @@ const Qualification = () => {
   const customsContext = useContext(customContext);
   const { icons, language } = customsContext;
   
-  const {title, subtitle, tabs, educations, works, mainIcon1, mainIcon2, mainIcon3} = qualificationInfo[language || 'en'];
+  const {title, subtitle, tabs, educations, works} = qualificationInfo[language || 'en'];
+  const {mainIcon1, mainIcon2, mainIcon3} = qualificationInfo['unique'];
 
   const graduationCap = foundIcon(icons, mainIcon1.name, mainIcon1.class);
   const briefcaseAlt = foundIcon(icons, mainIcon2.name, mainIcon2.class);

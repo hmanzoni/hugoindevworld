@@ -3,10 +3,6 @@
     "title": "Services",
     "subtitle": "What i can offer",
     "textServicesContent": "View More",
-    "mainIcon1": {
-      "name": "UilCheckCircle",
-      "class":"services__modal-icon"
-    },
     "servicesCardsInfo": [
       {
         "title": "DevOps",
@@ -58,10 +54,6 @@
     "title": "Servicios",
     "subtitle": "Que puedo ofrecer",
     "textServicesContent": "Vea más",
-    "mainIcon1": {
-      "name": "UilCheckCircle",
-      "class":"services__modal-icon"
-    },
     "servicesCardsInfo": [
       {
         "title": "DevOps",
@@ -113,10 +105,6 @@
     "title": "Services",
     "subtitle": "Cosa posso offrire",
     "textServicesContent": "Guarda di più",
-    "mainIcon1": {
-      "name": "UilCheckCircle",
-      "class":"services__modal-icon"
-    },
     "servicesCardsInfo": [
       {
         "title": "DevOps",
@@ -163,5 +151,11 @@
         ]
       }
     ]
+  },
+  "unique": {
+    "mainIcon1": {
+      "name": "UilCheckCircle",
+      "class":"services__modal-icon"
+    }
   }
 }

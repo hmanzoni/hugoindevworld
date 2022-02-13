@@ -52,7 +52,8 @@ const Services = () => {
   const customsContext = useContext(customContext);
   const { icons, language } = customsContext;
 
-  const {title, subtitle, textServicesContent, mainIcon1, servicesCardsInfo} = servicesInfo[language || 'en'];
+  const {title, subtitle, textServicesContent, servicesCardsInfo} = servicesInfo[language || 'en'];
+  const { mainIcon1} = servicesInfo['unique'];
 
   const checkCircle = foundIcon(icons, mainIcon1.name, mainIcon1.class);
   const services = [];

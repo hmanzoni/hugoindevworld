@@ -2,10 +2,6 @@
   "en": {
     "title": "Skills",
     "subtitle": "My technical level",
-    "mainIconSkills": {
-      "name": "UilBracketsCurly",
-      "class":"skills__icon"
-    },
     "skillsInfo": [
       {
         "title": "Frontend",
@@ -42,10 +38,6 @@
   "es": {
     "title": "Skills",
     "subtitle": "Mi nivel tecnico",
-    "mainIconSkills": {
-      "name": "UilBracketsCurly",
-      "class":"skills__icon"
-    },
     "skillsInfo": [
       {
         "title": "Frontend",
@@ -82,10 +74,6 @@
   "it": {
     "title": "Skills",
     "subtitle": "Livello tecnico",
-    "mainIconSkills": {
-      "name": "UilBracketsCurly",
-      "class":"skills__icon"
-    },
     "skillsInfo": [
       {
         "title": "Frontend",
@@ -118,5 +106,11 @@
         "cardsSkills": []
       }
     ]
+  },
+  "unique": {
+    "mainIconSkills": {
+      "name": "UilBracketsCurly",
+      "class":"skills__icon"
+    }
   }
 }
