@@ -50,9 +50,9 @@ const Services = () => {
   const [servicesContent, setServicesContent] = useState([]);
   
   const iconsContext = useContext(iconContext);
-  const { icons } = iconsContext;
+  const { icons, language } = iconsContext;
 
-  const {title, subtitle, textServicesContent, mainIcon1, servicesCardsInfo} = servicesInfo['en'];
+  const {title, subtitle, textServicesContent, mainIcon1, servicesCardsInfo} = servicesInfo[language || 'en'];
 
   const checkCircle = foundIcon(icons, mainIcon1.name, mainIcon1.class);
   const services = [];
@@ -79,7 +79,7 @@ const Services = () => {
   }
 
   return (
-    <section className="services section">
+    <section className="services section" id="services">
       <h2 className="section__title">{title}</h2>
       <span className="section__subtitle">{subtitle}</span>
       <div className="services__container container grid">

@@ -30,9 +30,9 @@ const FooterSocialLink = ({ infoCard }) => {
 const Footer = () => {
 
   const iconsContext = useContext(iconContext);
-  const { icons } = iconsContext;
+  const { icons, language } = iconsContext;
 
-  const {title, subtitle, rightsText, linksInt, iconSocial} = footerInfo['en'];
+  const {title, subtitle, rightsText, linksInt, iconSocial} = footerInfo[language || 'en'];
   const actualYear = new Date().getUTCFullYear();
 
   const arrIconsSocial = [];

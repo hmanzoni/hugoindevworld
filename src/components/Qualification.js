@@ -37,16 +37,16 @@ const Qualification = () => {
   const [tabActive, setTabActive] = useState('work');
   
   const iconsContext = useContext(iconContext);
-  const { icons } = iconsContext;
+  const { icons, language } = iconsContext;
   
-  const {title, subtitle, tabs, educations, works, mainIcon1, mainIcon2, mainIcon3} = qualificationInfo['en'];
+  const {title, subtitle, tabs, educations, works, mainIcon1, mainIcon2, mainIcon3} = qualificationInfo[language || 'en'];
 
   const graduationCap = foundIcon(icons, mainIcon1.name, mainIcon1.class);
   const briefcaseAlt = foundIcon(icons, mainIcon2.name, mainIcon2.class);
   const calendarAlt = foundIcon(icons, mainIcon3.name);
 
   return (
-    <section className="qualification section">
+    <section className="qualification section" id="qualification">
       <h2 className="section__title">{title}</h2>
       <span className="section__subtitle">{subtitle}</span>
 

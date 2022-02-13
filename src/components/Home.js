@@ -28,8 +28,8 @@ const HomeScroll = ({iconHomeScroll, scollText}) => (
 const Home = () => {
 
   const iconsContext = useContext(iconContext);
-  const { icons } = iconsContext;
-  const {title, subtitle, description, socialLinksInfo, iconHomeScrollInfo, scollText} = homeInfo['en'];
+  const { icons, language } = iconsContext;
+  const {title, subtitle, description, socialLinksInfo, iconHomeScrollInfo, scollText} = homeInfo[language || 'en'];
   const socialLinks = [];
   const iconHomeScroll = {};
 
