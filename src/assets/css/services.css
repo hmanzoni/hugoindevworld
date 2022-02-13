@@ -31,6 +31,11 @@
   font-weight: var(--font-medium);
 }
 
+.services__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
 .services__button {
   cursor: pointer;
   font-size: var(--small-font-size);

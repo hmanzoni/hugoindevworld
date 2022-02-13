@@ -6,9 +6,9 @@
     "servicesCardsInfo": [
       {
         "title": "DevOps",
-        "icon": "UilCloudDatabaseTree",
+        "iconName": "UilCloudDatabaseTree",
         "iconClass":"services__icon",
-        "subtitle": "DevOps",
+        "subtitle": "Develop and operations",
         "code": "DO",
         "isOpen": false,
         "textsList": [
@@ -22,9 +22,9 @@
       },
       {
         "title": "Frontend",
-        "icon": "UilWebGrid",
+        "iconName": "UilWebGrid",
         "iconClass":"services__icon",
-        "subtitle": "Frontend",
+        "subtitle": "Client interface",
         "code": "FE",
         "isOpen": false,
         "textsList": [
@@ -36,9 +36,9 @@
       },
       {
         "title": "Backend",
-        "icon": "UilServer",
+        "iconName": "UilServer",
         "iconClass":"services__icon",
-        "subtitle": "Backend",
+        "subtitle": "Server interface",
         "code": "BE",
         "isOpen": false,
         "textsList": [
@@ -57,9 +57,9 @@
     "servicesCardsInfo": [
       {
         "title": "DevOps",
-        "icon": "UilCloudDatabaseTree",
+        "iconName": "UilCloudDatabaseTree",
         "iconClass":"services__icon",
-        "subtitle": "DevOps",
+        "subtitle": "Desarrollo y operaciones",
         "code": "DO",
         "isOpen": false,
         "textsList": [
@@ -73,9 +73,9 @@
       },
       {
         "title": "Frontend",
-        "icon": "UilWebGrid",
+        "iconName": "UilWebGrid",
         "iconClass":"services__icon",
-        "subtitle": "Frontend",
+        "subtitle": "Interfaz cliente",
         "code": "FE",
         "isOpen": false,
         "textsList": [
@@ -87,9 +87,9 @@
       },
       {
         "title": "Backend",
-        "icon": "UilServer",
+        "iconName": "UilServer",
         "iconClass":"services__icon",
-        "subtitle": "Backend",
+        "subtitle": "Interfaz servidor",
         "code": "BE",
         "isOpen": false,
         "textsList": [
@@ -108,9 +108,9 @@
     "servicesCardsInfo": [
       {
         "title": "DevOps",
-        "icon": "UilCloudDatabaseTree",
+        "iconName": "UilCloudDatabaseTree",
         "iconClass":"services__icon",
-        "subtitle": "DevOps",
+        "subtitle": "Sviluppo e operazioni",
         "code": "DO",
         "isOpen": false,
         "textsList": [
@@ -124,9 +124,9 @@
       },
       {
         "title": "Frontend",
-        "icon": "UilWebGrid",
+        "iconName": "UilWebGrid",
         "iconClass":"services__icon",
-        "subtitle": "Frontend",
+        "subtitle": "Interfaccia cliente",
         "code": "FE",
         "isOpen": false,
         "textsList": [
@@ -138,9 +138,9 @@
       },
       {
         "title": "Backend",
-        "icon": "UilServer",
+        "iconName": "UilServer",
         "iconClass":"services__icon",
-        "subtitle": "Backend",
+        "subtitle": "Interfaccia server",
         "code": "BE",
         "isOpen": false,
         "textsList": [
@@ -156,6 +156,14 @@
     "mainIcon1": {
       "name": "UilCheckCircle",
       "class":"services__modal-icon"
+    },
+    "mainIcon2": {
+      "name": "UilArrowRight",
+      "class":"button__icon"
+    },
+    "mainIcon3": {
+      "name": "UilTimes",
+      "class":"services__modal-close"
     }
   }
 }

@@ -1,5 +1,4 @@
-import React, { useContext, useState } from 'react';
-import { UilArrowRight, UilTimes } from '@iconscout/react-unicons';
+import React, { useContext, useState, useEffect } from 'react';
 import '../assets/css/services.css';
 import customContext from '../context/customs/customsContext';
 import foundIcon from './functions/foundIcon';
@@ -12,29 +11,30 @@ const ServicesList = ({ text, checkCircle }) => (
   </li>
 );
 
-const ServicesContent = ({ cardInfo, clickerFn, checkCircle, textServicesContent }) => {
+const ServicesContent = ({ cardInfo, clickerFn, iconsObj, textServicesContent }) => {
+  const {checkCircle, arrowRight, timesIcon } = iconsObj;
   return (
     <div className="services__content">
-      <div>
+      <div onClick={() => clickerFn(cardInfo.code)}>
         {cardInfo.icon}
         <h3 className="services__title">
           {cardInfo.title}
           <br />
-          {cardInfo.subtitle}
+          <span className="services__subtitle">{cardInfo.subtitle}</span>
         </h3>
       </div>
       <span className="button button--flex button--small button--link services__button" onClick={() => clickerFn(cardInfo.code)}>
         {textServicesContent}
-        <UilArrowRight className="button__icon" />
+        {arrowRight}
       </span>
       <div className={`services__modal ${cardInfo.isOpen && 'active-modal'}`} onClick={(e) => e.target.className === 'services__modal active-modal' && clickerFn(cardInfo.code)}>
         <div className="services__modal-content">
           <h4 className="services__modal-title">
             {cardInfo.title}
             <br />
-            {cardInfo.subtitle}
+            <span className="services__subtitle">{cardInfo.subtitle}</span>
           </h4>
-          <UilTimes className="services__modal-close" onClick={() => clickerFn(cardInfo.code)} />
+          <div onClick={() => clickerFn(cardInfo.code)} >{timesIcon}</div>
           <ul className="services__modal-services grid">
             {cardInfo.textsList.map((text, index) => (
               <ServicesList key={index} text={text} checkCircle={checkCircle} />
@@ -53,20 +53,25 @@ const Services = () => {
   const { icons, language } = customsContext;
 
   const {title, subtitle, textServicesContent, servicesCardsInfo} = servicesInfo[language || 'en'];
-  const { mainIcon1} = servicesInfo['unique'];
+  const { mainIcon1, mainIcon2, mainIcon3 } = servicesInfo['unique'];
 
-  const checkCircle = foundIcon(icons, mainIcon1.name, mainIcon1.class);
-  const services = [];
-
-  servicesCardsInfo.forEach(service => {
-    const iconElement = foundIcon(icons, service.icon, service.iconClass);
-    service.icon = iconElement
-    services.push(service);
-  });
-
-  if (!servicesContent.length) {
-    setServicesContent(services);
+  const iconsObj = {
+    checkCircle: foundIcon(icons, mainIcon1.name, mainIcon1.class),
+    arrowRight: foundIcon(icons, mainIcon2.name, mainIcon2.class),
+    timesIcon: foundIcon(icons, mainIcon3.name, mainIcon3.class)
   }
+
+  useEffect(() => {
+    const services = [];
+  
+    servicesCardsInfo.forEach(service => {
+      const iconElement = foundIcon(icons, service.iconName, service.iconClass);
+      service.icon = iconElement;
+      services.push(service);
+    });
+
+    setServicesContent(services);
+  }, [language, servicesCardsInfo, icons]);
 
   const handlerOpenClose = (servCode) => {
     const index = servicesContent.findIndex(skill => skill.code === servCode);
@@ -85,7 +90,7 @@ const Services = () => {
       <span className="section__subtitle">{subtitle}</span>
       <div className="services__container container grid">
         {servicesContent.map((serviceContent, index) => (
-          <ServicesContent key={index} cardInfo={serviceContent} clickerFn={handlerOpenClose} checkCircle={checkCircle} textServicesContent={textServicesContent} />
+          <ServicesContent key={index} cardInfo={serviceContent} clickerFn={handlerOpenClose} iconsObj={iconsObj} textServicesContent={textServicesContent} />
         ))}
       </div>
     </section>
