@@ -52,6 +52,8 @@ const Skills = () => {
     skillsInfo.forEach(skill => {
       const iconElement = foundIcon(icons, skill.icon, skill.iconClass)
       skill.icon = iconElement;
+      const yearsCalc = (new Date().getUTCFullYear() - skill.year).toString();
+      skill.subtitle = skill.subtitle.replace('$year', yearsCalc);
       const skillCardsInformation = skillsCards[skill.code];
       skill.cardsSkills = skillCardsInformation;
       

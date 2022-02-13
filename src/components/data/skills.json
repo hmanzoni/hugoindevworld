@@ -13,7 +13,8 @@
         "icon": "UilWebGrid", 
         "iconClass": "skills__icon",
         "isOpen": false,
-        "subtitle": "More than 4 years",
+        "year": 2018,
+        "subtitle": "More than $year years",
         "cardsSkills": []
       },
       {
@@ -22,7 +23,8 @@
         "icon": "UilServer", 
         "iconClass": "skills__icon",
         "isOpen": false,
-        "subtitle": "More than 2 years",
+        "year": 2020,
+        "subtitle": "More than $year years",
         "cardsSkills": []
       },
       {
@@ -31,7 +33,8 @@
         "icon": "UilCloudDatabaseTree", 
         "iconClass": "skills__icon",
         "isOpen": false,
-        "subtitle": "More than 1 years",
+        "year": 2021,
+        "subtitle": "More than $year years",
         "cardsSkills": []
       }
     ]
@@ -50,7 +53,8 @@
         "icon": "UilWebGrid", 
         "iconClass": "skills__icon",
         "isOpen": false,
-        "subtitle": "Más de 4 años",
+        "year": 2018,
+        "subtitle": "Más de $year años",
         "cardsSkills": []
       },
       {
@@ -59,7 +63,8 @@
         "icon": "UilServer", 
         "iconClass": "skills__icon",
         "isOpen": false,
-        "subtitle": "Más de 2 años",
+        "year": 2020,
+        "subtitle": "Más de $year años",
         "cardsSkills": []
       },
       {
@@ -68,7 +73,8 @@
         "icon": "UilCloudDatabaseTree", 
         "iconClass": "skills__icon",
         "isOpen": false,
-        "subtitle": "Más de 1 año",
+        "year": 2021,
+        "subtitle": "Más de $year año",
         "cardsSkills": []
       }
     ]
@@ -87,7 +93,8 @@
         "icon": "UilWebGrid", 
         "iconClass": "skills__icon",
         "isOpen": false,
-        "subtitle": "Più di 4 anni",
+        "year": 2018,
+        "subtitle": "Più di $year anni",
         "cardsSkills": []
       },
       {
@@ -96,7 +103,8 @@
         "icon": "UilServer", 
         "iconClass": "skills__icon",
         "isOpen": false,
-        "subtitle": "Più di 2 anni",
+        "year": 2020,
+        "subtitle": "Più di $year anni",
         "cardsSkills": []
       },
       {
@@ -105,7 +113,8 @@
         "icon": "UilCloudDatabaseTree", 
         "iconClass": "skills__icon",
         "isOpen": false,
-        "subtitle": "Più di 1 anno",
+        "year": 2021,
+        "subtitle": "Più di $year anno",
         "cardsSkills": []
       }
     ]
