@@ -111,6 +111,10 @@
     "mainIconSkills": {
       "name": "UilBracketsCurly",
       "class":"skills__icon"
+    },
+    "iconArrowOpen": {
+      "name": "UilAngleDown",
+      "class":"skills__arrow"
     }
   }
 }

@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { UilAngleDown } from '@iconscout/react-unicons';
 import '../assets/css/skills.css';
 import customContext from '../context/customs/customsContext';
 import foundIcon from './functions/foundIcon';
@@ -19,15 +18,15 @@ const SkillCard = ({ infoCard }) => (
   </div>
 );
 
-const SkillContent = ({ infoCard, clickerFn, bracketsCurly }) => (
-    <div className={`skills__content ${infoCard.isOpen ? 'skills__open' : 'skills__close'}`}>
+const SkillContent = ({ infoCard, clickerFn, bracketsCurly, angleDown }) => (
+    <div className={`skills__content ${infoCard.isOpen ? 'skills__open' : 'skills__close'}`} onClick={() => clickerFn(infoCard.code)}>
       <div className="skills__header">
         {bracketsCurly}
         <div>
           <h1 className="skills__title">{infoCard.title}</h1>
           <span className="skills__subtitle">{infoCard.subtitle}</span>
         </div>
-        <UilAngleDown onClick={() => clickerFn(infoCard.code)} size={'32'} className="skills__arrow" />
+        {angleDown}
       </div>
 
       <div className="skills__list grid">
@@ -45,9 +44,10 @@ const Skills = () => {
   const { icons, language } = customsContext;
 
   const {title, subtitle, skillsInfo} = skillInfo[language || 'en'];
-  const {mainIconSkills} = skillInfo['unique'];
+  const {mainIconSkills, iconArrowOpen} = skillInfo['unique'];
 
   const bracketsCurly = foundIcon(icons, mainIconSkills.name, mainIconSkills.class);
+  const angleDown = foundIcon(icons, iconArrowOpen.name, iconArrowOpen.class);
 
   useEffect(() => {
     const skills = [];
@@ -82,7 +82,7 @@ const Skills = () => {
       <div className="skills__container container grid">
         <div>
           {skillsContents.map((skillContent, index) => (
-            <SkillContent key={index} infoCard={skillContent} clickerFn={handlerOpenClose} bracketsCurly={bracketsCurly} />
+            <SkillContent key={index} infoCard={skillContent} clickerFn={handlerOpenClose} bracketsCurly={bracketsCurly} angleDown={angleDown} />
           ))}
         </div>
       </div>
