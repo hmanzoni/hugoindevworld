@@ -24,7 +24,7 @@ const SkillContent = ({ infoCard, clickerFn, bracketsCurly }) => (
         {bracketsCurly}
         <div>
           <h1 className="skills__title">{infoCard.title}</h1>
-          <span className="section__subtitle">{infoCard.subtitle}</span>
+          <span className="skills__subtitle">{infoCard.subtitle}</span>
         </div>
         <UilAngleDown onClick={() => clickerFn(infoCard.code)} size={'32'} className="skills__arrow" />
       </div>
