@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import '../assets/css/qualification.css';
-import iconContext from '../context/icons/iconsContext';
+import customContext from '../context/customs/customsContext';
 import { foundIcon } from './ui/icons';
 import qualificationInfo from './data/qualification';
 
@@ -36,8 +36,8 @@ const SingleQualification = ({ infoCard, calendarAlt }) => (
 const Qualification = () => {
   const [tabActive, setTabActive] = useState('work');
   
-  const iconsContext = useContext(iconContext);
-  const { icons, language } = iconsContext;
+  const customsContext = useContext(customContext);
+  const { icons, language } = customsContext;
   
   const {title, subtitle, tabs, educations, works, mainIcon1, mainIcon2, mainIcon3} = qualificationInfo[language || 'en'];
 

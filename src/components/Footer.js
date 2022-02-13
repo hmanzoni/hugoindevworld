@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import '../assets/css/footer.css';
-import iconContext from '../context/icons/iconsContext';
+import customContext from '../context/customs/customsContext';
 import { foundIcon } from './ui/icons';
 import footerInfo from './data/footer';
 
@@ -29,8 +29,8 @@ const FooterSocialLink = ({ infoCard }) => {
 
 const Footer = () => {
 
-  const iconsContext = useContext(iconContext);
-  const { icons, language } = iconsContext;
+  const customsContext = useContext(customContext);
+  const { icons, language } = customsContext;
 
   const {title, subtitle, rightsText, linksInt, iconSocial} = footerInfo[language || 'en'];
   const actualYear = new Date().getUTCFullYear();

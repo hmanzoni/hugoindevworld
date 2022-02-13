@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { UilArrowRight, UilTimes } from '@iconscout/react-unicons';
 import '../assets/css/services.css';
-import iconContext from '../context/icons/iconsContext';
+import customContext from '../context/customs/customsContext';
 import { foundIcon } from './ui/icons';
 import servicesInfo from './data/services';
 
@@ -49,8 +49,8 @@ const ServicesContent = ({ cardInfo, clickerFn, checkCircle, textServicesContent
 const Services = () => {
   const [servicesContent, setServicesContent] = useState([]);
   
-  const iconsContext = useContext(iconContext);
-  const { icons, language } = iconsContext;
+  const customsContext = useContext(customContext);
+  const { icons, language } = customsContext;
 
   const {title, subtitle, textServicesContent, mainIcon1, servicesCardsInfo} = servicesInfo[language || 'en'];
 

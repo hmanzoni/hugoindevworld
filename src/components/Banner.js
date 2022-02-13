@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import '../assets/css/project.css';
 import project from '../assets/img/project.png';
-import iconContext from '../context/icons/iconsContext';
+import iconContext from '../context/icons/customsContext';
 import { foundIcon } from './ui/icons';
 
 const Banner = () => {
-  const iconsContext = useContext(iconContext);
-  const { icons } = iconsContext;
+  const customsContext = useContext(iconContext);
+  const { icons } = customsContext;
   
   const messageProject = foundIcon(icons, 'UilMessage', 'project__icon');
   

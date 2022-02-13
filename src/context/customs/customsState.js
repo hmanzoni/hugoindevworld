@@ -1,10 +1,10 @@
 import React, { useReducer } from 'react';
 import * as ico from '@iconscout/react-unicons';
-import iconsContext from './iconsContext';
-import iconsReducer from './iconsReducer';
+import customsContext from './customsContext';
+import customsReducer from './customsReducer';
 import { GET_ICON, LOADING_FINISH, CHANGE_LANG } from '../types';
 
-const IconsState = (props) => {
+const CustomsState = (props) => {
 
   const initialState = {
     icons: [],
@@ -12,7 +12,7 @@ const IconsState = (props) => {
     language: 'en'
   };
 
-  const [state, dispatch] = useReducer(iconsReducer, initialState);
+  const [state, dispatch] = useReducer(customsReducer, initialState);
 
   const getIcons = (iconsArr) => {
     try {
@@ -58,7 +58,7 @@ const IconsState = (props) => {
   }
 
   return (
-    <iconsContext.Provider
+    <customsContext.Provider
       value={{
         icons: state.icons,
         loading: state.loading,
@@ -69,8 +69,8 @@ const IconsState = (props) => {
       }}
     >
       {props.children}
-    </iconsContext.Provider>
+    </customsContext.Provider>
   );
 };
 
-export default IconsState;
+export default CustomsState;

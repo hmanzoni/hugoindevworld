@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { arrIcons, foundIcon } from './ui/icons';
-import iconContext from '../context/icons/iconsContext';
+import iconContext from '../context/customs/customsContext';
 import About from './About';
 import Home from './Home';
 import Header from './Header';
@@ -10,8 +10,8 @@ import Qualification from './Qualification';
 import Footer from './Footer';
 
 const Hugo = () => {
-  const iconsContext = useContext(iconContext);
-  const { getIcons, icons } = iconsContext;
+  const customsContext = useContext(iconContext);
+  const { getIcons, icons } = customsContext;
 
   useEffect(() => {
     if (!icons.length) {

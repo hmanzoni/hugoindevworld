@@ -3,7 +3,7 @@ import {
   UilApps, UilMoon, UilSun, UilTimes
 } from '@iconscout/react-unicons';
 import '../assets/css/header.css';
-import iconContext from '../context/icons/iconsContext';
+import customContext from '../context/customs/customsContext';
 import { foundIcon } from './ui/icons';
 
 const NavItems = ({ infoCard, hideMenu }) => (
@@ -21,8 +21,8 @@ const Header = () => {
   const [isActive, setActive] = useState(false);
   const [darkThemeActive, setDarkThemeActive] = useState(false);
 
-  const iconsContext = useContext(iconContext);
-  const { icons, changeLanguage, language } = iconsContext;
+  const customsContext = useContext(customContext);
+  const { icons, changeLanguage, language } = customsContext;
 
   const getCurrentTheme = (selectTheme) => selectTheme !== 'dark' ? 'dark' : 'light';
 

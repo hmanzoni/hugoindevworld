@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UilAngleDown } from '@iconscout/react-unicons';
 import '../assets/css/skills.css';
-import iconContext from '../context/icons/iconsContext';
+import customContext from '../context/customs/customsContext';
 import { foundIcon } from './ui/icons';
 import skillInfo from './data/skills';
 import skillsCards from './data/skillsCards';
@@ -40,8 +40,8 @@ const SkillContent = ({ infoCard, clickerFn, bracketsCurly }) => (
 const Skills = () => {
   const [skillsContents, setSkillsContents] = useState([]);
   
-  const iconsContext = useContext(iconContext);
-  const { icons, language } = iconsContext;
+  const customsContext = useContext(customContext);
+  const { icons, language } = customsContext;
 
   const {title, subtitle, mainIconSkills, skillsInfo} = skillInfo[language || 'en'];
 

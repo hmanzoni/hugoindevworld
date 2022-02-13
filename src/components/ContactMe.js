@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import '../assets/css/contact.css';
-import iconContext from '../context/icons/iconsContext';
+import iconContext from '../context/icons/customsContext';
 import { foundIcon } from './ui/icons';
 
 const ContactInfo = ({ cardInfo }) => {
@@ -63,8 +63,8 @@ const ContactForm = ({messageBtnIcon}) => {
 
 const ContactMe = () => {
 
-  const iconsContext = useContext(iconContext);
-  const { icons } = iconsContext;
+  const customsContext = useContext(iconContext);
+  const { icons } = customsContext;
   
   const messageBtnIcon = foundIcon(icons, 'UilMessage', 'button__icon');
 

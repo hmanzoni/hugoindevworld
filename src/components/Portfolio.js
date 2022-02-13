@@ -3,7 +3,7 @@ import '../assets/css/portfolio.css';
 import portfolio1 from '../assets/img/portfolio1.jpg';
 import portfolio2 from '../assets/img/portfolio2.jpg';
 import portfolio3 from '../assets/img/portfolio3.jpg';
-import iconContext from '../context/icons/iconsContext';
+import iconContext from '../context/icons/customsContext';
 import { foundIcon } from './ui/icons';
 
 const PorfolioCards = ({ infoCard }) => {
@@ -27,8 +27,8 @@ const PorfolioCards = ({ infoCard }) => {
 };
 
 const Portfolio = () => {
-  const iconsContext = useContext(iconContext);
-  const { icons } = iconsContext;
+  const customsContext = useContext(iconContext);
+  const { icons } = customsContext;
 
   const arrowRight = foundIcon(icons, 'UilArrowRight', 'button__icon');
   const angleLeftB = foundIcon(icons, 'UilAngleLeftB', 'swiper-portfolio-icon');

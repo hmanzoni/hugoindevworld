@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import '../assets/css/about.css';
 import about from '../assets/img/about.jpg';
 import hugoCV from '../assets/pdf/HugoManzoni.CV.pdf';
-import iconContext from '../context/icons/iconsContext';
+import customContext from '../context/customs/customsContext';
 import { foundIcon } from './ui/icons';
 import aboutInfo from './data/about';
 
@@ -28,8 +28,8 @@ const SingleAboutCard = ({ infoCard }) => {
 const TextDesc = ({text}) => <>{text}<br /></>;
 
 const About = () => {
-  const iconsContext = useContext(iconContext);
-  const { icons, language } = iconsContext;
+  const customsContext = useContext(customContext);
+  const { icons, language } = customsContext;
   
   const {title, subtitle, downloadAltIcon, description, aboutCardsInfo, downloadText} = aboutInfo[language || 'en'];
   const downloadAlt = foundIcon(icons, downloadAltIcon);
