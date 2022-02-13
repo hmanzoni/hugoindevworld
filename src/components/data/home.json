@@ -1,7 +1,7 @@
 {
   "en": {
     "title": "Hi, I'm Hugo!",
-    "subtitle": "Frontend Developer",
+    "subtitle": "Software development",
     "description": "High level experience in web and software development knowledge, and continuously learning new stacks.",
     "socialLinksInfo": [
       { "id": "1", "link": "#!", "icon": "UilLinkedinAlt" },
@@ -14,6 +14,34 @@
     ],
     "scollText": "Scroll down"
   },
-  "es": {},
-  "it": {}
+  "es": {
+    "title": "Hola, soy Hugo!",
+    "subtitle": "Software development",
+    "description": "Alto nivel de experiencia y conocimentos en el desarrollo web y de software, y en continuo aprendizaje de nuevas habilidades.",
+    "socialLinksInfo": [
+      { "id": "1", "link": "#!", "icon": "UilLinkedinAlt" },
+      { "id": "2", "link": "#!", "icon": "UilDribbble" },
+      { "id": "3", "link": "#!", "icon": "UilGithubAlt" }
+    ],
+    "iconHomeScrollInfo": [
+      { "name": "mouseAlt", "icon": "UilMouseAlt", "classIcon": "home__scroll-mouse" },
+      { "name": "arrowDown", "icon": "UilArrowDown", "classIcon": "home__scroll-arrow"}
+    ],
+    "scollText": "Scroll down"
+  },
+  "it": {
+    "title": "Ciao, sono Hugo!",
+    "subtitle": "Software development",
+    "description": "Alto livello di esperienza e conoscenza nello sviluppo web e di software, e apprendimento continuo di nuove abilità.",
+    "socialLinksInfo": [
+      { "id": "1", "link": "#!", "icon": "UilLinkedinAlt" },
+      { "id": "2", "link": "#!", "icon": "UilDribbble" },
+      { "id": "3", "link": "#!", "icon": "UilGithubAlt" }
+    ],
+    "iconHomeScrollInfo": [
+      { "name": "mouseAlt", "icon": "UilMouseAlt", "classIcon": "home__scroll-mouse" },
+      { "name": "arrowDown", "icon": "UilArrowDown", "classIcon": "home__scroll-arrow"}
+    ],
+    "scollText": "Scroll down"
+  }
 }
