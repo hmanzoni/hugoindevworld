@@ -12,13 +12,16 @@ import Footer from './Footer';
 
 const Hugo = () => {
   const customsContext = useContext(iconContext);
-  const { getIcons, icons } = customsContext;
+  const { getIcons, icons, setDefaultLang, isSetupLang } = customsContext;
 
   useEffect(() => {
     if (!icons.length) {
       getIcons(arrIcons);
     }
-  }, [icons, getIcons]);
+    if (!isSetupLang) {
+      setDefaultLang();
+    }
+  }, [icons, getIcons, setDefaultLang, isSetupLang]);
 
   const arrowUp = foundIcon(icons, 'UilArrowUp', 'scrollup__icon');
 
