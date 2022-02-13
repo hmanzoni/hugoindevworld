@@ -75,11 +75,171 @@
         "id": 3,
         "title": "Sofware Developer",
         "subtitle": "Trueblue",
-        "rangeYears": "09/2020 - 03/2021",
+        "rangeYears": "09/2020 - 03/2022",
         "order": 3
       }
     ]
   },
-  "es": {},
-  "it": {}
+  "es": {
+    "title": "Calificación",
+    "subtitle": "Mi viaje personal",
+    "tabs": [
+      {
+        "icon": "mainIcon1",
+        "title": "Educación",
+        "targetData": "education"
+      },
+      {
+        "icon": "mainIcon2",
+        "title":"Trabajo",
+        "targetData": "work"
+      }
+    ],
+    "mainIcon1": {
+      "name": "UilGraduationCap",
+      "class":"qualification__icon"
+    },
+    "mainIcon2": {
+      "name": "UilBriefcaseAlt",
+      "class": "qualification__icon"
+    },
+    "mainIcon3": {
+      "name": "UilCalendarAlt",
+      "class": ""
+    },
+    "educations": [
+      {
+        "id": 1,
+        "title": "Bioquimica",
+        "subtitle": "Universidad Nacional de Córdoba",
+        "rangeYears": "2008 - 2012",
+        "order": 1
+      },
+      {
+        "id": 2,
+        "title": "Desarrollo basico de sitios webs",
+        "subtitle": "Udemy",
+        "rangeYears": "2017 - 2019",
+        "order": 2
+      },
+      {
+        "id": 3,
+        "title": "Desarrollo avanzado de Webs y Sofware",
+        "subtitle": "Udemy",
+        "rangeYears": "2019 - Actual",
+        "order": 3
+      },
+      {
+        "id": 4,
+        "title": "DevOps Skills",
+        "subtitle": "Udemy",
+        "rangeYears": "2021 - Actual",
+        "order": 4
+      }
+    ],
+    "works": [
+      {
+        "id": 1,
+        "title": "Desarrolador web",
+        "subtitle": "Dana Giraldo",
+        "rangeYears": "07/2018 - 10/2018",
+        "order": 1
+      },
+      {
+        "id": 2,
+        "title": "Desarrolador web",
+        "subtitle": "Gustos Alto Adige",
+        "rangeYears": "12/2018 - 07/2020",
+        "order": 2
+      },
+      {
+        "id": 3,
+        "title": "Desarrolador de Sofware",
+        "subtitle": "Trueblue",
+        "rangeYears": "09/2020 - 03/2022",
+        "order": 3
+      }
+    ]
+  },
+  "it": {
+    "title": "Qualificazione",
+    "subtitle": "Il mio viaggio personale",
+    "tabs": [
+      {
+        "icon": "mainIcon1",
+        "title": "Educazione",
+        "targetData": "education"
+      },
+      {
+        "icon": "mainIcon2",
+        "title":"Lavoro",
+        "targetData": "work"
+      }
+    ],
+    "mainIcon1": {
+      "name": "UilGraduationCap",
+      "class":"qualification__icon"
+    },
+    "mainIcon2": {
+      "name": "UilBriefcaseAlt",
+      "class": "qualification__icon"
+    },
+    "mainIcon3": {
+      "name": "UilCalendarAlt",
+      "class": ""
+    },
+    "educations": [
+      {
+        "id": 1,
+        "title": "Biochimica",
+        "subtitle": "Universidad Nacional de Córdoba",
+        "rangeYears": "2008 - 2012",
+        "order": 1
+      },
+      {
+        "id": 2,
+        "title": "Sviluppo basico di webs",
+        "subtitle": "Udemy",
+        "rangeYears": "2017 - 2019",
+        "order": 2
+      },
+      {
+        "id": 3,
+        "title": "Sviluppo avanzato di Web e Sofware",
+        "subtitle": "Udemy",
+        "rangeYears": "2019 - Actual",
+        "order": 3
+      },
+      {
+        "id": 4,
+        "title": "DevOps Skills",
+        "subtitle": "Udemy",
+        "rangeYears": "2021 - Actual",
+        "order": 4
+      }
+    ],
+    "works": [
+      {
+        "id": 1,
+        "title": "Sviluppatore web",
+        "subtitle": "Dana Giraldo",
+        "rangeYears": "07/2018 - 10/2018",
+        "order": 1
+      },
+      {
+        "id": 2,
+        "title": "Sviluppatore web",
+        "subtitle": "Gustos Alto Adige",
+        "rangeYears": "12/2018 - 07/2020",
+        "order": 2
+      },
+      {
+        "id": 3,
+        "title": "Sviluppatore Sofware",
+        "subtitle": "Trueblue",
+        "rangeYears": "09/2020 - 03/2022",
+        "order": 3
+      }
+    ]
+  }
 }
