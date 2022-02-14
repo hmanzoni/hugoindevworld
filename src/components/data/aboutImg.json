@@ -1,0 +1,30 @@
+{
+  "en": {
+    "rolesText": [
+      "I am a web developer.",
+      "I am a student.",
+      "I am a traveler.",
+      "I am an enthusiast."
+    ]
+  },
+  "es": {
+    "rolesText": [
+      "Soy un desarrolador web.",
+      "Soy un estudiante.",
+      "Soy un viajero.",
+      "Soy un apasionado."
+    ]
+  },
+  "it": {
+    "rolesText": [
+      "Sono uno sviluppatore web.",
+      "Sono uno studente.",
+      "Sono un viaggiatore.",
+      "Sono un appassionata."
+    ]
+  },
+  "unique": {
+    "title": "Hugo",
+    "subtitle": "Carrizo Manzoni"
+  }
+}
