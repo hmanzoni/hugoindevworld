@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import '../assets/css/home.css';
 import customContext from '../context/customs/customsContext';
-import HomeImg from './HomeImg';
+import HomeImg from './ui/HomeImg';
 import foundIcon from './functions/foundIcon';
 import homeInfo from './data/home';
 import { home as socialLinksInfo } from './data/socialLinks';
