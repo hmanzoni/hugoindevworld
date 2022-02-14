@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import '../assets/css/about.css';
-import about from '../assets/img/about.jpg';
 import hugoCV from '../assets/pdf/HugoManzoni.CV.pdf';
 import customContext from '../context/customs/customsContext';
 import calcYears from './functions/calcYears';
 import foundIcon from './functions/foundIcon';
+import AboutImg from './ui/AboutImg';
 import aboutInfo from './data/about';
+import aboutImgInfo from './data/aboutImg';
 
 const SingleAboutCard = ({ infoCard }) => {
   let title = infoCard.title;
@@ -32,6 +33,9 @@ const About = () => {
   const { icons, language } = customsContext;
   
   const {title, subtitle, downloadAltIcon, description, aboutCardsInfo, downloadText} = aboutInfo[language || 'en'];
+  const {rolesText} = aboutImgInfo[language || 'en'];
+  const aboutImgTexts = aboutImgInfo['unique'];
+
   const downloadAlt = foundIcon(icons, downloadAltIcon);
 
   return (
@@ -40,7 +44,7 @@ const About = () => {
       <span className="section__subtitle">{subtitle}</span>
 
       <div className="about__container container grid">
-        <img src={about} alt="about" className="about__img" />
+        <AboutImg aboutImgTexts={aboutImgTexts} rolesText={rolesText} />
         <div className="about__data">
           <p className="about__description">
             {description.map((singleText, index) => <TextDesc key={index} text={singleText}></TextDesc>)}
