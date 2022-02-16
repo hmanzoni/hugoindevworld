@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import '../../assets/css/aboutImg.css';
 import about from '../../assets/img/about.jpg';
 import rolesListHandler from '../functions/rolesListHandler';
 
 const AboutImg = ({aboutImgTexts, rolesText}) => {
+  const rolesRef = useRef();
   return (
     <div className="wrapper">
       <figure className="wrapper__snip">
@@ -16,7 +17,7 @@ const AboutImg = ({aboutImgTexts, rolesText}) => {
         </figcaption>
         {/* <a href="aboutme"></a> */}
       </figure>
-      <div className="roles" onLoad={rolesListHandler()}>
+      <div className="roles" ref={rolesRef} onLoad={rolesListHandler(rolesRef)}>
         {rolesText.map((text, index) => <div key={index}>{text}</div>)}
       </div>
     </div>

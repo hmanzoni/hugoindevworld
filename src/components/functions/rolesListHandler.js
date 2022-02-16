@@ -1,7 +1,7 @@
-const rolesListHandler = () => {
+const rolesListHandler = (rolesRef) => {
   let current = 1; // keeps track of the current div
   const timeMoveText = 2000; // time in milisec 2000 = 2 seg
-  const rolesElement = document.querySelector('.roles');
+  const rolesElement = rolesRef?.current;
   if (rolesElement) {
     const height = rolesElement.clientHeight; // the height of the roles div
     const numberDivs = rolesElement.children.length; // the number of children of the roles div
