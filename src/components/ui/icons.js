@@ -36,4 +36,5 @@ export const arrIcons = [
   {iconName: 'UilLinkedinAlt', iconSize: sizeIcons},
   {iconName: 'UilBookOpen', iconSize: sizeIcons},
   {iconName: 'UilGithubAlt', iconSize: sizeIcons},
+  {iconName: 'UilEnvelopeShare', iconSize: sizeIcons},
 ];
