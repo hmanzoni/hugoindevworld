@@ -6,15 +6,18 @@ import foundIcon from './functions/foundIcon';
 import homeInfo from './data/home';
 import { home as socialLinksInfo } from './data/socialLinks';
 
+const HomeSocialEmail = ({textEmail}) => <div className='home__social-mail'>{textEmail}</div>
+
 const HomeSocialLink = ({ infoCard }) => (
-  <a
-    href={infoCard.link}
-    target="_blank"
-    className="home__social-icon"
-    rel="noreferrer"
-  >
-    {infoCard.icon}
-  </a>
+    <a
+      href={infoCard.link}
+      target="_blank"
+      className="home__social-icon"
+      rel="noreferrer"
+    >
+      {infoCard.icon}
+      {infoCard.link.split(':')[0] === 'mailto' && <HomeSocialEmail textEmail={infoCard.link.split(':')[1]} />}
+    </a>
 );
 const HomeScroll = ({iconHomeScroll, scollText}) => (
   <div className="home__scroll">

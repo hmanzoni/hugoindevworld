@@ -21,6 +21,23 @@
   color: var(--first-color);
 }
 
+.home__social-mail {
+  position: absolute;
+  color: #000;
+  background-color: #f5f5dc;
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 0 5px;
+  display: none;
+}
+
+.home__social-icon:hover > .home__social-mail {
+  display: inline-block;
+}
+.home__social-mail:hover >  {
+  display: inline-block;
+}
+
 .home__social-icon:hover {
   font-size: 1.25rem;
   color: var(--first-color-alt);
