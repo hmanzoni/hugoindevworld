@@ -1,0 +1,32 @@
+{
+  "en": {
+    "linksNavitems": [
+      { "link": "#home", "title": "Home", "iconName": "UilEstate", "iconClass":"nav__icon" },
+      { "link": "#about", "title": "About", "iconName": "UilUser", "iconClass":"nav__icon" },
+      { "link": "#skills", "title": "Skills", "iconName": "UilFileAlt", "iconClass":"nav__icon" },
+      { "link": "#services", "title": "Services", "iconName": "UilBriefcaseAlt", "iconClass":"nav__icon" }
+    ]
+  },
+  "es": {
+    "linksNavitems": [
+      { "link": "#home", "title": "Home", "iconName": "UilEstate", "iconClass":"nav__icon" },
+      { "link": "#about", "title": "About", "iconName": "UilUser", "iconClass":"nav__icon" },
+      { "link": "#skills", "title": "Skills", "iconName": "UilFileAlt", "iconClass":"nav__icon" },
+      { "link": "#services", "title": "Services", "iconName": "UilBriefcaseAlt", "iconClass":"nav__icon" }
+    ]
+  },
+  "it": {
+    "linksNavitems": [
+      { "link": "#home", "title": "Home", "iconName": "UilEstate", "iconClass":"nav__icon" },
+      { "link": "#about", "title": "About", "iconName": "UilUser", "iconClass":"nav__icon" },
+      { "link": "#skills", "title": "Skills", "iconName": "UilFileAlt", "iconClass":"nav__icon" },
+      { "link": "#services", "title": "Services", "iconName": "UilBriefcaseAlt", "iconClass":"nav__icon" }
+    ]
+  },
+  "unique": {
+    "name": "Hugo",
+    "defaultTheme": "",
+    "availablesLang": ["EN", "ES", "IT"],
+    "linkName": "mailto:hugocarrizomanzoni@gmail.com"
+  }
+}
