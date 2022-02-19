@@ -1,16 +1,16 @@
 import React, { useContext, useEffect } from 'react';
-import { arrIcons } from './ui/icons';
-import foundIcon from './functions/foundIcon';
-import iconContext from '../context/customs/customsContext';
-import About from './About';
-import Home from './Home';
-import Header from './Header';
-import Skills from './Skills';
-import Services from './Services';
-import Qualification from './Qualification';
-import Footer from './Footer';
+import { arrIcons } from './icons';
+import foundIcon from '../functions/foundIcon';
+import iconContext from '../../context/customs/customsContext';
+import About from '../About';
+import Home from '../Home';
+import Header from '../Header';
+import Skills from '../Skills';
+import Services from '../Services';
+import Qualification from '../Qualification';
+import Footer from '../Footer';
 
-const Hugo = () => {
+const Layout = () => {
   const customsContext = useContext(iconContext);
   const { getIcons, icons, setDefaultLang, isSetupLang } = customsContext;
 
@@ -39,4 +39,4 @@ const Hugo = () => {
   );
 };
 
-export default Hugo;
+export default Layout;

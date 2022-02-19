@@ -1,13 +1,13 @@
 import React, { Suspense, lazy } from 'react';
 import CustomsState from './context/customs/customsState';
-import Loader from './components/Loader';
-const Hugo = lazy(() => import('./components/Hugo'));
+import Loader from './components/ui/Loader';
+const Layout = lazy(() => import('./components/ui/Layout'));
 
 function App() {
   return (
     <CustomsState>
       <Suspense fallback={<Loader />}>
-        <Hugo />
+        <Layout />
       </Suspense>
     </CustomsState>
   );
