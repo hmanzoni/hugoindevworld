@@ -4,7 +4,7 @@
     "subtitle": "How I start in IT world",
     "downloadAltIcon": "UilDownloadAlt",
     "downloadText": "Download CV",
-    "showDownloadCV": true,
+    "showDownloadCV": false,
     "fileNameCV": "HugoManzoni_CV",
     "description": [
       "I have been a software enthusiast IT since 2015.", 
@@ -23,7 +23,7 @@
     "subtitle": "Como comencé en el mundo IT",
     "downloadAltIcon": "UilDownloadAlt",
     "downloadText": "Descarga CV",
-    "showDownloadCV": true,
+    "showDownloadCV": false,
     "fileNameCV": "HugoManzoni_CV",
     "description": [
       "He sido un entusiasta de la programación desde 2015.", 
@@ -42,7 +42,7 @@
     "subtitle": "Come sono iniziato nel mondo IT",
     "downloadAltIcon": "UilDownloadAlt",
     "downloadText": "Scarica CV",
-    "showDownloadCV": true,
+    "showDownloadCV": false,
     "fileNameCV": "HugoManzoni_CV",
     "description": [
       "Sono un appassionato della programmazione dal 2015.", 
