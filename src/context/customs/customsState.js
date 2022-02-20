@@ -62,13 +62,13 @@ const CustomsState = (props) => {
           defaultLang = 'en';
           break;
       }
-      localStorage.setItem(localStorageLangWord, defaultLang);
+      // localStorage.setItem(localStorageLangWord, defaultLang);
     }
     changeLanguage(defaultLang);
   }
 
   const changeLanguage = (lang) => {
-    localStorage.setItem(localStorageLangWord, lang);
+    // localStorage.setItem(localStorageLangWord, lang);
     try {
       dispatch({
         type: CHANGE_LANG,

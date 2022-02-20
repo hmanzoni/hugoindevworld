@@ -18,26 +18,26 @@ const NavItems = ({ infoCard, hideMenu }) => (
 
 const Header = () => {
   const darkTheme = 'dark-theme';
-  const itemNameStorage = 'selected-theme';
-  const { name, linkName, defaultTheme, availablesLang } = headerInfo['unique'];
+  // const itemNameStorage = 'selected-theme';
+  const { name, linkName, darkThemeActive, availablesLang } = headerInfo['unique'];
   const [isActive, setActive] = useState(false);
-  const [darkThemeActive, setDarkThemeActive] = useState(defaultTheme);
+  const [isDarkTheme, setIsDarkTheme] = useState(darkThemeActive);
 
   const customsContext = useContext(customContext);
   const { icons, changeLanguage, language } = customsContext;
   const {linksNavitems} = headerInfo[language || 'en'];
 
-  const getCurrentTheme = (selectTheme) => selectTheme !== 'dark' ? 'dark' : 'light';
+  // const getCurrentTheme = (selectTheme) => selectTheme !== 'dark' ? 'dark' : 'light';
 
   useEffect(() => {
-    const selectTheme = localStorage.getItem(itemNameStorage);
-    localStorage.setItem(itemNameStorage, getCurrentTheme(selectTheme));
-    if (darkThemeActive) {
+    // const selectTheme = localStorage.getItem(itemNameStorage);
+    // localStorage.setItem(itemNameStorage, getCurrentTheme(selectTheme));
+    if (isDarkTheme) {
       document.body.classList.add(darkTheme);
     } else {
       document.body.classList.remove(darkTheme);
     }
-  }, [darkThemeActive]);
+  }, [isDarkTheme]);
 
   const linksArr = [];
   linksNavitems.forEach(linkInfo => linksArr.push({ link: linkInfo.link, title: linkInfo.title, icon: foundIcon(icons, linkInfo.iconName, linkInfo.iconClass) }));
@@ -62,10 +62,10 @@ const Header = () => {
 
         <div className="nav__btns">
             {
-              darkThemeActive ?
-              <UilSun className="change-theme" id="theme-button" onClick={() => setDarkThemeActive(false)} />
+              isDarkTheme ?
+              <UilSun className="change-theme" id="theme-button" onClick={() => setIsDarkTheme(false)} />
               :
-              <UilMoon className="change-theme" id="theme-button" onClick={() => setDarkThemeActive(true)} />
+              <UilMoon className="change-theme" id="theme-button" onClick={() => setIsDarkTheme(true)} />
             }
           <div className="nav__toggle" id="nav-toggle">
             <UilApps onClick={() => setActive(true)} />
