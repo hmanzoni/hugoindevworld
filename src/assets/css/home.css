@@ -25,13 +25,14 @@
   position: absolute;
   color: #000;
   background-color: #f5f5dc;
-  font-size: 15px;
+  font-size: var(--small-font-size);
   border-radius: 10px;
+  margin-left: 7.5rem;
   padding: 0 5px;
   display: none;
 }
 
-.home__social-icon:hover > .home__social-mail {
+.home__mailto:hover > .home__social-mail {
   display: inline-block;
 }
 .home__social-mail:hover >  {

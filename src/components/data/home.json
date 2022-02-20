@@ -33,6 +33,7 @@
     "scollText": "Scroll down",
     "showContactButton": true,
     "contactLink": "mailto:hugocmdesign@gmail.com",
+    "contactTextEmail": "hugocmdesign@gmail.com",
     "iconContactMe": {
       "iconName": "UilMessage",
       "iconClass": "button__icon"

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import '../assets/css/home.css';
 import customContext from '../context/customs/customsContext';
 import HomeImg from './ui/HomeImg';
-import SocialLinks from './ui/SocialLinks';
+import {SocialLinks, ContactMeElement} from './ui/SocialLinks';
 import HomeScroll from './ui/HomeScroll';
 import foundIcon from './functions/foundIcon';
 import homeInfo from './data/home';
@@ -14,11 +14,12 @@ const Home = () => {
   const customsContext = useContext(customContext);
   const { icons, language } = customsContext;
   const {title, subtitle, description, scollText, contactMeText} = homeInfo[language || 'en'];
-  const { iconHomeScrollInfo, iconContactMe, showContactButton, contactLink } = homeInfo['unique'];
+  const { iconHomeScrollInfo, iconContactMe, showContactButton, contactLink, contactTextEmail } = homeInfo['unique'];
   const socialLinks = [];
   const iconHomeScroll = {};
 
   const iconContact = foundIcon(icons, iconContactMe.iconName, iconContactMe.iconClass);
+  const objInfoContact = {contactMeText, contactLink, contactTextEmail, iconContact}
   socialLinksInfo.forEach(iconInfo => {
     const params = {link: iconInfo.link, icon: foundIcon(icons, iconInfo.icon)}
     socialLinks.push(params);
@@ -44,7 +45,7 @@ const Home = () => {
             <h1 className="home__title">{title}</h1>
             <h3 className="home__subtitle">{subtitle}</h3>
             <p className="home__description">{description}</p>
-            {showContactButton && <a href={contactLink} className="button button--flex">{contactMeText}{iconContact}</a>}
+            {showContactButton && <ContactMeElement infoContact={objInfoContact} />}
           </div>
         </div>
         <HomeScroll iconHomeScroll={iconHomeScroll} scollText={scollText} />
