@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import '../assets/css/footer.css';
 import customContext from '../context/customs/customsContext';
 import foundIcon from './functions/foundIcon';
+import SocialLinks from './ui/SocialLinks';
 import footerInfo from './data/footer';
 import { footer as socialLinksInfo } from './data/socialLinks';
 
@@ -12,19 +13,6 @@ const FooterLink = ({ infoCard }) => {
         {infoCard.title}
       </a>
     </li>
-  );
-};
-
-const FooterSocialLink = ({ infoCard }) => {
-  return (
-    <a
-      href={infoCard.link}
-      target="_blank"
-      className="footer__social"
-      rel="noreferrer"
-    >
-      {infoCard.icon}
-    </a>
   );
 };
 
@@ -52,7 +40,7 @@ const Footer = () => {
           </ul>
           <div className="footer__socials">
             {arrIconsSocial.map((socialLink, index) => (
-              <FooterSocialLink key={index} infoCard={socialLink} />
+              <SocialLinks key={index} infoCard={socialLink} classAnchor={'footer__social'} />
             ))}
           </div>
         </div>
