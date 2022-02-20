@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import '../assets/css/about.css';
-import hugoCV from '../assets/pdf/HugoManzoni.CV.pdf';
+import enCV from '../assets/pdf/en.CV.pdf';
+import esCV from '../assets/pdf/es.CV.pdf';
+import itCV from '../assets/pdf/it.CV.pdf';
 import customContext from '../context/customs/customsContext';
 import calcYears from './functions/calcYears';
 import foundIcon from './functions/foundIcon';
@@ -32,9 +34,10 @@ const About = () => {
   const customsContext = useContext(customContext);
   const { icons, language } = customsContext;
   
-  const {title, subtitle, downloadAltIcon, description, aboutCardsInfo, downloadText} = aboutInfo[language || 'en'];
+  const {title, subtitle, downloadAltIcon, description, aboutCardsInfo, downloadText, showDownloadCV, fileNameCV} = aboutInfo[language || 'en'];
   const {rolesText} = aboutImgInfo[language || 'en'];
   const aboutImgTexts = aboutImgInfo['unique'];
+  const linkCV = language === 'es' ? esCV : language === 'it' ? itCV : enCV;
 
   const downloadAlt = foundIcon(icons, downloadAltIcon);
 
@@ -54,12 +57,12 @@ const About = () => {
             {aboutCardsInfo.map((infoCard) => <SingleAboutCard key={infoCard.id} infoCard={infoCard} />)}
           </div>
 
-          <div className="about__buttons">
-            <a download="" href={hugoCV} className="button button--flex">
+          {showDownloadCV && <div className="about__buttons">
+            <a download={fileNameCV} href={linkCV} className="button button--flex">
               {downloadText}
               {downloadAlt}
             </a>
-          </div>
+          </div>}
         </div>
       </div>
     </section>

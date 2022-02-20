@@ -4,6 +4,8 @@
     "subtitle": "How I start in IT world",
     "downloadAltIcon": "UilDownloadAlt",
     "downloadText": "Download CV",
+    "showDownloadCV": true,
+    "fileNameCV": "HugoManzoni_CV",
     "description": [
       "I have been a software enthusiast IT since 2015.", 
       "As a professional, my main goal is to increase my knowledge in this field, things like new technologies and programming languages. In particular, I look enjoy discovering their weaknesses and strengths.", 
@@ -21,6 +23,8 @@
     "subtitle": "Como comencé en el mundo IT",
     "downloadAltIcon": "UilDownloadAlt",
     "downloadText": "Descarga CV",
+    "showDownloadCV": true,
+    "fileNameCV": "HugoManzoni_CV",
     "description": [
       "He sido un entusiasta de la programación desde 2015.", 
       "Como profesional, mi objetivo principal es aumentar mis conocimientos en este campo, aprendiendo nuevas tecnologías y lenguajes de programación. En particular, me gusta descubrir sus debilidades y fortalezas.", 
@@ -38,6 +42,8 @@
     "subtitle": "Come sono iniziato nel mondo IT",
     "downloadAltIcon": "UilDownloadAlt",
     "downloadText": "Scarica CV",
+    "showDownloadCV": true,
+    "fileNameCV": "HugoManzoni_CV",
     "description": [
       "Sono un appassionato della programmazione dal 2015.", 
       "Come professionista, il mio obiettivo principale è aumentare le mie conoscenze in questo campo, imparando nuove tecnologie e linguaggi di programmazione. In particolare, mi diverto a scoprire le loro debolezze e punti di forza.", 
