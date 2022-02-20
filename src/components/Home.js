@@ -13,11 +13,12 @@ const Home = () => {
 
   const customsContext = useContext(customContext);
   const { icons, language } = customsContext;
-  const {title, subtitle, description, scollText} = homeInfo[language || 'en'];
-  const { iconHomeScrollInfo } = homeInfo['unique'];
+  const {title, subtitle, description, scollText, contactMeText} = homeInfo[language || 'en'];
+  const { iconHomeScrollInfo, iconContactMe, showContactButton, contactLink } = homeInfo['unique'];
   const socialLinks = [];
   const iconHomeScroll = {};
 
+  const iconContact = foundIcon(icons, iconContactMe.iconName, iconContactMe.iconClass);
   socialLinksInfo.forEach(iconInfo => {
     const params = {link: iconInfo.link, icon: foundIcon(icons, iconInfo.icon)}
     socialLinks.push(params);
@@ -43,9 +44,7 @@ const Home = () => {
             <h1 className="home__title">{title}</h1>
             <h3 className="home__subtitle">{subtitle}</h3>
             <p className="home__description">{description}</p>
-            {/* <a href="!#" className="button button--flex">
-              Contact Me <UilMessage className="button__icon" />
-            </a> */}
+            {showContactButton && <a href={contactLink} className="button button--flex">{contactMeText}{iconContact}</a>}
           </div>
         </div>
         <HomeScroll iconHomeScroll={iconHomeScroll} scollText={scollText} />
