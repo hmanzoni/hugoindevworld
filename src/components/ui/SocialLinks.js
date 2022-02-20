@@ -18,3 +18,12 @@ export const SocialLinks = ({ infoCard, classAnchor }) => (
     {infoCard.icon}
   </a>
 );
+
+export const ButtonDownloadCV = ({ infoCard }) => (
+  <div className="about__buttons">
+    <a download={infoCard.fileNameCV} href={infoCard.linkCV} className="button button--flex">
+      {infoCard.downloadText}
+      {infoCard.downloadAlt}
+    </a>
+  </div>
+);

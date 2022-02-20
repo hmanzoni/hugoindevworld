@@ -7,6 +7,7 @@ import customContext from '../context/customs/customsContext';
 import foundIcon from './functions/foundIcon';
 import SingleAboutCard from './ui/SingleAboutCard';
 import AboutImg from './ui/AboutImg';
+import {ButtonDownloadCV} from './ui/SocialLinks';
 import aboutInfo from './data/about';
 import aboutImgInfo from './data/aboutImg';
 
@@ -39,12 +40,7 @@ const About = () => {
             {aboutCardsInfo.map((infoCard) => <SingleAboutCard key={infoCard.id} infoCard={infoCard} />)}
           </div>
 
-          {showDownloadCV && <div className="about__buttons">
-            <a download={fileNameCV} href={linkCV} className="button button--flex">
-              {downloadText}
-              {downloadAlt}
-            </a>
-          </div>}
+          {showDownloadCV && <ButtonDownloadCV infoCard={{fileNameCV, linkCV, downloadText, downloadAlt}} />}
         </div>
       </div>
     </section>
