@@ -1,37 +1,9 @@
 import React, { useContext, useState } from 'react';
 import '../assets/css/qualification.css';
 import customContext from '../context/customs/customsContext';
+import SingleQualification from './ui/SingleQualification';
 import foundIcon from './functions/foundIcon';
 import qualificationInfo from './data/qualification';
-
-const QualificationRounderLine = () => (
-  <div>
-    <span className="qualification__rounder"></span>
-    <span className="qualification__line"></span>
-  </div>
-);
-
-const SingleQualification = ({ infoCard, calendarAlt }) => (
-  <div className="qualification__data">
-    {(infoCard.order % 2) === 0 && (
-      <>
-        <div></div>
-        <QualificationRounderLine />
-      </>
-    )}
-    <div>
-      <h3 className="qualification__title">{infoCard.title}</h3>
-      <span className="qualification__subtitle">{infoCard.subtitle}</span>
-      <div className="qualification__calendar">
-        {calendarAlt}
-        <p>{infoCard.rangeYears}</p>
-      </div>
-    </div>
-    {(infoCard.order % 2) === 1 && (
-        <QualificationRounderLine />
-    )}
-  </div>
-);
 
 const Qualification = () => {
   const [tabActive, setTabActive] = useState('work');
