@@ -2,32 +2,12 @@ import React, { useContext } from 'react';
 import '../assets/css/home.css';
 import customContext from '../context/customs/customsContext';
 import HomeImg from './ui/HomeImg';
+import SocialLinks from './ui/SocialLinks';
+import HomeScroll from './ui/HomeScroll';
 import foundIcon from './functions/foundIcon';
 import homeInfo from './data/home';
 import { home as socialLinksInfo } from './data/socialLinks';
 
-const HomeSocialEmail = ({textEmail}) => <div className='home__social-mail'>{textEmail}</div>
-
-const HomeSocialLink = ({ infoCard }) => (
-    <a
-      href={infoCard.link}
-      target="_blank"
-      className="home__social-icon"
-      rel="noreferrer"
-    >
-      {infoCard.icon}
-      {infoCard.link.split(':')[0] === 'mailto' && <HomeSocialEmail textEmail={infoCard.link.split(':')[1]} />}
-    </a>
-);
-const HomeScroll = ({iconHomeScroll, scollText}) => (
-  <div className="home__scroll">
-    <a href="#about" className="home__scroll-button button--flex">
-      {iconHomeScroll.mouseAlt}
-      <span className="home__scroll-name">{scollText}</span>
-      {iconHomeScroll.arrowDown}
-    </a>
-  </div>
-);
 
 const Home = () => {
 
@@ -51,7 +31,7 @@ const Home = () => {
         <div className="home__content grid">
           <div className="home__social">
             {socialLinks.map((socialLink, index) => (
-              <HomeSocialLink key={index} infoCard={socialLink} />
+              <SocialLinks key={index} infoCard={socialLink} classAnchor={'home__social-icon'} />
             ))}
           </div>
 
