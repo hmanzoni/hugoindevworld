@@ -7,12 +7,12 @@ import qualificationInfo from './data/qualification';
 
 const Qualification = () => {
   const [tabActive, setTabActive] = useState('work');
-  
+
   const customsContext = useContext(customContext);
   const { icons, language } = customsContext;
-  
-  const {title, subtitle, tabs, educations, works} = qualificationInfo[language || 'en'];
-  const {mainIcon1, mainIcon2, mainIcon3} = qualificationInfo['unique'];
+
+  const { title, subtitle, tabs, educations, works } = qualificationInfo[language || 'en'];
+  const { mainIcon1, mainIcon2, mainIcon3 } = qualificationInfo['unique'];
 
   const graduationCap = foundIcon(icons, mainIcon1.name, mainIcon1.class);
   const briefcaseAlt = foundIcon(icons, mainIcon2.name, mainIcon2.class);
@@ -45,12 +45,12 @@ const Qualification = () => {
             id="education"
           >
             {educations.map((education) => (
-              <SingleQualification key={education.id} infoCard={education} calendarAlt={calendarAlt}/>
+              <SingleQualification key={education.id} infoCard={education} calendarAlt={calendarAlt} />
             ))}
           </div>
           <div className={`qualification__content ${tabActive === 'work' && "qualification__active"}`} data-content id="work">
             {works.map((work) => (
-              <SingleQualification key={work.id} infoCard={work} calendarAlt={calendarAlt}/>
+              <SingleQualification key={work.id} infoCard={work} calendarAlt={calendarAlt} />
             ))}
           </div>
         </div>

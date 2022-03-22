@@ -24,7 +24,7 @@ const SingleQualification = ({ infoCard, calendarAlt }) => (
       </div>
     </div>
     {(infoCard.order % 2) === 1 && (
-        <QualificationRounderLine />
+      <QualificationRounderLine />
     )}
   </div>
 );

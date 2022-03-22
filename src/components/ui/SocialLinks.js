@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ContactMeElement = ({infoContact}) => (
+export const ContactMeElement = ({ infoContact }) => (
   <a href={infoContact.contactLink} className="button button--flex home__mailto">
     {infoContact.contactMeText}
     {infoContact.iconContact}

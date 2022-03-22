@@ -16,7 +16,7 @@ const TestimonialCard = ({ infoCard }) => {
     let icons = [];
     for (let i = 0; i < infoCard.stars; i++) {
       icons.push(
-        {star}
+        { star }
       );
     }
     return icons;

@@ -25,7 +25,7 @@ const Header = () => {
 
   const customsContext = useContext(customContext);
   const { icons, changeLanguage, language } = customsContext;
-  const {linksNavitems} = headerInfo[language || 'en'];
+  const { linksNavitems } = headerInfo[language || 'en'];
 
   // const getCurrentTheme = (selectTheme) => selectTheme !== 'dark' ? 'dark' : 'light';
 
@@ -49,7 +49,7 @@ const Header = () => {
           {name}
         </a>
         <div className="nav__lang">
-          {availablesLang.map( (lang, index) => <div key={index} className={language === lang.toLocaleLowerCase() ? 'active-link' : ''} onClick={()=>changeLanguage(lang)}>{lang}</div>)}
+          {availablesLang.map((lang, index) => <div key={index} className={language === lang.toLocaleLowerCase() ? 'active-link' : ''} onClick={() => changeLanguage(lang)}>{lang}</div>)}
         </div>
         <div className={`nav__menu ${isActive ? "show-menu" : ""}`} id="nav-menu">
           <ul className="nav__list grid">
@@ -61,12 +61,12 @@ const Header = () => {
         </div>
 
         <div className="nav__btns">
-            {
-              isDarkTheme ?
+          {
+            isDarkTheme ?
               <UilSun className="change-theme" id="theme-button" onClick={() => setIsDarkTheme(false)} />
               :
               <UilMoon className="change-theme" id="theme-button" onClick={() => setIsDarkTheme(true)} />
-            }
+          }
           <div className="nav__toggle" id="nav-toggle">
             <UilApps onClick={() => setActive(true)} />
           </div>

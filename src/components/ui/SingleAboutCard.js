@@ -3,7 +3,7 @@ import calcYears from '../functions/calcYears';
 
 const SingleAboutCard = ({ infoCard }) => {
   let title = infoCard.title;
-  const {name, desc} = infoCard;
+  const { name, desc } = infoCard;
   if (title === '$year' && infoCard.year) {
     title = calcYears(title, infoCard.year, true);
   }

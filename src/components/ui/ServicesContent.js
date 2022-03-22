@@ -8,7 +8,7 @@ const ServicesList = ({ text, checkCircle }) => (
 );
 
 const ServicesContent = ({ cardInfo, clickerFn, iconsObj, textServicesContent }) => {
-  const {checkCircle, arrowRight, timesIcon } = iconsObj;
+  const { checkCircle, arrowRight, timesIcon } = iconsObj;
   return (
     <div className="services__content">
       <div onClick={() => clickerFn(cardInfo.code)}>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HomeScroll = ({iconHomeScroll, scollText}) => (
+const HomeScroll = ({ iconHomeScroll, scollText }) => (
   <div className="home__scroll">
     <a href="#about" className="home__scroll-button button--flex">
       {iconHomeScroll.mouseAlt}

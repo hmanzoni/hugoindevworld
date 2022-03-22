@@ -7,18 +7,18 @@ import customContext from '../context/customs/customsContext';
 import foundIcon from './functions/foundIcon';
 import SingleAboutCard from './ui/SingleAboutCard';
 import AboutImg from './ui/AboutImg';
-import {ButtonDownloadCV} from './ui/SocialLinks';
+import { ButtonDownloadCV } from './ui/SocialLinks';
 import aboutInfo from './data/about';
 import aboutImgInfo from './data/aboutImg';
 
-const TextDesc = ({text}) => <>{text}<br /></>;
+const TextDesc = ({ text }) => <>{text}<br /></>;
 
 const About = () => {
   const customsContext = useContext(customContext);
   const { icons, language } = customsContext;
-  
-  const {title, subtitle, downloadAltIcon, description, aboutCardsInfo, downloadText, showDownloadCV, fileNameCV} = aboutInfo[language || 'en'];
-  const {rolesText} = aboutImgInfo[language || 'en'];
+
+  const { title, subtitle, downloadAltIcon, description, aboutCardsInfo, downloadText, showDownloadCV, fileNameCV } = aboutInfo[language || 'en'];
+  const { rolesText } = aboutImgInfo[language || 'en'];
   const aboutImgTexts = aboutImgInfo['unique'];
   const linkCV = language === 'es' ? esCV : language === 'it' ? itCV : enCV;
 
@@ -40,7 +40,7 @@ const About = () => {
             {aboutCardsInfo.map((infoCard) => <SingleAboutCard key={infoCard.id} infoCard={infoCard} />)}
           </div>
 
-          {showDownloadCV && <ButtonDownloadCV infoCard={{fileNameCV, linkCV, downloadText, downloadAlt}} />}
+          {showDownloadCV && <ButtonDownloadCV infoCard={{ fileNameCV, linkCV, downloadText, downloadAlt }} />}
         </div>
       </div>
     </section>

@@ -7,11 +7,11 @@ import servicesInfo from './data/services';
 
 const Services = () => {
   const [servicesContent, setServicesContent] = useState([]);
-  
+
   const customsContext = useContext(customContext);
   const { icons, language } = customsContext;
 
-  const {title, subtitle, textServicesContent, servicesCardsInfo} = servicesInfo[language || 'en'];
+  const { title, subtitle, textServicesContent, servicesCardsInfo } = servicesInfo[language || 'en'];
   const { mainIcon1, mainIcon2, mainIcon3 } = servicesInfo['unique'];
 
   const iconsObj = {
@@ -22,7 +22,7 @@ const Services = () => {
 
   useEffect(() => {
     const services = [];
-  
+
     servicesCardsInfo.forEach(service => {
       const iconElement = foundIcon(icons, service.iconName, service.iconClass);
       service.icon = iconElement;
@@ -36,10 +36,10 @@ const Services = () => {
     const index = servicesContent.findIndex(skill => skill.code === servCode);
     const changeState = !servicesContent[index].isOpen;
     setServicesContent([
-         ...servicesContent.slice(0, index),
-        { ...servicesContent[index], isOpen: changeState },  
-         ...servicesContent.slice(index + 1)
-      ]
+      ...servicesContent.slice(0, index),
+      { ...servicesContent[index], isOpen: changeState },
+      ...servicesContent.slice(index + 1)
+    ]
     );
   }
 

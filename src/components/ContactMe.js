@@ -16,7 +16,7 @@ const ContactInfo = ({ cardInfo }) => {
   );
 };
 
-const ContactForm = ({messageBtnIcon}) => {
+const ContactForm = ({ messageBtnIcon }) => {
   return (
     <form action="" className="contact__form grid">
       <div className="contact__inputs grid">
@@ -65,7 +65,7 @@ const ContactMe = () => {
 
   const customsContext = useContext(iconContext);
   const { icons } = customsContext;
-  
+
   const messageBtnIcon = foundIcon(icons, 'UilMessage', 'button__icon');
 
   const contactsInfo = [
@@ -95,7 +95,7 @@ const ContactMe = () => {
             <ContactInfo key={index} cardInfo={contactSingleInfo} />
           ))}
         </div>
-        <ContactForm messageBtnIcon={messageBtnIcon}/>
+        <ContactForm messageBtnIcon={messageBtnIcon} />
       </div>
     </section>
   );

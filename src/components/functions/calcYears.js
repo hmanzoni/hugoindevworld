@@ -5,7 +5,7 @@ const calcYears = (text, year, twoDigits = false, replaceWord = '$year') => {
     yearsCalc = yearsCalc.length === 1 ? `0${yearsCalc}` : yearsCalc;
   }
   const newText = text.replace(replaceWord, yearsCalc);
-  
+
   return newText;
 
 }

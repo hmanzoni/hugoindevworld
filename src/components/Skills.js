@@ -10,12 +10,12 @@ import skillsCards from './data/skillsCards';
 
 const Skills = () => {
   const [skillsContents, setSkillsContents] = useState([]);
-  
+
   const customsContext = useContext(customContext);
   const { icons, language } = customsContext;
 
-  const {title, subtitle, skillsInfo} = skillInfo[language || 'en'];
-  const {mainIconSkills, iconArrowOpen} = skillInfo['unique'];
+  const { title, subtitle, skillsInfo } = skillInfo[language || 'en'];
+  const { mainIconSkills, iconArrowOpen } = skillInfo['unique'];
 
   const bracketsCurly = foundIcon(icons, mainIconSkills.name, mainIconSkills.class);
   const angleDown = foundIcon(icons, iconArrowOpen.name, iconArrowOpen.class);
@@ -28,7 +28,7 @@ const Skills = () => {
       skill.subtitle = calcYears(skill.subtitle, skill.year);
       const skillCardsInformation = skillsCards[skill.code];
       skill.cardsSkills = skillCardsInformation;
-      
+
       skills.push(skill);
     });
     setSkillsContents(skills);
@@ -38,10 +38,10 @@ const Skills = () => {
     const index = skillsContents.findIndex(skill => skill.code === skillCode);
     const changeState = !skillsContents[index].isOpen;
     setSkillsContents([
-         ...skillsContents.slice(0, index),
-        { ...skillsContents[index], isOpen: changeState },  
-         ...skillsContents.slice(index + 1)
-      ]
+      ...skillsContents.slice(0, index),
+      { ...skillsContents[index], isOpen: changeState },
+      ...skillsContents.slice(index + 1)
+    ]
     );
   }
 

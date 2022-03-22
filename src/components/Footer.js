@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import '../assets/css/footer.css';
 import customContext from '../context/customs/customsContext';
 import foundIcon from './functions/foundIcon';
-import {SocialLinks} from './ui/SocialLinks';
+import { SocialLinks } from './ui/SocialLinks';
 import footerInfo from './data/footer';
 import { footer as socialLinksInfo } from './data/socialLinks';
 
@@ -21,11 +21,11 @@ const Footer = () => {
   const customsContext = useContext(customContext);
   const { icons, language } = customsContext;
 
-  const {title, subtitle, rightsText, linksInt} = footerInfo[language || 'en'];
+  const { title, subtitle, rightsText, linksInt } = footerInfo[language || 'en'];
   const actualYear = new Date().getUTCFullYear();
 
   const arrIconsSocial = [];
-  socialLinksInfo.forEach(socialInfo => arrIconsSocial.push({icon: foundIcon(icons, socialInfo.icon), link: socialInfo.link}));
+  socialLinksInfo.forEach(socialInfo => arrIconsSocial.push({ icon: foundIcon(icons, socialInfo.icon), link: socialInfo.link }));
 
   return (
     <footer className="footer">
