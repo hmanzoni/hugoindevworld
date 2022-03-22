@@ -3,24 +3,27 @@ import '../assets/css/project.css';
 import project from '../assets/img/project.png';
 import iconContext from '../context/icons/customsContext';
 import foundIcon from './functions/foundIcon';
+import bannerInfo from './data/banner';
 
 const Banner = () => {
   const customsContext = useContext(iconContext);
-  const { icons } = customsContext;
-  
-  const messageProject = foundIcon(icons, 'UilMessage', 'project__icon');
-  
+  const { icons, language } = customsContext;
+  const { title, description, contactMeText } = bannerInfo[language || 'en'];
+  const { iconBanner } = bannerInfo['unique'];
+
+  const messageProject = foundIcon(icons, iconBanner.iconName, iconBanner.iconClass);
+
   return (
     <section className="project section">
       <div className="project__bg">
         <div className="project__container container grid">
           <div className="project__data">
-            <h2 className="project__title">You have a new project</h2>
+            <h2 className="project__title">{title}</h2>
             <p className="project__description">
-              Contact me now and get a 30% discount on your new project.
+              {description}
             </p>
-            <a href="!#" className="button button--flex button--white">
-              Contact Me
+            <a href="!#contact" className="button button--flex button--white">
+              {contactMeText}
               {messageProject}
             </a>
           </div>
