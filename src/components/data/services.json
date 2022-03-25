@@ -5,22 +5,6 @@
     "textServicesContent": "View More",
     "servicesCardsInfo": [
       {
-        "title": "DevOps",
-        "iconName": "UilCloudDatabaseTree",
-        "iconClass":"services__icon",
-        "subtitle": "Develop and operations",
-        "code": "DO",
-        "isOpen": false,
-        "textsList": [
-          "Integrate server in Azure or Firebase.",
-          "Integrate Docker and Kubernetes.",
-          "Improve deployment process.",
-          "Integrate GIT (version controller) in your code.",
-          "Create custom process with Bash.",
-          "Setup Services SMTP."
-        ]
-      },
-      {
         "title": "Frontend",
         "iconName": "UilWebGrid",
         "iconClass":"services__icon",
@@ -47,6 +31,22 @@
           "Integrate a services for send emails.",
           "Control and update the package versions."
         ]
+      },
+      {
+        "title": "DevOps",
+        "iconName": "UilCloudDatabaseTree",
+        "iconClass":"services__icon",
+        "subtitle": "Develop and operations",
+        "code": "DO",
+        "isOpen": false,
+        "textsList": [
+          "Integrate server in Azure or Firebase.",
+          "Integrate Docker and Kubernetes.",
+          "Improve deployment process.",
+          "Integrate GIT (version controller) in your code.",
+          "Create custom process with Bash.",
+          "Setup Services SMTP."
+        ]
       }
     ]
   },
@@ -55,22 +55,6 @@
     "subtitle": "Que puedo ofrecer",
     "textServicesContent": "Vea más",
     "servicesCardsInfo": [
-      {
-        "title": "DevOps",
-        "iconName": "UilCloudDatabaseTree",
-        "iconClass":"services__icon",
-        "subtitle": "Desarrollo y operaciones",
-        "code": "DO",
-        "isOpen": false,
-        "textsList": [
-          "Integraciones en Azure or Firebase servers.",
-          "Integraciones con Docker y Kubernetes.",
-          "Optimizaciones en el proceso de deployment.",
-          "Integraciones GIT (version controller) en tu codigo.",
-          "Creación procesos customs con Bash.",
-          "Configuración cuentas SMTP."
-        ]
-      },
       {
         "title": "Frontend",
         "iconName": "UilWebGrid",
@@ -98,6 +82,22 @@
           "Integración de servicios para envio de emails.",
           "Controlalr y actualizar paquete de versiones."
         ]
+      },
+      {
+        "title": "DevOps",
+        "iconName": "UilCloudDatabaseTree",
+        "iconClass":"services__icon",
+        "subtitle": "Desarrollo y operaciones",
+        "code": "DO",
+        "isOpen": false,
+        "textsList": [
+          "Integraciones en Azure or Firebase servers.",
+          "Integraciones con Docker y Kubernetes.",
+          "Optimizaciones en el proceso de deployment.",
+          "Integraciones GIT (version controller) en tu codigo.",
+          "Creación procesos customs con Bash.",
+          "Configuración cuentas SMTP."
+        ]
       }
     ]
   },
@@ -106,22 +106,6 @@
     "subtitle": "Cosa posso offrire",
     "textServicesContent": "Guarda di più",
     "servicesCardsInfo": [
-      {
-        "title": "DevOps",
-        "iconName": "UilCloudDatabaseTree",
-        "iconClass":"services__icon",
-        "subtitle": "Sviluppo e operazioni",
-        "code": "DO",
-        "isOpen": false,
-        "textsList": [
-          "Integrare in Azure o Firebase servers.",
-          "Integrare Docker e Kubernetes.",
-          "Ottimizzare il processo di rilascio.",
-          "Integrare GIT (version controller) nel tuo codice.",
-          "Creare processi custom con Bash.",
-          "Configurare servizi SMTP."
-        ]
-      },
       {
         "title": "Frontend",
         "iconName": "UilWebGrid",
@@ -148,6 +132,22 @@
           "Integrare nuove strutture di dati.",
           "Integrare un servizio per inviare emails.",
           "Controllo e aggiornamento di pacchetto di versioni."
+        ]
+      },
+      {
+        "title": "DevOps",
+        "iconName": "UilCloudDatabaseTree",
+        "iconClass":"services__icon",
+        "subtitle": "Sviluppo e operazioni",
+        "code": "DO",
+        "isOpen": false,
+        "textsList": [
+          "Integrare in Azure o Firebase servers.",
+          "Integrare Docker e Kubernetes.",
+          "Ottimizzare il processo di rilascio.",
+          "Integrare GIT (version controller) nel tuo codice.",
+          "Creare processi custom con Bash.",
+          "Configurare servizi SMTP."
         ]
       }
     ]
