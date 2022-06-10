@@ -45,10 +45,10 @@
     "showDownloadCV": false,
     "fileNameCV": "HugoManzoni_CV",
     "description": [
-      "Sono un appassionato della programmazione dal 2015.", 
-      "Come professionista, il mio obiettivo principale è aumentare le mie conoscenze in questo campo, imparando nuove tecnologie e linguaggi di programmazione. In particolare, mi diverto a scoprire le loro debolezze e punti di forza.", 
-      "Inoltre, mi considero una persona motivata, appassionata e resiliente. Ho la capacità di imparare velocemente e di adattarmi velocemente a qualsiasi cambiamento. Inoltre, sono molto socievole e amo imparare di altre culture.", 
-      "Ho una laurea in biochimica e ho lavorato in questo campo alcuni anni. Tuttavia, nel 2015 ho iniziato a conoscere l'IT e finalmente ho inseguito il mio sogno di iniziare a programmare come lavoro."
+      "La programmazione è una delle mie grandi passioni dal 2015.", 
+      "Come professionista il mio obiettivo principale è aumentare le mie conoscenze in questo ambito, imparando nuove tecnologie e linguaggi di programmazione.", 
+      "Inoltre, mi considero una persona motivata, appassionata e resiliente. Ho la capacità di imparare e di adattarmi velocemente a qualsiasi cambiamento. Sono molto socievole e amo entrare in contatto con altre culture e realtà.", 
+      "Ho una laurea in biochimica e ho lavorato nell'ambito alcuni anni. Nel 2015, quando ho iniziato a conoscere l'IT e ho deciso di seguire il mio sogno di fare la programmazione il mio lavoro."
     ],
     "aboutCardsInfo": [
       { "id": "1", "year": 2018, "title": "$year", "name": "Anni", "desc": "esperienza" },

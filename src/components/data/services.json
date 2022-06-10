@@ -102,7 +102,7 @@
     ]
   },
   "it": {
-    "title": "Services",
+    "title": "Servizi",
     "subtitle": "Cosa posso offrire",
     "textServicesContent": "Guarda di più",
     "servicesCardsInfo": [
@@ -115,7 +115,7 @@
         "isOpen": false,
         "textsList": [
           "Integrare nuove funzioni per soddisfare i requisiti business.",
-          "Fare cambi visivi per per rinnovare un software/sito.",
+          "Apportare cambi visivi per rinnovare un software/sito.",
           "Migliorare e ottimizzare il codice.",
           "Debug e risolvere gli errori."
         ]
