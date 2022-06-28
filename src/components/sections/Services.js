@@ -1,9 +1,9 @@
 import React, { useContext, useState, useEffect } from 'react';
-import '../assets/css/services.css';
-import customContext from '../context/customs/customsContext';
-import ServicesContent from './ui/ServicesContent';
-import foundIcon from './functions/foundIcon';
-import servicesInfo from './data/services';
+import '../../assets/css/services.css';
+import customContext from '../../context/customs/customsContext';
+import ServicesContent from '../ui/ServicesContent';
+import foundIcon from '../functions/foundIcon';
+import servicesInfo from '../data/services';
 
 const Services = () => {
   const [servicesContent, setServicesContent] = useState([]);

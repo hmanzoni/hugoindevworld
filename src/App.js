@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import CustomsState from './context/customs/customsState';
 import Loader from './components/ui/Loader';
-const Layout = lazy(() => import('./components/ui/Layout'));
+const Layout = lazy(() => import('./components/Layout'));
 
 function App() {
   return (

@@ -1,14 +1,14 @@
 import React, { useContext, useEffect } from 'react';
-import { arrIcons } from './icons';
-import foundIcon from '../functions/foundIcon';
-import iconContext from '../../context/customs/customsContext';
-import About from '../About';
-import Home from '../Home';
-import Header from '../Header';
-import Skills from '../Skills';
-import Services from '../Services';
-import Qualification from '../Qualification';
-import Footer from '../Footer';
+import { arrIcons } from './ui/icons';
+import foundIcon from './functions/foundIcon';
+import iconContext from '../context/customs/customsContext';
+import About from './sections/About';
+import Home from './sections/Home';
+import Header from './sections/Header';
+import Skills from './sections/Skills';
+import Services from './sections/Services';
+import Qualification from './sections/Qualification';
+import Footer from './sections/Footer';
 
 const Layout = () => {
   const customsContext = useContext(iconContext);

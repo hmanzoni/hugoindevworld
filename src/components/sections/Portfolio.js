@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import '../assets/css/portfolio.css';
-import portfolio1 from '../assets/img/portfolio1.jpg';
-import portfolio2 from '../assets/img/portfolio2.jpg';
-import portfolio3 from '../assets/img/portfolio3.jpg';
-import iconContext from '../context/icons/customsContext';
-import foundIcon from './functions/foundIcon';
+import '../../assets/css/portfolio.css';
+import portfolio1 from '../../assets/img/portfolio1.jpg';
+import portfolio2 from '../../assets/img/portfolio2.jpg';
+import portfolio3 from '../../assets/img/portfolio3.jpg';
+import iconContext from '../../context/icons/customsContext';
+import foundIcon from '../functions/foundIcon';
 
 const PorfolioCards = ({ infoCard }) => {
   return (

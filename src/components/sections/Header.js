@@ -2,10 +2,10 @@ import React, { useContext, useEffect, useState } from 'react';
 import {
   UilApps, UilMoon, UilSun, UilTimes
 } from '@iconscout/react-unicons';
-import '../assets/css/header.css';
-import customContext from '../context/customs/customsContext';
-import foundIcon from './functions/foundIcon';
-import headerInfo from './data/header';
+import '../../assets/css/header.css';
+import customContext from '../../context/customs/customsContext';
+import foundIcon from '../functions/foundIcon';
+import headerInfo from '../data/header';
 
 const NavItems = ({ infoCard, hideMenu }) => (
   <li className="nav__item">

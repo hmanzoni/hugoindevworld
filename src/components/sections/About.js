@@ -1,15 +1,15 @@
 import React, { useContext } from 'react';
-import '../assets/css/about.css';
-import enCV from '../assets/pdf/en.CV.pdf';
-import esCV from '../assets/pdf/es.CV.pdf';
-import itCV from '../assets/pdf/it.CV.pdf';
-import customContext from '../context/customs/customsContext';
-import foundIcon from './functions/foundIcon';
-import SingleAboutCard from './ui/SingleAboutCard';
-import AboutImg from './ui/AboutImg';
-import { ButtonDownloadCV } from './ui/SocialLinks';
-import aboutInfo from './data/about';
-import aboutImgInfo from './data/aboutImg';
+import '../../assets/css/about.css';
+import enCV from '../../assets/pdf/en.CV.pdf';
+import esCV from '../../assets/pdf/es.CV.pdf';
+import itCV from '../../assets/pdf/it.CV.pdf';
+import customContext from '../../context/customs/customsContext';
+import foundIcon from '../functions/foundIcon';
+import SingleAboutCard from '../ui/SingleAboutCard';
+import AboutImg from '../ui/AboutImg';
+import { ButtonDownloadCV } from '../ui/SocialLinks';
+import aboutInfo from '../data/about';
+import aboutImgInfo from '../data/aboutImg';
 
 const TextDesc = ({ text }) => <>{text}<br /></>;
 

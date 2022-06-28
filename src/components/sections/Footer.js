@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import '../assets/css/footer.css';
-import customContext from '../context/customs/customsContext';
-import foundIcon from './functions/foundIcon';
-import { SocialLinks } from './ui/SocialLinks';
-import footerInfo from './data/footer';
-import { footer as socialLinksInfo } from './data/socialLinks';
+import '../../assets/css/footer.css';
+import customContext from '../../context/customs/customsContext';
+import foundIcon from '../functions/foundIcon';
+import { SocialLinks } from '../ui/SocialLinks';
+import footerInfo from '../data/footer';
+import { footer as socialLinksInfo } from '../data/socialLinks';
 
 const FooterLink = ({ infoCard }) => {
   return (

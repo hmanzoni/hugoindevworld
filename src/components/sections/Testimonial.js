@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import '../assets/css/testimonial.css';
-import testimonial1 from '../assets/img/testimonial1.jpg';
-import testimonial2 from '../assets/img/testimonial2.jpg';
-import testimonial3 from '../assets/img/testimonial3.jpg';
-import iconContext from '../context/icons/customsContext';
-import foundIcon from './functions/foundIcon';
+import '../../assets/css/testimonial.css';
+import testimonial1 from '../../assets/img/testimonial1.jpg';
+import testimonial2 from '../../assets/img/testimonial2.jpg';
+import testimonial3 from '../../assets/img/testimonial3.jpg';
+import iconContext from '../../context/icons/customsContext';
+import foundIcon from '../functions/foundIcon';
 
 const TestimonialCard = ({ infoCard }) => {
   const customsContext = useContext(iconContext);

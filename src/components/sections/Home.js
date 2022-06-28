@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
-import '../assets/css/home.css';
-import customContext from '../context/customs/customsContext';
-import HomeImg from './ui/HomeImg';
-import { SocialLinks, ContactMeElement } from './ui/SocialLinks';
-import HomeScroll from './ui/HomeScroll';
-import foundIcon from './functions/foundIcon';
-import homeInfo from './data/home';
-import { home as socialLinksInfo } from './data/socialLinks';
+import '../../assets/css/home.css';
+import customContext from '../../context/customs/customsContext';
+import HomeImg from '../ui/HomeImg';
+import { SocialLinks, ContactMeElement } from '../ui/SocialLinks';
+import HomeScroll from '../ui/HomeScroll';
+import foundIcon from '../functions/foundIcon';
+import homeInfo from '../data/home';
+import { home as socialLinksInfo } from '../data/socialLinks';
 
 
 const Home = () => {
