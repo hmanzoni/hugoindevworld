@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Personal Porfolio - Hugo in Dev World
+The objective of this project is to show my programming skills and at the same time promote my profile on the web..
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Note: This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
