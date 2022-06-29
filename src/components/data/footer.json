@@ -4,9 +4,9 @@
     "subtitle": "Software development",
     "rightsText": "Hugo Carrizo Manzoni. All rights reserved.",
     "linksInt": [
-      { "title": "Services", "link": "!#" },
-      { "title": "Portfolio", "link": "!#" },
-      { "title": "Contact", "link": "!#" }
+      { "title": "Services", "link": "#services" },
+      { "title": "Skills", "link": "#skills" },
+      { "title": "About", "link": "#about" }
     ]
   },
   "es": {
@@ -14,9 +14,9 @@
     "subtitle": "Software development",
     "rightsText": "Hugo Carrizo Manzoni. Todos los derechos reservados.",
     "linksInt": [
-      { "title": "Servicios", "link": "!#" },
-      { "title": "Portafolio", "link": "!#" },
-      { "title": "Contacto", "link": "!#" }
+      { "title": "Servicios", "link": "#services" },
+      { "title": "Skills", "link": "#skills" },
+      { "title": "About", "link": "#about" }
     ]
   },
   "it": {
@@ -24,9 +24,9 @@
     "subtitle": "Software development",
     "rightsText": "Hugo Carrizo Manzoni. All rights reserved.",
     "linksInt": [
-      { "title": "Services", "link": "!#" },
-      { "title": "Portfolio", "link": "!#" },
-      { "title": "Contatto", "link": "!#" }
+      { "title": "Services", "link": "#services" },
+      { "title": "Skills", "link": "#skills" },
+      { "title": "About", "link": "#about" }
     ]
   }
 }
