@@ -2,12 +2,13 @@ import React, { useReducer } from 'react';
 import * as ico from '@iconscout/react-unicons';
 import customsContext from './customsContext';
 import customsReducer from './customsReducer';
-import { GET_ICON, LOADING_FINISH, CHANGE_LANG } from '../types';
+import { GET_ICON, GET_ICON_ARR, LOADING_FINISH, CHANGE_LANG } from '../types';
 
 const CustomsState = (props) => {
 
   const initialState = {
-    icons: [],
+    icons: {},
+    iconsArray: [],
     loading: true,
     isSetupLang: false,
     language: 'en'
@@ -17,6 +18,31 @@ const CustomsState = (props) => {
   const [state, dispatch] = useReducer(customsReducer, initialState);
 
   const getIcons = (iconsArr) => {
+    try {
+      const elementObj = {};
+      iconsArr.forEach(iconInfo => {
+        const nameIcon = iconInfo.iconName;
+        if (nameIcon) {
+          const classIcon = iconInfo?.propsIcon?.className || '';
+          const keyObj = `${nameIcon}.${classIcon}`;
+          const iconElement = ico[nameIcon];
+          const iProps = iconInfo.propsIcon || {};
+          if (iconInfo.iconSize) iconElement.defaultProps.size = iconInfo.iconSize;
+          if (iconInfo.iconColor) iconElement.defaultProps.color = iconInfo.iconColor;
+          const iconToAdd = { [keyObj] : React.createElement(iconElement, iProps) };
+          Object.assign(elementObj, iconToAdd);
+        }
+      });
+      dispatch({
+        type: GET_ICON,
+        payload: elementObj,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const getIconsArr = (iconsArr) => {
     try {
       const elementArray = [];
       iconsArr.forEach(iconInfo => {
@@ -29,7 +55,7 @@ const CustomsState = (props) => {
         }
       });
       dispatch({
-        type: GET_ICON,
+        type: GET_ICON_ARR,
         payload: elementArray,
       });
     } catch (error) {
@@ -83,10 +109,12 @@ const CustomsState = (props) => {
     <customsContext.Provider
       value={{
         icons: state.icons,
+        iconsArray: state.iconsArray,
         loading: state.loading,
         language: state.language,
         isSetupLang: state.isSetupLang,
         getIcons,
+        getIconsArr,
         loadingFinish,
         setDefaultLang,
         changeLanguage

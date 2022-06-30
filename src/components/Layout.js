@@ -15,14 +15,13 @@ const Layout = () => {
   const { getIcons, icons, setDefaultLang, isSetupLang } = customsContext;
 
   useEffect(() => {
-    if (!icons.length) {
+    if (icons && Object.getPrototypeOf(icons) === Object.prototype && !Object.entries(icons).length) {
       getIcons(arrIcons);
     }
     if (!isSetupLang) {
       setDefaultLang();
     }
   }, [icons, getIcons, setDefaultLang, isSetupLang]);
-
   const arrowUp = foundIcon(icons, 'UilArrowUp', 'scrollup__icon');
 
   return (

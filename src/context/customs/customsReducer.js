@@ -1,4 +1,4 @@
-import { GET_ICON, LOADING_FINISH, CHANGE_LANG } from '../types';
+import { GET_ICON, GET_ICON_ARR, LOADING_FINISH, CHANGE_LANG } from '../types';
 
 const reducerFn = (state, action) => {
   switch (action.type) {
@@ -6,6 +6,11 @@ const reducerFn = (state, action) => {
       return {
         ...state,
         icons: action.payload
+      };
+    case GET_ICON_ARR:
+      return {
+        ...state,
+        iconsArray: action.payload
       };
     case LOADING_FINISH:
       return {

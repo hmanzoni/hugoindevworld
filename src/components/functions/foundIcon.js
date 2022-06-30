@@ -1,4 +1,4 @@
-const foundIcon = (icons, nameIcon, classIcon = '', sizeIcon = '') => icons.find(i => {
+export const foundIconArr = (icons, nameIcon, classIcon = '', sizeIcon = '') => icons.find(i => {
   const checkName = i.type.name === nameIcon;
   const checkClass = i.props.className === classIcon;
   const checkSize = i.props.size === sizeIcon;
@@ -12,5 +12,10 @@ const foundIcon = (icons, nameIcon, classIcon = '', sizeIcon = '') => icons.find
     return checkName;
   }
 });
+
+const foundIcon = (icons, nameIcon, classIcon = '') => {
+  const keyObjIcon = `${nameIcon}.${classIcon}`;
+  return icons[keyObjIcon]
+}
 
 export default foundIcon;
