@@ -8,9 +8,10 @@
     "fileNameCV": "HugoManzoni_CV",
     "description": [
       "I have been a software enthusiast IT since 2015.", 
-      "As a professional, my main goal is to increase my knowledge in this field, things like new technologies and programming languages. In particular, I look enjoy discovering their weaknesses and strengths.", 
-      "In addition, I consider myself a self-motivated, enthusiastic and resilient person and I have the ability to learn fast and adapt to any changes quickly. Moreover, I am very sociable, I love to learn from other cultures.", 
-      "I have a degree on biochemistry and worked in this field for some years. Nevertheless, in 2015 I started learning about IT, and finally I pursued my dream of starting to programming for a living."
+      "My main goal as a professional is to improve my knowledge of new technologies and programming languages. One of the things I like most about programming is discover its weaknesses and strengths, in order to use it as best as possible.", 
+      "I am a very self-motivated, enthusiastic and resilient person and I have to ability to learn fast and to adapt to any changes quickly.", 
+      "I can define myself as a very sociable and curious. I love to get in touch with new cultures and habits from all over the world.", 
+      "I have a master's degree in Biochemistry, and I worked in this field for some years. Nevertheless, in 2015 I started learning programming realizing one of the dreams of my life and I am now a web developer always looking for new challenges."
     ],
     "aboutCardsInfo": [
       { "id": "1", "year": 2018, "title": "$year", "name": "Years", "desc": "experience" },
@@ -27,9 +28,9 @@
     "fileNameCV": "HugoManzoni_CV",
     "description": [
       "He sido un entusiasta de la programación desde 2015.", 
-      "Como profesional, mi objetivo principal es aumentar mis conocimientos en este campo, aprendiendo nuevas tecnologías y lenguajes de programación. En particular, me gusta descubrir sus debilidades y fortalezas.", 
-      "Además, me considero una persona motivada, apacionado y resiliente. Tengo la capacidad de aprender rápido y adaptarme a cualquier cambio rápidamente. Además, soy muy sociable y me encanta aprender de otras culturas.", 
-      "Soy licenciado en bioquímica y trabajé en este campo durante algunos años. Sin embargo, en 2015 comencé a aprender sobre IT y finalmente perseguí mi sueño de comenzar a programar para ganarme la vida."
+      "Como profesional, mi objetivo principal es aumentar mis conocimientos en este campo, aprendiendo nuevas tecnologías y lenguajes de programación. En particular, me gusta descubrir sus debilidades y fortalezas para hacer un mejor uso de ellos.", 
+      "Soy una persona motivada, apacionada y resiliente. Tengo la capacidad de aprender rápido y adaptarme a cualquier cambio rápidamente. Además, soy muy sociable y me encanta aprender de otras culturas.", 
+      "Soy licenciado en bioquímica y trabajé en este campo durante algunos años. Sin embargo, en 2015 comencé a aprender sobre IT y finalmente perseguí mi sueño de hacer de la programación mi trabajo."
     ],
     "aboutCardsInfo": [
       { "id": "1", "year": 2018, "title": "$year", "name": "Años", "desc": "experiencia" },
@@ -47,7 +48,7 @@
     "description": [
       "La programmazione è una delle mie grandi passioni dal 2015.", 
       "Come professionista il mio obiettivo principale è aumentare le mie conoscenze in questo ambito, imparando nuove tecnologie e linguaggi di programmazione.", 
-      "Inoltre, mi considero una persona motivata, appassionata e resiliente. Ho la capacità di imparare e di adattarmi velocemente a qualsiasi cambiamento. Sono molto socievole e amo entrare in contatto con altre culture e realtà.", 
+      "Sono una persona motivata, appassionata e resiliente. Ho la capacità di imparare e di adattarmi velocemente a qualsiasi cambiamento. Sono molto socievole e amo entrare in contatto con altre culture e realtà.", 
       "Ho una laurea in biochimica e ho lavorato nell'ambito alcuni anni. Nel 2015, quando ho iniziato a conoscere l'IT e ho deciso di seguire il mio sogno di fare la programmazione il mio lavoro."
     ],
     "aboutCardsInfo": [
