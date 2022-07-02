@@ -33,7 +33,7 @@ const Layout = () => {
       <Qualification />
       <Services />
       <Footer />
-      <a href="!#" className="show-scroll scrollup" id="scroll-up">{arrowUp}</a>
+      <a href="#" className="show-scroll scrollup" id="scroll-up">{arrowUp}</a>
     </>
   );
 };

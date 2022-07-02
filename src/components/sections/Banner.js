@@ -22,7 +22,7 @@ const Banner = () => {
             <p className="project__description">
               {description}
             </p>
-            <a href="!#contact" className="button button--flex button--white">
+            <a href="#contact" className="button button--flex button--white">
               {contactMeText}
               {messageProject}
             </a>
