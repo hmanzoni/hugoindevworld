@@ -13,8 +13,8 @@
         "isOpen": false,
         "textsList": [
           "Integrate functions for new business requirements.",
-          "Make visual changes for renew a software/site.",
-          "Improve and optimize the existing code.",
+          "Make visual changes to renew a software/site.",
+          "Improve and optimize existing code.",
           "Debug and resolve bugs."
         ]
       },
@@ -28,8 +28,8 @@
         "textsList": [
           "Integrate a API services for consulting data in DB.",
           "Integrate new data structure.",
-          "Integrate a services for send emails.",
-          "Control and update the package versions."
+          "Integrate services to send emails.",
+          "Control and update package versions."
         ]
       },
       {

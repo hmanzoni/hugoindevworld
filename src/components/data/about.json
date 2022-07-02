@@ -7,16 +7,16 @@
     "showDownloadCV": false,
     "fileNameCV": "HugoManzoni_CV",
     "description": [
-      "I have been a software enthusiast IT since 2015.", 
-      "My main goal as a professional is to improve my knowledge of new technologies and programming languages. One of the things I like most about programming is discover its weaknesses and strengths, in order to use it as best as possible.", 
-      "I am a very self-motivated, enthusiastic and resilient person and I have to ability to learn fast and to adapt to any changes quickly.", 
-      "I can define myself as a very sociable and curious. I love to get in touch with new cultures and habits from all over the world.", 
-      "I have a master's degree in Biochemistry, and I worked in this field for some years. Nevertheless, in 2015 I started learning programming realizing one of the dreams of my life and I am now a web developer always looking for new challenges."
+      "I have been an IT and software enthusiast since 2015.", 
+      "My main goal as a professional is to always improve my knowledge of new technologies and programming languages. One of the things I like most about programming is discovering weaknesses and strengths, in order to use it as best as possible.", 
+      "I am a self-motivated, enthusiastic and resilient person and I have the ability to learn fast and to quickly adapt to any changes.", 
+      "I can define myself as very sociable and curious. I love to experience new cultures from all over the world.", 
+      "I hold a Master's degree in Biochemistry, but in 2015 I started learning programming and realized it is one of my greatest passions in life. I am now a web developer always looking for new challenges."
     ],
     "aboutCardsInfo": [
       { "id": "1", "year": 2018, "title": "$year", "name": "Years", "desc": "experience" },
-      { "id": "2", "title": "20", "name": "Completed", "desc": "project" },
-      { "id": "3", "title": "05", "name": "Companies", "desc": "worked" }
+      { "id": "2", "title": "20", "name": "Completed", "desc": "projects" },
+      { "id": "3", "title": "05", "name": "Brands", "desc": "I worked for" }
     ]
   },
   "es": {
