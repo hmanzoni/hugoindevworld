@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { arrIcons } from './ui/icons';
-import foundIcon from './functions/foundIcon';
+import foundIcon from '../functions/foundIcon';
 import iconContext from '../context/customs/customsContext';
 import About from './sections/About';
 import Home from './sections/Home';
