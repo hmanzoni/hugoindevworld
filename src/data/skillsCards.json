@@ -11,6 +11,7 @@
     { "name": "CSS", "percent": "85%" }
   ],
   "DO": [
+    { "name": "AWS", "percent": "95%" },
     { "name": "GIT", "percent": "95%" },
     { "name": "Docker", "percent": "85%" },
     { "name": "Kubernetes", "percent": "80%" },
@@ -23,7 +24,7 @@
     { "name": "Node JS", "percent": "85%" },
     { "name": "Express JS", "percent": "85%" },
     { "name": "PHP", "percent": "75%" },
-    { "name": "Python", "percent": "70%" },
+    { "name": "Python", "percent": "80%" },
     { "name": "Laravel", "percent": "75%" },
     { "name": "MongoDB", "percent": "65%" },
     { "name": "MySQL", "percent": "65%" },

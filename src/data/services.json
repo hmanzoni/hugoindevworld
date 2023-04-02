@@ -36,7 +36,7 @@
         "title": "Cloud-DevOps",
         "iconName": "UilCloudDatabaseTree",
         "iconClass":"services__icon",
-        "subtitle": "Develop and operations",
+        "subtitle": "Cloud, develop and operations",
         "code": "DO",
         "isOpen": false,
         "textsList": [
@@ -88,7 +88,7 @@
         "title": "Cloud-DevOps",
         "iconName": "UilCloudDatabaseTree",
         "iconClass":"services__icon",
-        "subtitle": "Desarrollo y operaciones",
+        "subtitle": "Cloud, desarrollo y operaciones",
         "code": "DO",
         "isOpen": false,
         "textsList": [
@@ -140,7 +140,7 @@
         "title": "Cloud-DevOps",
         "iconName": "UilCloudDatabaseTree",
         "iconClass":"services__icon",
-        "subtitle": "Sviluppo e operazioni",
+        "subtitle": "Cloud, sviluppo e operazioni",
         "code": "DO",
         "isOpen": false,
         "textsList": [

@@ -60,7 +60,7 @@
         "cardsSkills": []
       },
       {
-        "title": "DevOps",
+        "title": "Cloud-DevOps",
         "code": "DO",
         "icon": "UilCloudDatabaseTree", 
         "iconClass": "skills__icon",
