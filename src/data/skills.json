@@ -24,7 +24,7 @@
         "cardsSkills": []
       },
       {
-        "title": "DevOps",
+        "title": "Cloud and DevOps",
         "code": "DO",
         "icon": "UilCloudDatabaseTree", 
         "iconClass": "skills__icon",
@@ -60,7 +60,7 @@
         "cardsSkills": []
       },
       {
-        "title": "Cloud-DevOps",
+        "title": "Cloud and DevOps",
         "code": "DO",
         "icon": "UilCloudDatabaseTree", 
         "iconClass": "skills__icon",
@@ -96,7 +96,7 @@
         "cardsSkills": []
       },
       {
-        "title": "DevOps",
+        "title": "Cloud and DevOps",
         "code": "DO",
         "icon": "UilCloudDatabaseTree", 
         "iconClass": "skills__icon",
