@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import '../../assets/css/project.css';
 import project from '../../assets/img/project.png';
 import iconContext from '../context/icons/customsContext';
-import foundIcon from '../functions/foundIcon';
-import bannerInfo from '../data/banner';
+import foundIcon from '../../functions/foundIcon';
+import bannerInfo from '../../data/banner';
 
 const Banner = () => {
   const customsContext = useContext(iconContext);

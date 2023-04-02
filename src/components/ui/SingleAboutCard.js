@@ -1,5 +1,5 @@
 import React from 'react';
-import calcYears from '../functions/calcYears';
+import calcYears from '../../functions/calcYears';
 
 const SingleAboutCard = ({ infoCard }) => {
   let title = infoCard.title;

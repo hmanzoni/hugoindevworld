@@ -2,10 +2,10 @@ import React, { useContext, useEffect, useState } from 'react';
 import '../../assets/css/skills.css';
 import customContext from '../../context/customs/customsContext';
 import SkillContent from '../ui/SkillContent';
-import foundIcon from '../functions/foundIcon';
-import calcYears from '../functions/calcYears';
-import skillInfo from '../data/skills';
-import skillsCards from '../data/skillsCards';
+import foundIcon from '../../functions/foundIcon';
+import calcYears from '../../functions/calcYears';
+import skillInfo from '../../data/skills';
+import skillsCards from '../../data/skillsCards';
 
 
 const Skills = () => {

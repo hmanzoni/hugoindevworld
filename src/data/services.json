@@ -33,19 +33,20 @@
         ]
       },
       {
-        "title": "DevOps",
+        "title": "Cloud-DevOps",
         "iconName": "UilCloudDatabaseTree",
         "iconClass":"services__icon",
         "subtitle": "Develop and operations",
         "code": "DO",
         "isOpen": false,
         "textsList": [
-          "Integrate server in Azure or Firebase.",
+          "Best practices on AWS, migration and monitoring services.",
+          "Integrate server in Firebase.",
           "Integrate Docker and Kubernetes.",
           "Improve deployment process.",
           "Integrate GIT (version controller) in your code.",
           "Create custom process with Bash.",
-          "Setup Services SMTP."
+          "Setup Services SMTP, alias DNS and renew SSL Certificates."
         ]
       }
     ]
@@ -84,19 +85,20 @@
         ]
       },
       {
-        "title": "DevOps",
+        "title": "Cloud-DevOps",
         "iconName": "UilCloudDatabaseTree",
         "iconClass":"services__icon",
         "subtitle": "Desarrollo y operaciones",
         "code": "DO",
         "isOpen": false,
         "textsList": [
-          "Integraciones en Azure or Firebase servers.",
+          "Best practices en AWS, migraciòn y monitoreo de servicios.",
+          "Integraciones en Firebase.",
           "Integraciones con Docker y Kubernetes.",
           "Optimizaciones en el proceso de deployment.",
           "Integraciones GIT (version controller) en tu codigo.",
           "Creación procesos customs con Bash.",
-          "Configuración cuentas SMTP."
+          "Configuración cuentas SMTP, alias DNS y renovaciòn Certificados SSL."
         ]
       }
     ]
@@ -135,19 +137,20 @@
         ]
       },
       {
-        "title": "DevOps",
+        "title": "Cloud-DevOps",
         "iconName": "UilCloudDatabaseTree",
         "iconClass":"services__icon",
         "subtitle": "Sviluppo e operazioni",
         "code": "DO",
         "isOpen": false,
         "textsList": [
-          "Integrare in Azure o Firebase servers.",
+          "Best practices in AWS, migrazioni e monitoring di servizi.",
+          "Integrare in Firebase.",
           "Integrare Docker e Kubernetes.",
           "Ottimizzare il processo di rilascio.",
           "Integrare GIT (version controller) nel tuo codice.",
           "Creare processi custom con Bash.",
-          "Configurare servizi SMTP."
+          "Configurare servizi SMTP, alias DNS e rinnovo Certificati SSL."
         ]
       }
     ]

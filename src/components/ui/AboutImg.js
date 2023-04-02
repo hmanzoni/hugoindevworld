@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import '../../assets/css/aboutImg.css';
 import about from '../../assets/img/about.jpg';
-import rolesListHandler from '../functions/rolesListHandler';
+import rolesListHandler from '../../functions/rolesListHandler';
 
 const AboutImg = ({ aboutImgTexts, rolesText }) => {
   const rolesRef = useRef();

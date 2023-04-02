@@ -31,14 +31,14 @@
       },
       {
         "id": 3,
-        "title": "Advance Web, Sofware Develop",
+        "title": "Advance Web, Software Develop",
         "subtitle": "Udemy",
         "rangeYears": "2019 - Actual",
         "order": 3
       },
       {
         "id": 4,
-        "title": "DevOps Skills",
+        "title": "Cloud and DevOps Skills",
         "subtitle": "Udemy",
         "rangeYears": "2021 - Actual",
         "order": 4
@@ -61,10 +61,17 @@
       },
       {
         "id": 3,
-        "title": "Sofware Developer",
+        "title": "Software Developer",
         "subtitle": "Trueblue",
-        "rangeYears": "09/2020 - Actual",
+        "rangeYears": "09/2020 - 03/2022",
         "order": 3
+      },
+      {
+        "id": 4,
+        "title": "Cloud Engineer",
+        "subtitle": "Claranet",
+        "rangeYears": "01/2023 - Actual",
+        "order": 4
       }
     ]
   },
@@ -100,14 +107,14 @@
       },
       {
         "id": 3,
-        "title": "Desarrollo avanzado de Webs y Sofware",
+        "title": "Desarrollo avanzado de Webs y Software",
         "subtitle": "Udemy",
         "rangeYears": "2019 - Actual",
         "order": 3
       },
       {
         "id": 4,
-        "title": "DevOps Skills",
+        "title": "Cloud and DevOps Skills",
         "subtitle": "Udemy",
         "rangeYears": "2021 - Actual",
         "order": 4
@@ -130,10 +137,17 @@
       },
       {
         "id": 3,
-        "title": "Desarrolador de Sofware",
+        "title": "Desarrolador de Software",
         "subtitle": "Trueblue",
-        "rangeYears": "09/2020 - Actual",
+        "rangeYears": "09/2020 - 03/2022",
         "order": 3
+      },
+      {
+        "id": 4,
+        "title": "Cloud Engineer",
+        "subtitle": "Claranet",
+        "rangeYears": "01/2023 - Actual",
+        "order": 4
       }
     ]
   },
@@ -169,14 +183,14 @@
       },
       {
         "id": 3,
-        "title": "Sviluppo avanzato di Web e Sofware",
+        "title": "Sviluppo avanzato di Web e Software",
         "subtitle": "Udemy",
         "rangeYears": "2019 - Attuale",
         "order": 3
       },
       {
         "id": 4,
-        "title": "DevOps Skills",
+        "title": "Cloud and DevOps Skills",
         "subtitle": "Udemy",
         "rangeYears": "2021 - Attuale",
         "order": 4
@@ -199,10 +213,17 @@
       },
       {
         "id": 3,
-        "title": "Sviluppatore Sofware",
+        "title": "Sviluppatore Software",
         "subtitle": "Trueblue",
-        "rangeYears": "09/2020 - Attuale",
+        "rangeYears": "09/2020 - 03/2022",
         "order": 3
+      },
+      {
+        "id": 4,
+        "title": "Cloud Engineer",
+        "subtitle": "Claranet",
+        "rangeYears": "01/2023 - Actual",
+        "order": 4
       }
     ]
   },

@@ -2,8 +2,8 @@ import React, { useContext, useState } from 'react';
 import '../../assets/css/qualification.css';
 import customContext from '../../context/customs/customsContext';
 import SingleQualification from '../ui/SingleQualification';
-import foundIcon from '../functions/foundIcon';
-import qualificationInfo from '../data/qualification';
+import foundIcon from '../../functions/foundIcon';
+import qualificationInfo from '../../data/qualification';
 
 const Qualification = () => {
   const [tabActive, setTabActive] = useState('work');
