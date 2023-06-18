@@ -2,15 +2,10 @@ import React, { useContext, useEffect } from 'react';
 import { arrIcons } from './ui/icons';
 import foundIcon from '../functions/foundIcon';
 import iconContext from '../context/customs/customsContext';
-import About from './sections/About';
-import Home from './sections/Home';
 import Header from './sections/Header';
-import Skills from './sections/Skills';
-import Services from './sections/Services';
-import Qualification from './sections/Qualification';
 import Footer from './sections/Footer';
 
-const Layout = () => {
+const Layout = ({children}) => {
   const customsContext = useContext(iconContext);
   const { getIcons, icons, setDefaultLang, isSetupLang } = customsContext;
 
@@ -27,13 +22,9 @@ const Layout = () => {
   return (
     <>
       <Header />
-      <Home />
-      <About />
-      <Skills />
-      <Qualification />
-      <Services />
+      {children}
       <Footer />
-      <a href="#" className="show-scroll scrollup" id="scroll-up">{arrowUp}</a>
+      <a href="!#" className="show-scroll scrollup" id="scroll-up" aria-label="Scroll up">{arrowUp}</a>
     </>
   );
 };
