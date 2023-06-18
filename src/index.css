@@ -154,7 +154,7 @@ img {
 .button {
   display: inline-block;
   background-color: var(--first-color);
-  color: #fff;
+  color: var(--body-color);
   padding: 1rem;
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
