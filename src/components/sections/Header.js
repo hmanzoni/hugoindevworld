@@ -9,7 +9,7 @@ import headerInfo from '../../data/header';
 
 const NavItems = ({ infoCard, hideMenu }) => (
   <li className="nav__item">
-    <a href={infoCard.link} onClick={hideMenu} className="nav__link active-link">
+    <a href={infoCard.link} onClick={hideMenu} className="nav__link active-link" aria-label="Nav link">
       {infoCard.icon}
       {infoCard.title}
     </a>
@@ -45,7 +45,7 @@ const Header = () => {
   return (
     <header className="header scroll-header" id="header">
       <nav className="nav container">
-        <a href={linkName} className="nav__logo">
+        <a href={linkName} className="nav__logo" aria-label="Logo link">
           {name}
         </a>
         <div className="nav__lang">

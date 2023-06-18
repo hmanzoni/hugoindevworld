@@ -15,7 +15,7 @@ const AboutImg = ({ aboutImgTexts, rolesText }) => {
             <h4>{aboutImgTexts.subtitle}</h4>
           </div>
         </figcaption>
-        {/* <a href="aboutme"></a> */}
+        {/* <a href="aboutme" aria-label="About me link"></a> */}
       </figure>
       <div className="roles" ref={rolesRef} onLoad={rolesListHandler(rolesRef)}>
         {rolesText.map((text, index) => <div key={index}>{text}</div>)}

@@ -9,7 +9,7 @@ import { footer as socialLinksInfo } from '../../data/socialLinks';
 const FooterLink = ({ infoCard }) => {
   return (
     <li>
-      <a href={infoCard.link} className="footer__link">
+      <a href={infoCard.link} className="footer__link" aria-label="Footer link">
         {infoCard.title}
       </a>
     </li>

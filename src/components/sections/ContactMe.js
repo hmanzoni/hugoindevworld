@@ -52,7 +52,7 @@ const ContactForm = ({ messageBtnIcon }) => {
         ></textarea>
       </div>
       <div>
-        <a href="#" className="button button--flex">
+        <a href="#" className="button button--flex" aria-label="Contact me">
           Send Message
           {messageBtnIcon}
         </a>

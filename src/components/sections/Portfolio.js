@@ -17,6 +17,7 @@ const PorfolioCards = ({ infoCard }) => {
         <a
           href={infoCard.link}
           className="button button--flex button--small portfolio__button"
+          aria-label="Portfolio link"
         >
           Demo
           {infoCard.icon}
