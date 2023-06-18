@@ -1,7 +1,7 @@
 {
   "en": {
     "rolesText": [
-      "I am a web developer.",
+      "I am a Software Engineer.",
       "I am a student.",
       "I am a traveler.",
       "I am an enthusiast."
@@ -9,7 +9,7 @@
   },
   "es": {
     "rolesText": [
-      "Soy un desarrolador web.",
+      "Soy un Software Engineer.",
       "Soy un estudiante.",
       "Soy un viajero.",
       "Soy un apasionado."
@@ -17,7 +17,7 @@
   },
   "it": {
     "rolesText": [
-      "Sono uno sviluppatore web.",
+      "Sono uno Software Engineer.",
       "Sono uno studente.",
       "Sono un viaggiatore.",
       "Sono un appassionato."
