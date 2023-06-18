@@ -8,11 +8,11 @@ const AboutImg = ({ aboutImgTexts, rolesText }) => {
   return (
     <div className="wrapper">
       <figure className="wrapper__snip">
-        <img src={about} alt="about" className="about__img" />
+        <img src={about} alt="about" className="about__img" width='auto' height='auto' />
         <figcaption>
           <div>
             <h2>{aboutImgTexts.title}</h2>
-            <h4>{aboutImgTexts.subtitle}</h4>
+            <h3>{aboutImgTexts.subtitle}</h3>
           </div>
         </figcaption>
         {/* <a href="aboutme" aria-label="About me link"></a> */}

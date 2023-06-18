@@ -101,7 +101,7 @@ figure.wrapper__snip figcaption div:after {
 }
 
 figure.wrapper__snip h2,
-figure.wrapper__snip h4 {
+figure.wrapper__snip h3 {
   margin: 0;
   text-transform: uppercase;
 }
@@ -111,7 +111,7 @@ figure.wrapper__snip h2 {
   font-weight: var(--font-semi-bold);
 }
 
-figure.wrapper__snip h4 {
+figure.wrapper__snip h3 {
   display: block;
   font-weight: 700;
   background-color: #ffffff;
