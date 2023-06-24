@@ -1,27 +1,6 @@
-import React, { useRef } from 'react';
-import '../../assets/css/aboutImg.css';
+import React from 'react';
 import about from '../../assets/img/about.jpg';
-import rolesListHandler from '../../functions/rolesListHandler';
 
-const AboutImg = ({ aboutImgTexts, rolesText }) => {
-  const rolesRef = useRef();
-  return (
-    <div className="wrapper">
-      <figure className="wrapper__snip">
-        <img src={about} alt="about" className="about__img" width='auto' height='auto' />
-        <figcaption>
-          <div>
-            <h2>{aboutImgTexts.title}</h2>
-            <h3>{aboutImgTexts.subtitle}</h3>
-          </div>
-        </figcaption>
-        {/* <a href="aboutme" aria-label="About me link"></a> */}
-      </figure>
-      <div className="roles" ref={rolesRef} onLoad={rolesListHandler(rolesRef)}>
-        {rolesText.map((text, index) => <div key={index}>{text}</div>)}
-      </div>
-    </div>
-  );
-};
+const Img = () => <img src={about} alt="about" className="about__img" loading="lazy" width='auto' height='auto' />;
 
-export default AboutImg;
+export default Img;

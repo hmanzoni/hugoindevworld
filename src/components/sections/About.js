@@ -6,7 +6,7 @@ import itCV from '../../assets/pdf/it.CV.pdf';
 import customContext from '../../context/customs/customsContext';
 import foundIcon from '../../functions/foundIcon';
 import SingleAboutCard from '../ui/SingleAboutCard';
-import AboutImg from '../ui/AboutImg';
+import AboutCard from '../ui/AboutCard';
 import { ButtonDownloadCV } from '../ui/SocialLinks';
 import aboutInfo from '../../data/about';
 import aboutImgInfo from '../../data/aboutImg';
@@ -30,7 +30,7 @@ const About = () => {
       <span className="section__subtitle">{subtitle}</span>
 
       <div className="about__container container grid">
-        <AboutImg aboutImgTexts={aboutImgTexts} rolesText={rolesText} />
+        <AboutCard aboutImgTexts={aboutImgTexts} rolesText={rolesText} />
         <div className="about__data">
           <p className="about__description">
             {description.map((singleText, index) => <TextDesc key={index} text={singleText}></TextDesc>)}
