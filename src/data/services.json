@@ -53,8 +53,8 @@
   },
   "es": {
     "title": "Servicios",
-    "subtitle": "Que puedo ofrecer",
-    "textServicesContent": "Vea más",
+    "subtitle": "Qué puedo ofrecer",
+    "textServicesContent": "Ver más",
     "servicesCardsInfo": [
       {
         "title": "Frontend",
@@ -64,10 +64,10 @@
         "code": "FE",
         "isOpen": false,
         "textsList": [
-          "Integración de funciones para satisfacer nuevos requirimientos.",
+          "Integración de funciones para satisfacer nuevos requerimientos.",
           "Hacer cambios visuales para renovar un software o web.",
-          "Mejorar y optimizar codigo existente.",
-          "Debug y resolución de errores."
+          "Mejorar y optimizar código existente.",
+          "Debug y resolución de bugs."
         ]
       },
       {
@@ -80,8 +80,8 @@
         "textsList": [
           "Integración servicios API para consultas a DB.",
           "Integración nuevas estructuras de datos.",
-          "Integración de servicios para envio de emails.",
-          "Controlalr y actualizar paquete de versiones."
+          "Integración de servicios para envío de emails.",
+          "Controlar y actualizar paquetes de versiones."
         ]
       },
       {
@@ -92,21 +92,21 @@
         "code": "DO",
         "isOpen": false,
         "textsList": [
-          "Best practices en AWS, migraciòn y monitoreo de servicios.",
-          "Integraciones en Firebase.",
-          "Integraciones con Docker y Kubernetes.",
-          "Optimizaciones en el proceso de deployment.",
-          "Integraciones GIT (version controller) en tu codigo.",
-          "Creación procesos customs con Bash.",
-          "Configuración cuentas SMTP, alias DNS y renovaciòn Certificados SSL."
+          "Best practices en AWS, migración y monitorización de servicios.",
+          "Integración con Firebase.",
+          "Integración con Docker y Kubernetes.",
+          "Optimización del proceso de deployment.",
+          "Integración de GIT (control de versiones) en tu código.",
+          "Creación de procesos customizados con Bash.",
+          "Configuración de cuentas SMTP, alias DNS y renovación de Certificados SSL."
         ]
       }
     ]
   },
   "it": {
     "title": "Servizi",
-    "subtitle": "Cosa posso offrire",
-    "textServicesContent": "Guarda di più",
+    "subtitle": "Cosa offro",
+    "textServicesContent": "Vedi di più",
     "servicesCardsInfo": [
       {
         "title": "Frontend",
@@ -116,10 +116,10 @@
         "code": "FE",
         "isOpen": false,
         "textsList": [
-          "Integrare nuove funzioni per soddisfare i requisiti business.",
-          "Apportare cambi visivi per rinnovare un software/sito.",
-          "Migliorare e ottimizzare il codice.",
-          "Debug e risolvere gli errori."
+          "Integrazione di nuove funzioni per soddisfare i requisiti di business.",
+          "Modifiche visive per rinnovare un software/sito.",
+          "Miglioramento e ottimizzazione del codice.",
+          "Debug e risoluzione di bug."
         ]
       },
       {
@@ -130,10 +130,10 @@
         "code": "BE",
         "isOpen": false,
         "textsList": [
-          "Integrare un servizio API per consulenza di dati in DB.",
-          "Integrare nuove strutture di dati.",
-          "Integrare un servizio per inviare emails.",
-          "Controllo e aggiornamento di pacchetto di versioni."
+          "Integrare un servizio API per la consultazione di dati in un DB.",
+          "Integrazione di nuove strutture di dati.",
+          "Integrazione di un servizio per l'invio di email.",
+          "Controllo e aggiornamento dei pacchetti di versioni."
         ]
       },
       {
@@ -144,13 +144,13 @@
         "code": "DO",
         "isOpen": false,
         "textsList": [
-          "Best practices in AWS, migrazioni e monitoring di servizi.",
-          "Integrare in Firebase.",
-          "Integrare Docker e Kubernetes.",
-          "Ottimizzare il processo di rilascio.",
-          "Integrare GIT (version controller) nel tuo codice.",
-          "Creare processi custom con Bash.",
-          "Configurare servizi SMTP, alias DNS e rinnovo Certificati SSL."
+          "Best practice in AWS, migrazione e monitoraggio dei servizi.",
+          "Integrazione con Firebase.",
+          "Integrazione con Docker e Kubernetes.",
+          "Ottimizzazione del processo di deployment.",
+          "Integrazione di GIT (controllo di versione) nel tuo codice.",
+          "Creazione di processi personalizzati con Bash.",
+          "Configurazione di servizi SMTP, alias DNS e rinnovo di Certificati SSL."
         ]
       }
     ]

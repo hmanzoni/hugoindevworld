@@ -29,7 +29,7 @@
     "description": [
       "He sido un entusiasta de la programación desde 2015.", 
       "Como profesional, mi objetivo principal es aumentar mis conocimientos en este campo, aprendiendo nuevas tecnologías y lenguajes de programación. En particular, me gusta descubrir sus debilidades y fortalezas para hacer un mejor uso de ellos.", 
-      "Soy una persona motivada, apacionada y resiliente. Tengo la capacidad de aprender rápido y adaptarme a cualquier cambio rápidamente. Además, soy muy sociable y me encanta aprender de otras culturas.", 
+      "Soy una persona motivada, apasionada y resiliente. Tengo la capacidad de aprender rápido y adaptarme a cualquier cambio rápidamente. Además, soy muy sociable y me encanta aprender de otras culturas.", 
       "Soy licenciado en bioquímica y trabajé en este campo durante algunos años. Sin embargo, en 2015 comencé a aprender sobre IT y finalmente perseguí mi sueño de hacer de la programación mi trabajo."
     ],
     "aboutCardsInfo": [
@@ -40,7 +40,7 @@
   },
   "it": {
     "title": "Su di me",
-    "subtitle": "Come sono iniziato nel mondo IT",
+    "subtitle": "Come ho iniziato nel mondo IT",
     "downloadAltIcon": "UilDownloadAlt",
     "downloadText": "Scarica CV",
     "showDownloadCV": false,
@@ -53,7 +53,7 @@
     ],
     "aboutCardsInfo": [
       { "id": "1", "year": 2018, "title": "$year", "name": "Anni", "desc": "esperienza" },
-      { "id": "2", "title": "20", "name": "Progetti", "desc": "completatti" },
+      { "id": "2", "title": "20", "name": "Progetti", "desc": "completati" },
       { "id": "3", "title": "05", "name": "Aziende", "desc": "" }
     ]
   }

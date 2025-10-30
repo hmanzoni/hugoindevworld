@@ -37,7 +37,7 @@
   },
   "es": {
     "title": "Skills",
-    "subtitle": "Mi nivel tecnico",
+    "subtitle": "Mi nivel técnico",
     "skillsInfo": [
       {
         "title": "Frontend",
@@ -66,14 +66,14 @@
         "iconClass": "skills__icon",
         "isOpen": false,
         "year": 2021,
-        "subtitle": "Más de $year año",
+        "subtitle": "Más de $year años",
         "cardsSkills": []
       }
     ]
   },
   "it": {
     "title": "Skills",
-    "subtitle": "Livello tecnico",
+    "subtitle": "Il mio livello tecnico",
     "skillsInfo": [
       {
         "title": "Frontend",
@@ -102,7 +102,7 @@
         "iconClass": "skills__icon",
         "isOpen": false,
         "year": 2021,
-        "subtitle": "Più di $year anno",
+        "subtitle": "Più di $year anni",
         "cardsSkills": []
       }
     ]

@@ -33,14 +33,14 @@
         "id": 3,
         "title": "Advance Web, Software Develop",
         "subtitle": "Udemy",
-        "rangeYears": "2019 - Actual",
+        "rangeYears": "2019 - Present",
         "order": 3
       },
       {
         "id": 4,
         "title": "Cloud and DevOps Skills",
         "subtitle": "Udemy",
-        "rangeYears": "2021 - Actual",
+        "rangeYears": "2021 - Present",
         "order": 4
       }
     ],
@@ -70,7 +70,7 @@
         "id": 4,
         "title": "Cloud Engineer",
         "subtitle": "Claranet",
-        "rangeYears": "01/2023 - Actual",
+        "rangeYears": "01/2023 - Present",
         "order": 4
       }
     ]
@@ -93,51 +93,51 @@
     "educations": [
       {
         "id": 1,
-        "title": "Bioquimica",
+        "title": "Bioquímica",
         "subtitle": "Universidad Nacional de Córdoba",
         "rangeYears": "2008 - 2012",
         "order": 1
       },
       {
         "id": 2,
-        "title": "Desarrollo basico de sitios webs",
+        "title": "Desarrollo básico de sitios web",
         "subtitle": "Udemy",
         "rangeYears": "2017 - 2019",
         "order": 2
       },
       {
         "id": 3,
-        "title": "Desarrollo avanzado de Webs y Software",
+        "title": "Desarrollo avanzado de Web y Software",
         "subtitle": "Udemy",
-        "rangeYears": "2019 - Actual",
+        "rangeYears": "2019 - Present",
         "order": 3
       },
       {
         "id": 4,
         "title": "Cloud and DevOps Skills",
         "subtitle": "Udemy",
-        "rangeYears": "2021 - Actual",
+        "rangeYears": "2021 - Present",
         "order": 4
       }
     ],
     "works": [
       {
         "id": 1,
-        "title": "Desarrolador web",
+        "title": "Desarrollador web",
         "subtitle": "Dana Giraldo",
         "rangeYears": "07/2018 - 10/2018",
         "order": 1
       },
       {
         "id": 2,
-        "title": "Desarrolador web",
+        "title": "Desarrollador web",
         "subtitle": "Gustos Alto Adige",
         "rangeYears": "12/2018 - 07/2020",
         "order": 2
       },
       {
         "id": 3,
-        "title": "Desarrolador de Software",
+        "title": "Desarrollador de Software",
         "subtitle": "Trueblue",
         "rangeYears": "09/2020 - 03/2022",
         "order": 3
@@ -146,7 +146,7 @@
         "id": 4,
         "title": "Cloud Engineer",
         "subtitle": "Claranet",
-        "rangeYears": "01/2023 - Actual",
+        "rangeYears": "01/2023 - Present",
         "order": 4
       }
     ]
@@ -176,7 +176,7 @@
       },
       {
         "id": 2,
-        "title": "Sviluppo basico di webs",
+        "title": "Sviluppo base di siti web",
         "subtitle": "Udemy",
         "rangeYears": "2017 - 2019",
         "order": 2
@@ -185,35 +185,35 @@
         "id": 3,
         "title": "Sviluppo avanzato di Web e Software",
         "subtitle": "Udemy",
-        "rangeYears": "2019 - Attuale",
+        "rangeYears": "2019 - Oggi",
         "order": 3
       },
       {
         "id": 4,
         "title": "Cloud and DevOps Skills",
         "subtitle": "Udemy",
-        "rangeYears": "2021 - Attuale",
+        "rangeYears": "2021 - Oggi",
         "order": 4
       }
     ],
     "works": [
       {
         "id": 1,
-        "title": "Sviluppatore web",
+        "title": "Sviluppatore Web",
         "subtitle": "Dana Giraldo",
         "rangeYears": "07/2018 - 10/2018",
         "order": 1
       },
       {
         "id": 2,
-        "title": "Sviluppatore web",
+        "title": "Sviluppatore Web",
         "subtitle": "Gustos Alto Adige",
         "rangeYears": "12/2018 - 07/2020",
         "order": 2
       },
       {
         "id": 3,
-        "title": "Sviluppatore Software",
+        "title": "Sviluppatore di Software",
         "subtitle": "Trueblue",
         "rangeYears": "09/2020 - 03/2022",
         "order": 3
@@ -222,7 +222,7 @@
         "id": 4,
         "title": "Cloud Engineer",
         "subtitle": "Claranet",
-        "rangeYears": "01/2023 - Actual",
+        "rangeYears": "01/2023 - Oggi",
         "order": 4
       }
     ]
