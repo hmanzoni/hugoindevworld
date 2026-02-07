@@ -28,7 +28,7 @@ const foundIcon = (
   classIcon = ''
 ): ReactElement | undefined => {
   const key = `${nameIcon}.${classIcon}`;
-  return icons[key];
+  return icons[key] as ReactElement | undefined;
 };
 
 export default foundIcon;
