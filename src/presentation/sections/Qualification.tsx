@@ -28,7 +28,7 @@ const Qualification = () => {
             <div
               key={i}
               className={`qualification__button button--flex ${
-                tabActive === tab.targetData && 'qualification__active'
+                tabActive === tab.targetData ? 'qualification__active' : ''
               }`}
               data-target={`#${tab.targetData}`}
               onClick={() => setTabActive(tab.targetData)}
@@ -41,7 +41,7 @@ const Qualification = () => {
 
         <div className="qualification__sections">
           <div
-            className={`qualification__content ${tabActive === 'education' && 'qualification__active'}`}
+            className={`qualification__content ${tabActive === 'education' ? 'qualification__active' : ''}`}
             data-content
             id="education"
           >
@@ -50,7 +50,7 @@ const Qualification = () => {
             ))}
           </div>
           <div
-            className={`qualification__content ${tabActive === 'work' && 'qualification__active'}`}
+            className={`qualification__content ${tabActive === 'work' ? 'qualification__active' : ''}`}
             data-content
             id="work"
           >

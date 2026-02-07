@@ -54,7 +54,7 @@ const ServicesContent = ({ cardInfo, clickerFn, iconsObj, textServicesContent }:
         {arrowRight}
       </span>
       <div
-        className={`services__modal ${cardInfo.isOpen && 'active-modal'}`}
+        className={`services__modal ${cardInfo.isOpen ? 'active-modal' : ''}`}
         onClick={(e) =>
           (e.target as HTMLElement).className === 'services__modal active-modal' &&
           clickerFn(cardInfo.code)
