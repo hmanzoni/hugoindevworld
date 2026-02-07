@@ -4,17 +4,14 @@ import { useAppContext } from '@presentation/context/useAppContext';
 import SkillContent from '@presentation/components/SkillContent';
 import foundIcon from '@presentation/utils/foundIcon';
 import { calcYears } from '@domain/services';
-import { SkillContentItem } from '@domain/models/Skills';
-import { JsonContentRepository } from '@infrastructure/adapters/JsonContentRepository';
-
-const contentRepo = new JsonContentRepository();
-const skillInfo = contentRepo.getSkillsContent();
-const skillsCards = contentRepo.getSkillsCardsContent();
+import { SkillContentItem } from '@presentation/types/viewModels';
 
 const Skills = () => {
   const [skillsContents, setSkillsContents] = useState<SkillContentItem[]>([]);
 
-  const { icons, language } = useAppContext();
+  const { icons, language, contentRepo } = useAppContext();
+  const skillInfo = contentRepo.getSkillsContent();
+  const skillsCards = contentRepo.getSkillsCardsContent();
 
   const { title, subtitle, skillsInfo } = skillInfo[language || 'en'];
   const { mainIconSkills, iconArrowOpen } = skillInfo['unique'];

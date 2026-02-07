@@ -1,14 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { UilApps, UilMoon, UilSun, UilTimes } from '@iconscout/react-unicons';
+import React, { useEffect, useState, ReactElement } from 'react';
 import '@assets/css/header.css';
 import { useAppContext } from '@presentation/context/useAppContext';
 import foundIcon from '@presentation/utils/foundIcon';
 import { HeaderData, NavItemInfo } from '@domain/models/Header';
-import { JsonContentRepository } from '@infrastructure/adapters/JsonContentRepository';
-import { ReactElement } from 'react';
-
-const contentRepo = new JsonContentRepository();
-const headerInfo: HeaderData = contentRepo.getHeaderContent();
 
 interface NavItemRendered {
   link: string;
@@ -32,11 +26,12 @@ const NavItems = ({ infoCard, hideMenu }: NavItemsProps) => (
 
 const Header = () => {
   const darkTheme = 'dark-theme';
+  const { icons, changeLanguage, language, contentRepo } = useAppContext();
+  const headerInfo: HeaderData = contentRepo.getHeaderContent();
   const { name, linkName, darkThemeActive, availablesLang } = headerInfo['unique'];
   const [isActive, setActive] = useState(false);
   const [isDarkTheme, setIsDarkTheme] = useState(darkThemeActive);
 
-  const { icons, changeLanguage, language } = useAppContext();
   const { linksNavitems } = headerInfo[language || 'en'];
 
   useEffect(() => {
@@ -52,6 +47,11 @@ const Header = () => {
     title: linkInfo.title,
     icon: foundIcon(icons, linkInfo.iconName, linkInfo.iconClass),
   }));
+
+  const closeIcon = foundIcon(icons, 'UilTimes', 'nav__close');
+  const moonIcon = foundIcon(icons, 'UilMoon', 'change-theme');
+  const sunIcon = foundIcon(icons, 'UilSun', 'change-theme');
+  const appsIcon = foundIcon(icons, 'UilApps', 'nav__toggle');
 
   return (
     <header className="header scroll-header" id="header">
@@ -76,17 +76,25 @@ const Header = () => {
               <NavItems key={index} infoCard={linkNavitem} hideMenu={() => setActive(false)} />
             ))}
           </ul>
-          <UilTimes onClick={() => setActive(false)} className="nav__close" id="nav-close" />
+          <div onClick={() => setActive(false)} id="nav-close">
+            {closeIcon}
+          </div>
         </div>
 
         <div className="nav__btns">
           {isDarkTheme ? (
-            <UilSun className="change-theme" id="theme-button" onClick={() => setIsDarkTheme(false)} />
+            <div id="theme-button" onClick={() => setIsDarkTheme(false)}>
+              {sunIcon}
+            </div>
           ) : (
-            <UilMoon className="change-theme" id="theme-button" onClick={() => setIsDarkTheme(true)} />
+            <div id="theme-button" onClick={() => setIsDarkTheme(true)}>
+              {moonIcon}
+            </div>
           )}
           <div className="nav__toggle" id="nav-toggle">
-            <UilApps onClick={() => setActive(true)} />
+            <div onClick={() => setActive(true)}>
+              {appsIcon}
+            </div>
           </div>
         </div>
       </nav>

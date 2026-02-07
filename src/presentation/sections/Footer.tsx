@@ -3,12 +3,7 @@ import '@assets/css/footer.css';
 import { useAppContext } from '@presentation/context/useAppContext';
 import foundIcon from '@presentation/utils/foundIcon';
 import { SocialLinks } from '@presentation/components/SocialLinks';
-import { JsonContentRepository } from '@infrastructure/adapters/JsonContentRepository';
 import { FooterLinkInfo } from '@domain/models/Footer';
-
-const contentRepo = new JsonContentRepository();
-const footerInfo = contentRepo.getFooterContent();
-const socialLinksData = contentRepo.getSocialLinksContent();
 
 interface FooterLinkProps {
   infoCard: FooterLinkInfo;
@@ -23,7 +18,9 @@ const FooterLink = ({ infoCard }: FooterLinkProps) => (
 );
 
 const Footer = () => {
-  const { icons, language } = useAppContext();
+  const { icons, language, contentRepo } = useAppContext();
+  const footerInfo = contentRepo.getFooterContent();
+  const socialLinksData = contentRepo.getSocialLinksContent();
 
   const { title, subtitle, rightsText, linksInt } = footerInfo[language || 'en'];
   const actualYear = new Date().getUTCFullYear();

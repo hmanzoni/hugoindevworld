@@ -3,16 +3,13 @@ import '@assets/css/services.css';
 import { useAppContext } from '@presentation/context/useAppContext';
 import ServicesContent from '@presentation/components/ServicesContent';
 import foundIcon from '@presentation/utils/foundIcon';
-import { ServiceContentItem } from '@domain/models/Services';
-import { JsonContentRepository } from '@infrastructure/adapters/JsonContentRepository';
-
-const contentRepo = new JsonContentRepository();
-const servicesInfo = contentRepo.getServicesContent();
+import { ServiceContentItem } from '@presentation/types/viewModels';
 
 const Services = () => {
   const [servicesContent, setServicesContent] = useState<ServiceContentItem[]>([]);
 
-  const { icons, language } = useAppContext();
+  const { icons, language, contentRepo } = useAppContext();
+  const servicesInfo = contentRepo.getServicesContent();
 
   const { title, subtitle, textServicesContent, servicesCardsInfo } = servicesInfo[language || 'en'];
   const { mainIcon1, mainIcon2, mainIcon3 } = servicesInfo['unique'];

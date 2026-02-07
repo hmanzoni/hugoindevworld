@@ -8,11 +8,6 @@ import foundIcon from '@presentation/utils/foundIcon';
 import SingleAboutCard from '@presentation/components/SingleAboutCard';
 import AboutCard from '@presentation/components/AboutCard';
 import { ButtonDownloadCV } from '@presentation/components/SocialLinks';
-import { JsonContentRepository } from '@infrastructure/adapters/JsonContentRepository';
-
-const contentRepo = new JsonContentRepository();
-const aboutInfo = contentRepo.getAboutContent();
-const aboutImgInfo = contentRepo.getAboutImgContent();
 
 const TextDesc = ({ text }: { text: string }) => (
   <>
@@ -22,7 +17,9 @@ const TextDesc = ({ text }: { text: string }) => (
 );
 
 const About = () => {
-  const { icons, language } = useAppContext();
+  const { icons, language, contentRepo } = useAppContext();
+  const aboutInfo = contentRepo.getAboutContent();
+  const aboutImgInfo = contentRepo.getAboutImgContent();
 
   const {
     title,

@@ -4,16 +4,13 @@ import { useAppContext } from '@presentation/context/useAppContext';
 import { SocialLinks, ContactMeElement } from '@presentation/components/SocialLinks';
 import HomeScroll from '@presentation/components/HomeScroll';
 import foundIcon from '@presentation/utils/foundIcon';
-import { JsonContentRepository } from '@infrastructure/adapters/JsonContentRepository';
 
 const HomeImg = lazy(() => import('@presentation/components/HomeImg'));
 
-const contentRepo = new JsonContentRepository();
-const homeInfo = contentRepo.getHomeContent();
-const socialLinksData = contentRepo.getSocialLinksContent();
-
 const Home = () => {
-  const { icons, language } = useAppContext();
+  const { icons, language, contentRepo } = useAppContext();
+  const homeInfo = contentRepo.getHomeContent();
+  const socialLinksData = contentRepo.getSocialLinksContent();
   const { title, subtitle, description, contactMeText } = homeInfo[language || 'en'];
   const { iconHomeScrollInfo, iconContactMe, showContactButton, contactLink, contactTextEmail } =
     homeInfo['unique'];

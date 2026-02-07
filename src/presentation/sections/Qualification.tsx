@@ -3,15 +3,12 @@ import '@assets/css/qualification.css';
 import { useAppContext } from '@presentation/context/useAppContext';
 import SingleQualification from '@presentation/components/SingleQualification';
 import foundIcon from '@presentation/utils/foundIcon';
-import { JsonContentRepository } from '@infrastructure/adapters/JsonContentRepository';
-
-const contentRepo = new JsonContentRepository();
-const qualificationInfo = contentRepo.getQualificationContent();
 
 const Qualification = () => {
   const [tabActive, setTabActive] = useState('work');
 
-  const { icons, language } = useAppContext();
+  const { icons, language, contentRepo } = useAppContext();
+  const qualificationInfo = contentRepo.getQualificationContent();
 
   const { title, subtitle, tabs, educations, works } = qualificationInfo[language || 'en'];
   const { mainIcon1, mainIcon2, mainIcon3 } = qualificationInfo['unique'];
