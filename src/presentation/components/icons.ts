@@ -41,4 +41,8 @@ export const arrIcons: IconConfig[] = [
   { iconName: 'UilGithubAlt', iconSize: sizeIcons },
   { iconName: 'UilEnvelopeShare', iconSize: sizeIcons },
   { iconName: 'UilArrowGrowth', iconSize: sizeIcons },
+  { iconName: 'UilTimes', propsIcon: { className: 'nav__close' } },
+  { iconName: 'UilMoon', propsIcon: { className: 'change-theme' } },
+  { iconName: 'UilSun', propsIcon: { className: 'change-theme' } },
+  { iconName: 'UilApps', propsIcon: { className: 'nav__toggle' } },
 ];
