@@ -1,8 +1,5 @@
 import React from 'react';
 import '@assets/css/about.css';
-import enCV from '@assets/pdf/en.CV.pdf';
-import esCV from '@assets/pdf/es.CV.pdf';
-import itCV from '@assets/pdf/it.CV.pdf';
 import { useAppContext } from '@presentation/context/useAppContext';
 import foundIcon from '@presentation/utils/foundIcon';
 import SingleAboutCard from '@presentation/components/SingleAboutCard';
@@ -27,13 +24,9 @@ const About = () => {
     downloadAltIcon,
     description,
     aboutCardsInfo,
-    downloadText,
-    showDownloadCV,
-    fileNameCV,
   } = aboutInfo[language || 'en'];
   const { rolesText } = aboutImgInfo[language || 'en'];
   const aboutImgTexts = aboutImgInfo['unique'];
-  const linkCV = language === 'es' ? esCV : language === 'it' ? itCV : enCV;
 
   const downloadAlt = foundIcon(icons, downloadAltIcon);
 
@@ -56,10 +49,6 @@ const About = () => {
               <SingleAboutCard key={infoCard.id} infoCard={infoCard} />
             ))}
           </div>
-
-          {showDownloadCV && (
-            <ButtonDownloadCV infoCard={{ fileNameCV, linkCV, downloadText, downloadAlt }} />
-          )}
         </div>
       </div>
     </section>
