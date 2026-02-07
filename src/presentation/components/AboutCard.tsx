@@ -14,7 +14,10 @@ const AboutCard = ({ aboutImgTexts, rolesText }: AboutCardProps) => {
   const rolesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    rolesListHandler(rolesRef);
+    const intervalId = rolesListHandler(rolesRef);
+    return () => {
+      if (intervalId !== undefined) clearInterval(intervalId);
+    };
   }, []);
 
   return (
