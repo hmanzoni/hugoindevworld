@@ -46,3 +46,16 @@ declare module '@iconscout/react-unicons' {
     const icons: Record<string, ComponentType<UniconProps>>;
     export default icons;
   }
+
+declare module '@iconscout/react-unicons/icons/*' {
+    import { ComponentType, SVGAttributes } from 'react';
+
+    interface UniconProps extends SVGAttributes<SVGElement> {
+      size?: string | number;
+      color?: string;
+      className?: string;
+    }
+
+    const Icon: ComponentType<UniconProps>;
+    export default Icon;
+  }
