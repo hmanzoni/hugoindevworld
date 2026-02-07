@@ -11,9 +11,9 @@ const rolesListHandler = (rolesRef: RefObject<HTMLDivElement>): ReturnType<typeo
     if (!first) return undefined;
     return setInterval(() => {
       const offset = current * -height;
-      first.style.transform = `translateY(${offset}px)`;
+      first.style.marginTop = `${offset}px`;
       if (current === numberDivs) {
-        first.style.transform = 'translateY(0px)';
+        first.style.marginTop = '0px';
         current = 1;
       } else {
         current++;
