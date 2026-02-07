@@ -15,8 +15,8 @@
     "rightsText": "Hugo Carrizo Manzoni. Todos los derechos reservados.",
     "linksInt": [
       { "title": "Servicios", "link": "#services" },
-      { "title": "Habilidades", "link": "#skills" },
-      { "title": "Acerca de", "link": "#about" }
+      { "title": "Skills", "link": "#skills" },
+      { "title": "About", "link": "#about" }
     ]
   },
   "it": {
@@ -26,7 +26,7 @@
     "linksInt": [
       { "title": "Servizi", "link": "#services" },
       { "title": "Competenze", "link": "#skills" },
-      { "title": "Su di me", "link": "#about" }
+      { "title": "About", "link": "#about" }
     ]
   }
 }
