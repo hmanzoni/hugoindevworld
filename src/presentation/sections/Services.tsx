@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useMemo, useState } from 'react';
 import '@assets/css/services.css';
 import { useAppContext } from '@presentation/context/useAppContext';
 import ServicesContent from '@presentation/components/ServicesContent';
@@ -6,7 +6,7 @@ import foundIcon from '@presentation/utils/foundIcon';
 import { ServiceContentItem } from '@presentation/types/viewModels';
 
 const Services = () => {
-  const [servicesContent, setServicesContent] = useState<ServiceContentItem[]>([]);
+  const [openState, setOpenState] = useState<Record<string, boolean>>({});
 
   const { icons, language, contentRepo } = useAppContext();
   const servicesInfo = contentRepo.getServicesContent();
@@ -20,23 +20,21 @@ const Services = () => {
     timesIcon: foundIcon(icons, mainIcon3.name, mainIcon3.class),
   };
 
-  useEffect(() => {
-    const services: ServiceContentItem[] = servicesCardsInfo.map((service) => ({
-      ...service,
-      icon: foundIcon(icons, service.iconName, service.iconClass),
-    }));
-    setServicesContent(services);
-  }, [language, servicesCardsInfo, icons]);
+  const servicesContent: ServiceContentItem[] = useMemo(
+    () =>
+      servicesCardsInfo.map((service) => ({
+        ...service,
+        icon: foundIcon(icons, service.iconName, service.iconClass),
+        isOpen: openState[service.code] ?? service.isOpen,
+      })),
+    [language, servicesCardsInfo, icons, openState]
+  );
 
   const handlerOpenClose = (servCode: string) => {
-    const index = servicesContent.findIndex((service) => service.code === servCode);
-    if (index === -1) return;
-    const changeState = !servicesContent[index].isOpen;
-    setServicesContent([
-      ...servicesContent.slice(0, index),
-      { ...servicesContent[index], isOpen: changeState },
-      ...servicesContent.slice(index + 1),
-    ]);
+    setOpenState((prev) => ({
+      ...prev,
+      [servCode]: !prev[servCode],
+    }));
   };
 
   return (

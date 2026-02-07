@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import '@assets/css/skills.css';
 import { useAppContext } from '@presentation/context/useAppContext';
 import SkillContent from '@presentation/components/SkillContent';
@@ -7,7 +7,7 @@ import { calcYears } from '@domain/services';
 import { SkillContentItem } from '@presentation/types/viewModels';
 
 const Skills = () => {
-  const [skillsContents, setSkillsContents] = useState<SkillContentItem[]>([]);
+  const [openState, setOpenState] = useState<Record<string, boolean>>({});
 
   const { icons, language, contentRepo } = useAppContext();
   const skillInfo = contentRepo.getSkillsContent();
@@ -19,25 +19,23 @@ const Skills = () => {
   const bracketsCurly = foundIcon(icons, mainIconSkills.name, mainIconSkills.class);
   const angleDown = foundIcon(icons, iconArrowOpen.name, iconArrowOpen.class);
 
-  useEffect(() => {
-    const skills: SkillContentItem[] = skillsInfo.map((skill) => ({
-      ...skill,
-      icon: foundIcon(icons, skill.icon, skill.iconClass),
-      subtitle: calcYears(skill.subtitle, skill.year),
-      cardsSkills: skillsCards[skill.code] || skill.cardsSkills,
-    }));
-    setSkillsContents(skills);
-  }, [language, skillsInfo, icons]);
+  const skillsContents: SkillContentItem[] = useMemo(
+    () =>
+      skillsInfo.map((skill) => ({
+        ...skill,
+        icon: foundIcon(icons, skill.icon, skill.iconClass),
+        subtitle: calcYears(skill.subtitle, skill.year),
+        cardsSkills: skillsCards[skill.code] || skill.cardsSkills,
+        isOpen: openState[skill.code] ?? skill.isOpen,
+      })),
+    [language, skillsInfo, icons, openState, skillsCards]
+  );
 
   const handlerOpenClose = (skillCode: string) => {
-    const index = skillsContents.findIndex((skill) => skill.code === skillCode);
-    if (index === -1) return;
-    const changeState = !skillsContents[index].isOpen;
-    setSkillsContents([
-      ...skillsContents.slice(0, index),
-      { ...skillsContents[index], isOpen: changeState },
-      ...skillsContents.slice(index + 1),
-    ]);
+    setOpenState((prev) => ({
+      ...prev,
+      [skillCode]: !prev[skillCode],
+    }));
   };
 
   return (
