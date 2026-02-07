@@ -35,7 +35,7 @@
 .home__mailto:hover > .home__social-mail {
   display: inline-block;
 }
-.home__social-mail:hover >  {
+.home__social-mail:hover {
   display: inline-block;
 }
 

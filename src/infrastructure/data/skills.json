@@ -1,0 +1,120 @@
+{
+  "en": {
+    "title": "Skills",
+    "subtitle": "My technical level",
+    "skillsInfo": [
+      {
+        "title": "Frontend",
+        "code": "FE",
+        "icon": "UilWebGrid", 
+        "iconClass": "skills__icon",
+        "isOpen": true,
+        "year": 2018,
+        "subtitle": "More than $year years",
+        "cardsSkills": []
+      },
+      {
+        "title": "Backend and DB",
+        "code": "BE",
+        "icon": "UilServer", 
+        "iconClass": "skills__icon",
+        "isOpen": false,
+        "year": 2020,
+        "subtitle": "More than $year years",
+        "cardsSkills": []
+      },
+      {
+        "title": "Cloud and DevOps",
+        "code": "DO",
+        "icon": "UilCloudDatabaseTree", 
+        "iconClass": "skills__icon",
+        "isOpen": false,
+        "year": 2021,
+        "subtitle": "More than $year years",
+        "cardsSkills": []
+      }
+    ]
+  },
+  "es": {
+    "title": "Habilidades",
+    "subtitle": "Mi nivel técnico",
+    "skillsInfo": [
+      {
+        "title": "Frontend",
+        "code": "FE",
+        "icon": "UilWebGrid", 
+        "iconClass": "skills__icon",
+        "isOpen": true,
+        "year": 2018,
+        "subtitle": "Más de $year años",
+        "cardsSkills": []
+      },
+      {
+        "title": "Backend and DB",
+        "code": "BE",
+        "icon": "UilServer", 
+        "iconClass": "skills__icon",
+        "isOpen": false,
+        "year": 2020,
+        "subtitle": "Más de $year años",
+        "cardsSkills": []
+      },
+      {
+        "title": "Cloud and DevOps",
+        "code": "DO",
+        "icon": "UilCloudDatabaseTree", 
+        "iconClass": "skills__icon",
+        "isOpen": false,
+        "year": 2021,
+        "subtitle": "Más de $year años",
+        "cardsSkills": []
+      }
+    ]
+  },
+  "it": {
+    "title": "Competenze",
+    "subtitle": "Il mio livello tecnico",
+    "skillsInfo": [
+      {
+        "title": "Frontend",
+        "code": "FE",
+        "icon": "UilWebGrid", 
+        "iconClass": "skills__icon",
+        "isOpen": true,
+        "year": 2018,
+        "subtitle": "Più di $year anni",
+        "cardsSkills": []
+      },
+      {
+        "title": "Backend and DB",
+        "code": "BE",
+        "icon": "UilServer", 
+        "iconClass": "skills__icon",
+        "isOpen": false,
+        "year": 2020,
+        "subtitle": "Più di $year anni",
+        "cardsSkills": []
+      },
+      {
+        "title": "Cloud and DevOps",
+        "code": "DO",
+        "icon": "UilCloudDatabaseTree", 
+        "iconClass": "skills__icon",
+        "isOpen": false,
+        "year": 2021,
+        "subtitle": "Più di $year anni",
+        "cardsSkills": []
+      }
+    ]
+  },
+  "unique": {
+    "mainIconSkills": {
+      "name": "UilBracketsCurly",
+      "class":"skills__icon"
+    },
+    "iconArrowOpen": {
+      "name": "UilAngleDown",
+      "class":"skills__arrow"
+    }
+  }
+}

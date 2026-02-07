@@ -1,0 +1,32 @@
+{
+  "en": {
+    "linksNavitems": [
+      { "link": "#home", "title": "Home", "iconName": "UilEstate", "iconClass":"nav__icon" },
+      { "link": "#about", "title": "About", "iconName": "UilUser", "iconClass":"nav__icon" },
+      { "link": "#skills", "title": "Skills", "iconName": "UilFileAlt", "iconClass":"nav__icon" },
+      { "link": "#services", "title": "Services", "iconName": "UilBriefcaseAlt", "iconClass":"nav__icon" }
+    ]
+  },
+  "es": {
+    "linksNavitems": [
+      { "link": "#home", "title": "Inicio", "iconName": "UilEstate", "iconClass":"nav__icon" },
+      { "link": "#about", "title": "Acerca de", "iconName": "UilUser", "iconClass":"nav__icon" },
+      { "link": "#skills", "title": "Habilidades", "iconName": "UilFileAlt", "iconClass":"nav__icon" },
+      { "link": "#services", "title": "Servicios", "iconName": "UilBriefcaseAlt", "iconClass":"nav__icon" }
+    ]
+  },
+  "it": {
+    "linksNavitems": [
+      { "link": "#home", "title": "Home", "iconName": "UilEstate", "iconClass":"nav__icon" },
+      { "link": "#about", "title": "Su di me", "iconName": "UilUser", "iconClass":"nav__icon" },
+      { "link": "#skills", "title": "Competenze", "iconName": "UilFileAlt", "iconClass":"nav__icon" },
+      { "link": "#services", "title": "Servizi", "iconName": "UilBriefcaseAlt", "iconClass":"nav__icon" }
+    ]
+  },
+  "unique": {
+    "name": "Hugo",
+    "darkThemeActive": true,
+    "availablesLang": ["EN", "ES", "IT"],
+    "linkName": "mailto:hugocmdesign@gmail.com"
+  }
+}

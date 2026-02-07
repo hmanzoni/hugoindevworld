@@ -1,0 +1,23 @@
+{
+  "en": {
+    "title": "You have a new project",
+    "description": "Contact me now and get a 30% discount on your new project.",
+    "contactMeText": "Contact Me"
+  },
+  "es": {
+    "title": "¿Tienes un nuevo proyecto?",
+    "description": "Contáctame ahora y obtén un 30% de descuento en tu nuevo proyecto.",
+    "contactMeText": "Contáctame"
+  },
+  "it": {
+    "title": "Hai un nuovo progetto?",
+    "description": "Contattami ora e ottieni uno sconto del 30% sul tuo nuovo progetto.",
+    "contactMeText": "Contattami"
+  },
+  "unique": {
+    "iconBanner": {
+      "iconName": "UilMessage",
+      "iconClass": "project__icon"
+    }
+  }
+}

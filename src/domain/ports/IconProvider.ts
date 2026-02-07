@@ -1,0 +1,6 @@
+import { IconConfig, IconRegistry } from '../models/Icon';
+
+export interface IconProvider {
+  createIconRegistry(configs: IconConfig[]): IconRegistry;
+  createIconArray(configs: IconConfig[]): unknown[];
+}

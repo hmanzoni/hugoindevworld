@@ -1,0 +1,60 @@
+{
+  "en": {
+    "title": "About me",
+    "subtitle": "How I start in IT world",
+    "downloadAltIcon": "UilDownloadAlt",
+    "downloadText": "Download CV",
+    "showDownloadCV": false,
+    "fileNameCV": "HugoManzoni_CV",
+    "description": [
+      "I have been an IT and software enthusiast since 2015.", 
+      "My main goal as a professional is to always improve my knowledge of new technologies and programming languages. One of the things I like most about programming is discovering weaknesses and strengths, in order to use it as best as possible.", 
+      "I am a self-motivated, enthusiastic and resilient person and I have the ability to learn fast and to quickly adapt to any changes.", 
+      "I can define myself as very sociable and curious. I love to experience new cultures from all over the world.", 
+      "I hold a Master's degree in Biochemistry, but in 2015 I started learning programming and realized it is one of my greatest passions in life. I am now a web developer always looking for new challenges."
+    ],
+    "aboutCardsInfo": [
+      { "id": "1", "year": 2018, "title": "$year", "name": "Years", "desc": "experience" },
+      { "id": "2", "title": "20", "name": "Completed", "desc": "projects" },
+      { "id": "3", "title": "05", "name": "Brands", "desc": "I worked for" }
+    ]
+  },
+  "es": {
+    "title": "Acerca de mí",
+    "subtitle": "Como comencé en el mundo IT",
+    "downloadAltIcon": "UilDownloadAlt",
+    "downloadText": "Descarga CV",
+    "showDownloadCV": false,
+    "fileNameCV": "HugoManzoni_CV",
+    "description": [
+      "He sido un entusiasta de la programación desde 2015.", 
+      "Como profesional, mi objetivo principal es aumentar mis conocimientos en este campo, aprendiendo nuevas tecnologías y lenguajes de programación. En particular, me gusta descubrir sus debilidades y fortalezas para hacer un mejor uso de ellos.", 
+      "Soy una persona motivada, apasionada y resiliente. Tengo la capacidad de aprender rápido y adaptarme a cualquier cambio rápidamente. Además, soy muy sociable y me encanta aprender de otras culturas.", 
+      "Soy licenciado en bioquímica y trabajé en este campo durante algunos años. Sin embargo, en 2015 comencé a aprender sobre IT y finalmente perseguí mi sueño de hacer de la programación mi trabajo."
+    ],
+    "aboutCardsInfo": [
+      { "id": "1", "year": 2018, "title": "$year", "name": "Años", "desc": "experiencia" },
+      { "id": "2", "title": "20", "name": "Proyectos", "desc": "completos" },
+      { "id": "3", "title": "05", "name": "Compañías", "desc": "para las que trabajé" }
+    ]
+  },
+  "it": {
+    "title": "Su di me",
+    "subtitle": "Come ho iniziato nel mondo IT",
+    "downloadAltIcon": "UilDownloadAlt",
+    "downloadText": "Scarica CV",
+    "showDownloadCV": false,
+    "fileNameCV": "HugoManzoni_CV",
+    "description": [
+      "La programmazione è una delle mie grandi passioni dal 2015.", 
+      "Come professionista il mio obiettivo principale è aumentare le mie conoscenze in questo ambito, imparando nuove tecnologie e linguaggi di programmazione.", 
+      "Sono una persona motivata, appassionata e resiliente. Ho la capacità di imparare e di adattarmi velocemente a qualsiasi cambiamento. Sono molto socievole e amo entrare in contatto con altre culture e realtà.", 
+      "Ho una laurea in biochimica e ho lavorato in questo ambito per alcuni anni. Nel 2015 ho iniziato a conoscere il mondo IT e ho deciso di seguire il mio sogno di fare della programmazione il mio lavoro."
+    ],
+    "aboutCardsInfo": [
+      { "id": "1", "year": 2018, "title": "$year", "name": "Anni", "desc": "esperienza" },
+      { "id": "2", "title": "20", "name": "Progetti", "desc": "completati" },
+      { "id": "3", "title": "05", "name": "Aziende", "desc": "per cui ho lavorato" }
+    ]
+  }
+}
