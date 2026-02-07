@@ -1,4 +1,3 @@
-import { ReactElement } from 'react';
 import { IconConfig, IconRegistry } from '@domain/models/Icon';
 import { IconProvider } from '@domain/ports/IconProvider';
 
@@ -12,6 +11,6 @@ export function getIconRegistry(
 export function getIconArray(
   provider: IconProvider,
   configs: IconConfig[]
-): ReactElement[] {
+): unknown[] {
   return provider.createIconArray(configs);
 }

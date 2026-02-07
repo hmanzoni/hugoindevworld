@@ -1,10 +1,9 @@
-import { ReactElement } from 'react';
 import { Language } from '@domain/models/Language';
 import { IconRegistry } from '@domain/models/Icon';
 
 export interface AppState {
   icons: IconRegistry;
-  iconsArray: ReactElement[];
+  iconsArray: unknown[];
   loading: boolean;
   isSetupLang: boolean;
   language: Language;
