@@ -1,23 +1,30 @@
-import React, { useReducer, ReactNode } from 'react';
+import React, { useReducer, ReactElement, ReactNode } from 'react';
 import AppContext from './AppContext';
 import appReducer from '@application/state/appReducer';
 import { initialAppState } from '@application/state/AppState';
 import { IconConfig } from '@domain/models/Icon';
 import { isValidLanguage } from '@domain/models/Language';
-import { UniconIconProvider } from '@infrastructure/adapters/UniconIconProvider';
-import { LocalStorageProvider } from '@infrastructure/adapters/LocalStorageProvider';
-import { NavigatorBrowserProvider } from '@infrastructure/adapters/NavigatorBrowserProvider';
+import { ContentRepository } from '@domain/ports/ContentRepository';
+import { IconProvider } from '@domain/ports/IconProvider';
+import { StorageProvider } from '@domain/ports/StorageProvider';
+import { BrowserProvider } from '@domain/ports/BrowserProvider';
 import { detectLanguage } from '@application/useCases/DetectLanguage';
 
-const iconProvider = new UniconIconProvider();
-const storageProvider = new LocalStorageProvider();
-const browserProvider = new NavigatorBrowserProvider();
-
-interface AppProviderProps {
+export interface AppProviderProps {
   children: ReactNode;
+  contentRepo: ContentRepository;
+  iconProvider: IconProvider;
+  storageProvider: StorageProvider;
+  browserProvider: BrowserProvider;
 }
 
-const AppProvider = ({ children }: AppProviderProps) => {
+const AppProvider = ({
+  children,
+  contentRepo,
+  iconProvider,
+  storageProvider,
+  browserProvider,
+}: AppProviderProps) => {
   const [state, dispatch] = useReducer(appReducer, initialAppState);
 
   const getIcons = (iconsArr: IconConfig[]) => {
@@ -66,10 +73,11 @@ const AppProvider = ({ children }: AppProviderProps) => {
     <AppContext.Provider
       value={{
         icons: state.icons,
-        iconsArray: state.iconsArray,
+        iconsArray: state.iconsArray as ReactElement[],
         loading: state.loading,
         language: state.language,
         isSetupLang: state.isSetupLang,
+        contentRepo,
         getIcons,
         getIconsArr,
         loadingFinish,
