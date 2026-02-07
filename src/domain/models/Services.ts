@@ -1,4 +1,3 @@
-import { ReactElement } from 'react';
 import { Language } from './Language';
 import { IconReference } from './Icon';
 
@@ -10,17 +9,6 @@ export interface ServiceCardInfo {
   code: string;
   isOpen: boolean;
   textsList: string[];
-}
-
-export interface ServiceContentItem {
-  title: string;
-  iconName: string;
-  iconClass: string;
-  subtitle: string;
-  code: string;
-  isOpen: boolean;
-  textsList: string[];
-  icon: ReactElement | undefined;
 }
 
 export interface ServicesLocalizedContent {

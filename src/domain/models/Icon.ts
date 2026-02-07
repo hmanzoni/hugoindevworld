@@ -1,5 +1,3 @@
-import { ReactElement } from 'react';
-
 export interface IconConfig {
   iconName: string;
   propsIcon?: {
@@ -10,7 +8,7 @@ export interface IconConfig {
   iconColor?: string;
 }
 
-export type IconRegistry = Record<string, ReactElement>;
+export type IconRegistry = Record<string, unknown>;
 
 export interface IconReference {
   name: string;
