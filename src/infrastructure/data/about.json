@@ -35,7 +35,7 @@
     "aboutCardsInfo": [
       { "id": "1", "year": 2018, "title": "$year", "name": "Años", "desc": "experiencia" },
       { "id": "2", "title": "20", "name": "Proyectos", "desc": "completos" },
-      { "id": "3", "title": "05", "name": "Compañías", "desc": "" }
+      { "id": "3", "title": "05", "name": "Compañías", "desc": "para las que trabajé" }
     ]
   },
   "it": {
@@ -49,12 +49,12 @@
       "La programmazione è una delle mie grandi passioni dal 2015.", 
       "Come professionista il mio obiettivo principale è aumentare le mie conoscenze in questo ambito, imparando nuove tecnologie e linguaggi di programmazione.", 
       "Sono una persona motivata, appassionata e resiliente. Ho la capacità di imparare e di adattarmi velocemente a qualsiasi cambiamento. Sono molto socievole e amo entrare in contatto con altre culture e realtà.", 
-      "Ho una laurea in biochimica e ho lavorato nell'ambito alcuni anni. Nel 2015, quando ho iniziato a conoscere l'IT e ho deciso di seguire il mio sogno di fare la programmazione il mio lavoro."
+      "Ho una laurea in biochimica e ho lavorato in questo ambito per alcuni anni. Nel 2015 ho iniziato a conoscere il mondo IT e ho deciso di seguire il mio sogno di fare della programmazione il mio lavoro."
     ],
     "aboutCardsInfo": [
       { "id": "1", "year": 2018, "title": "$year", "name": "Anni", "desc": "esperienza" },
       { "id": "2", "title": "20", "name": "Progetti", "desc": "completati" },
-      { "id": "3", "title": "05", "name": "Aziende", "desc": "" }
+      { "id": "3", "title": "05", "name": "Aziende", "desc": "per cui ho lavorato" }
     ]
   }
 }

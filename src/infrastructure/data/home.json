@@ -30,7 +30,7 @@
         "classIcon": "home__scroll-arrow"
       }
     ],
-    "scollText": "Scroll down",
+    "scrollText": "Scroll down",
     "showContactButton": true,
     "contactLink": "mailto:hugocmdesign@gmail.com",
     "contactTextEmail": "hugocmdesign@gmail.com",

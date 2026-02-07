@@ -11,22 +11,22 @@
   },
   "es": {
     "title": "Hugo",
-    "subtitle": "Software development",
+    "subtitle": "Desarrollo de software",
     "rightsText": "Hugo Carrizo Manzoni. Todos los derechos reservados.",
     "linksInt": [
       { "title": "Servicios", "link": "#services" },
-      { "title": "Skills", "link": "#skills" },
-      { "title": "About", "link": "#about" }
+      { "title": "Habilidades", "link": "#skills" },
+      { "title": "Acerca de", "link": "#about" }
     ]
   },
   "it": {
     "title": "Hugo",
-    "subtitle": "Software development",
-    "rightsText": "Hugo Carrizo Manzoni. All rights reserved.",
+    "subtitle": "Sviluppo software",
+    "rightsText": "Hugo Carrizo Manzoni. Tutti i diritti riservati.",
     "linksInt": [
-      { "title": "Services", "link": "#services" },
-      { "title": "Skills", "link": "#skills" },
-      { "title": "About", "link": "#about" }
+      { "title": "Servizi", "link": "#services" },
+      { "title": "Competenze", "link": "#skills" },
+      { "title": "Su di me", "link": "#about" }
     ]
   }
 }
