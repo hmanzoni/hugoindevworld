@@ -15,7 +15,7 @@
 
 .roles div {
   height: 50px;
-  transition: margin-top 1s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
 figure.wrapper__snip {

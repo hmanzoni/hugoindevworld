@@ -9,10 +9,14 @@ interface LayoutProps {
   children: ReactNode;
 }
 
+let didInit = false;
+
 const Layout = ({ children }: LayoutProps) => {
   const { getIcons, icons, setDefaultLang, isSetupLang } = useAppContext();
 
   useEffect(() => {
+    if (didInit) return;
+    didInit = true;
     if (icons && Object.getPrototypeOf(icons) === Object.prototype && !Object.entries(icons).length) {
       getIcons(arrIcons);
     }
@@ -23,14 +27,24 @@ const Layout = ({ children }: LayoutProps) => {
 
   const arrowUp = foundIcon(icons, 'UilArrowUp', 'scrollup__icon');
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <>
       <Header />
       {children}
       <Footer />
-      <a href="!#" className="show-scroll scrollup" id="scroll-up" aria-label="Scroll up">
+      <button
+        type="button"
+        className="show-scroll scrollup"
+        id="scroll-up"
+        aria-label="Scroll up"
+        onClick={scrollToTop}
+      >
         {arrowUp}
-      </a>
+      </button>
     </>
   );
 };

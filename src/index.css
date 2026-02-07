@@ -242,6 +242,8 @@ img {
   border-radius: 0.4rem;
   z-index: var(--z-tooltip);
   transition: 0.4s;
+  border: none;
+  cursor: pointer;
 }
 .scrollup:hover {
   background-color: var(--first-color-alt);
