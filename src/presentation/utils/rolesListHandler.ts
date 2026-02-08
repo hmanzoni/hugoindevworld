@@ -1,6 +1,6 @@
 import { RefObject } from 'react';
 
-const rolesListHandler = (rolesRef: RefObject<HTMLDivElement>): ReturnType<typeof setInterval> | undefined => {
+const rolesListHandler = (rolesRef: RefObject<HTMLDivElement | null>): ReturnType<typeof setInterval> | undefined => {
   let current = 1;
   const timeMoveText = 2500;
   const rolesElement = rolesRef?.current;

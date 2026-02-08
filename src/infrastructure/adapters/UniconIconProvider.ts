@@ -33,7 +33,7 @@ import UilLinkedinAlt from '@iconscout/react-unicons/icons/uil-linkedin-alt';
 import UilBookOpen from '@iconscout/react-unicons/icons/uil-book-open';
 import UilGithubAlt from '@iconscout/react-unicons/icons/uil-github-alt';
 import UilEnvelopeShare from '@iconscout/react-unicons/icons/uil-envelope-share';
-import UilArrowGrowth from '@iconscout/react-unicons/icons/uil-arrow-growth';
+import UilArrowGrowth from '@iconscout/react-unicons/icons/uil-statistics';
 import UilMoon from '@iconscout/react-unicons/icons/uil-moon';
 import UilSun from '@iconscout/react-unicons/icons/uil-sun';
 import UilApps from '@iconscout/react-unicons/icons/uil-apps';
