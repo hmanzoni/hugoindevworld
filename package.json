@@ -2,7 +2,7 @@
   "name": "hugoindevworld",
   "version": "1.0.0",
   "author": "Hugo Carrizo Manzoni <hugocmdesign@gmail.com>",
-  "license": "GNU GPLv3",
+  "license": "MIT",
   "dependencies": {
     "@iconscout/react-unicons": "2.2.5",
     "react": "19.2.4",
