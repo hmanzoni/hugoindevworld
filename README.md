@@ -2,7 +2,7 @@
 
 > **Software Engineer** | AWS, Node.js, TypeScript, Python
 
-A modern, type-safe portfolio website showcasing skills, experience, and professional projects. Built with **React 17 + TypeScript** using **Vite**, following **Hexagonal Architecture** principles for clean, maintainable code.
+A modern, type-safe portfolio website showcasing skills, experience, and professional projects. Built with **React + TypeScript** using **Vite**, following **Hexagonal Architecture** principles for clean, maintainable code.
 
 🔗 **[View Live Site](https://hugoindevworld.netlify.app/)** | 📚 **[Source Code](https://github.com/hmanzoni/hugoindevworld)**
 
@@ -197,7 +197,7 @@ The site is deployed on **Netlify** with:
 | Layer | Technology |
 |-------|-----------|
 | **Runtime** | Node.js 16+ |
-| **Framework** | React 17 |
+| **Framework** | React 19 |
 | **Language** | TypeScript 5.9 |
 | **Build Tool** | Vite 7 |
 | **Icons** | @iconscout/react-unicons |
@@ -221,7 +221,6 @@ npm run preview  # Preview production build locally
 ### Git Strategy
 
 - **Main Branch** — `master` (production-ready code)
-- **Development** — `develop` branch for WIP features
 - **Features** — Feature branches follow naming: `feature/feature-name`
 
 ---
