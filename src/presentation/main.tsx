@@ -1,14 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import '../index.css';
-import App from './App';
-import { createDependencies } from './compositionRoot';
+import { createRoot } from "react-dom/client";
+import { StrictMode } from "react";
+import "../index.css";
+import App from "./App";
+import { createDependencies } from "./compositionRoot";
 
 const dependencies = createDependencies();
 
-ReactDOM.render(
-  <React.StrictMode>
+const root = createRoot(document.getElementById("root") as HTMLElement);
+
+root.render(
+  <StrictMode>
     <App {...dependencies} />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </StrictMode>,
 );
